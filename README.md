@@ -9,7 +9,7 @@ Este projeto tem como objetivo desenvolver o emissor de certificados para o metr
 | Larissa Gomes            | 25.00625-5   | @gLariii            | Desenvolvedor |
 | Guilherme Araújo         | 25.00615-6   | @Guilherme-p2006    | Desenvolvedor |
 | Luana Ferreira Silva     | 25.01656-9   | @luafxrreira        | Desenvolvedor |
-| Thiago Santos Machado    | 25.01702-1   | @Thiago_stosm       | Desenvolvedor |
+| Thiago Santos Machado    | 25.01702-1   | @Thiago-stosm       | Desenvolvedor |
 | Victor Zakimi            | 23.00187-9   | @Victor-Hugo-PZ     | Desenvolvedor |
 | Lucas Scudeler de Andrade| 25.00079-5   | @lucasdeandrade13   | Desenvolvedor |
 
@@ -17,19 +17,28 @@ Este projeto tem como objetivo desenvolver o emissor de certificados para o metr
 
 ```
 📁 TRILHO-DO-CONHECIMENTO
-│── 📁 assets
-│── 📁 css
-│   ├── 📄style.css 
-│── 📁 js
-│   │── 📄script.js   
-│── 📁 images
-│   │── 📄logo.png 
-├── 📁 pages 
-│   │── 📄sobre.html 
-│   │── 📄contato.html 
-│── 📄index.html   
+│── 📁 backend
+│   │── 📁 controllers
+│   │── 📁 frontend
+│   │   │── 📁 assets   
+│   │       │── 📄logo.png  
+│   │   │── 📁 css
+│   │       │── 📄style.css
+│   │   │── 📁 js
+│   │       │── 📄app.js
+│   │   │── 📁 pages
+│   │       │── 📄contato.html
+│   │       │── 📄sobre.html 
+│   │   │──📄index.html   
+│   │─── 📁 models      
+│   │─── 📁 routes      
+│   │─── 📄server.js  
+│── 📁 node_modules
 │── 📄.env   
-│── 📄README.md
+│── 📄.gitignore  
+│── 📄package-lock.json
+│── 📄package.json
+│── 📄README.md     
 ```
 
 ## Funcionalidades
