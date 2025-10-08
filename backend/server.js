@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
-const db = require("backend/connectionFactory/connectionFactory.js");
+const db = require("./connectionFactory/connectionFactory.js");
 
 app.get('/', (req, res) => {
     res.send("Olá, devs!")
