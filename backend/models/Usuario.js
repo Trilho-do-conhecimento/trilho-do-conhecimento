@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('backend/connectionFactory/connectionFactory.js');
+const TipoUsuario = require('.../enums/TipoUsuario.js');
 
 const Usuario = sequelize.define('Usuario', {
     id_usuario: {
@@ -34,7 +35,11 @@ const Usuario = sequelize.define('Usuario', {
         allowNull: false
     },
     tipo_usuario: {
-        type: DataTypes.ENUM('aluno', 'professor', 'admin'), //Ver se o enum por conta da logica precisa ser criado uma classe so para ele
+        type: DataTypes.ENUM(
+            TipoUsuario.ALUNO, 
+            TipoUsuario.PROFESSOR, 
+            TipoUsuario.ADMIN
+        ), //Ver se o enum por conta da logica precisa ser criado uma classe so para ele
         allowNull: false
     }
 }, {
