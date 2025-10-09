@@ -1,17 +1,17 @@
-const sequelize = require('../config/database'); // conexão com o bd
+const sequelize = require('backend/connectionFactory/connectionFactory.js'); // conexão com o bd
 
 // Importação das models
-const Usuario = require('/Usuario');
-const Curso = require('/Curso');          
-const Turma = require('/Turma');
-const Certificado = require('/Certificado');
-const Lista_presenca = require('/Lista_presenca');
-const Lista_presenca_usuario = require('/Lista_presenca_usuario');
+const Usuario = require('./Usuario');
+const Curso = require('./Curso');
+const Turma = require('./Turma');
+const Certificado = require('./Certificado');
+const Lista_presenca = require('./Lista_presenca');
+const Lista_presenca_usuario = require('./Lista_presenca_usuario');
 
 // Relacionamento Professor – Turma
 Usuario.hasMany(Turma, { 
     foreignKey: 'id_instrutor',
-    as: 'TurmasMinistrada' 
+    as: 'TurmasMinistradas' 
 });
 Turma.belongsTo(Usuario, { //cada turma pertence a um instrutor
     foreignKey: 'id_instrutor',
@@ -25,7 +25,7 @@ Curso.hasMany(Turma, {
 });
 Turma.belongsTo(Curso, {
     foreignKey: 'id_curso',
-    as: 'Curso'
+    as: 'Cursos'
 });
 
 //Aluno – Certificado 
@@ -35,13 +35,13 @@ Usuario.hasMany(Certificado, {
 });
 Certificado.belongsTo(Usuario, {
     foreignKey: 'id_concluinte',
-    as: 'CertificadoEmitido'
+    as: 'CertificadosEmitidos'
 });
 
 //Presença - Turma
 Turma.hasMany(Lista_presenca, {
     foreignKey: 'id_turma',
-    as: 'Lista_presencas'
+    as: 'Listas_presencas'
 });
 Lista_presenca.belongsTo(Turma, {
     foreignKey: 'id_turma',
