@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('backend/connectionFactory/connectionFactory.js');
+const sequelize = require('../connectionFactory/connectionFactory.js');
 
 const Usuario = sequelize.define('Usuario', {
     id_usuario: {

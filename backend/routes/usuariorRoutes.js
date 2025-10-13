@@ -2,11 +2,10 @@ const express = require('express');
 
 const router = express.Router(); 
 
-const Usuario = require('../models/Usuario'); // Importa a Model Usuario 
+const Usuario = require('../models/Usuario.js'); // Importa a Model Usuario 
 
+const db = require("../connectionFactory/connectionFactory.js")
  
- 
-
 // --- 1. CREATE (POST) /api/usuarios --- 
 
 router.post('/', async (req, res) => { 
