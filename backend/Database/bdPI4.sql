@@ -110,6 +110,16 @@ CREATE TABLE turma (
     FOREIGN KEY (id_instrutor) REFERENCES usuario(id_usuario)
 );
 
+-- Relacionamento turma : instrutor
+CREATE TABLE instrutor_turma (
+    id_usuario INT,
+    id_turma INT,
+    PRIMARY KEY (id_usuario, id_turma),
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario),
+    FOREIGN KEY (id_turma) REFERENCES turma(id_turma)
+);
+-- Criei uma tabela que relaciona instrutores e turmas, por conta do relacionamento N:N
+
 -- Lista de Presença 
 CREATE TABLE lista_presenca (
     id_lista INT PRIMARY KEY AUTO_INCREMENT,
