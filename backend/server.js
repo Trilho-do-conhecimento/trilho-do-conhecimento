@@ -4,7 +4,7 @@ const PORT = 3000;
 app.use(express.json()) // testar isso 
 
 const db = require("./connectionFactory/connectionFactory.js");
-const route = require("./routes/usuariorRoutes.js")
+const route = require("./routes/usuarioRoutes.js")
 
 app.get('/', (req, res) => {
     res.send("Olá, devs!")

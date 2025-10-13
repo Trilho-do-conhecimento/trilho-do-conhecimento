@@ -2,7 +2,7 @@ const Sequelize = require("sequelize");
 const sequelize = new Sequelize("metrodb", "root", "19282322Lfs#", {
     host : "localhost",
     dialect : "mysql"
-});
+}); // fazer conexão com bd na nuvem também
 
 sequelize.authenticate()
 .then(function(){
