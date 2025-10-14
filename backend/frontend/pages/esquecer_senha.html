@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login_styles.css">
+    <title>Controle de Treinamentos</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="metro-logo-box">
+                <img src="metro-painel.png" alt="Logo do Metrô SP" class="metro-logo-image">
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="yellow-shape"></div>
+            
+            <header class="header-grid-area">
+                <h1 class="training-title">CONTROLE DE TREINAMENTOS</h1>
+            </header>
+            
+            <div class="login-box login-grid-area">
+                <p class="access-text">Esqueceu a sua senha?</p>
+                
+                <form onsubmit="return validatePassword()">
+                    <div class="input-group">
+                        <label for="password" class="input-label">Nova Senha</label>
+                        <input type="password" id="password" name="password" class="login-input" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="confirm_password" class="input-label">Verifique a sua senha</label>
+                        <input type="password" id="confirm_password" name="confirm_password" class="login-input" required>
+                        <p id="password-error" class="error-message"></p>
+                    </div>
+                    
+                    <button type="submit" class="login-button">Confirmar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validatePassword() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            const errorElement = document.getElementById('password-error');
+
+            if (password !== confirmPassword) {
+                // Senhas não são iguais
+                errorElement.textContent = "Erro: As senhas digitadas não são iguais. Verifique novamente.";
+                errorElement.style.display = 'block';
+                errorElement.style.color = '#CC0000'; // Cor vermelha para erro
+                
+                // Bloqueia o envio do formulário
+                return false; 
+            } else {
+                // Senhas são iguais
+                errorElement.textContent = "";
+                errorElement.style.display = 'none';
+                
+                // Permite o envio do formulário (você pode colocar aqui o código para envio AJAX ou redirecionamento)
+                alert("Senhas iguais! Redefinição de senha confirmada.");
+                return true; 
+            }
+        }
+    </script>
+</body>
+</html>
