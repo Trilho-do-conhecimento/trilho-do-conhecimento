@@ -1,14 +1,17 @@
 require('dotenv').config();
 const express = require('express');
+const path = require('path'); //ajuda na busca e manipulação de caminhos de arquivos e diretórios
 const app = express();
 const PORT = 3000;
-app.use(express.json()) // testar isso 
+app.use(express.json()) 
+
+app.use(express.static(path.join(__dirname, 'frontend'))) //possibilita a busca de arquivos estáticos no diretorio. Permite que o index.html seja o principal 
 
 const db = require("./connectionFactory/connectionFactory.js");
 const route = require("./routes/usuarioRoutes.js")
 
 app.get('/', (req, res) => {
-    res.send("Olá, devs!")
+    res.redirect("/pages/index.html")
 });
 
 app.use('/rotas', route);
