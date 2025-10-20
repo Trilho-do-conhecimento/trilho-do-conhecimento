@@ -1,1 +1,0 @@
-// Este arquivo possibilita a interatividade e a adição de funcionalidades dinâmicas na página.

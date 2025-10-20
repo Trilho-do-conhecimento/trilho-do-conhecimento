@@ -1,11 +1,21 @@
 {
+  "name": "trilho-do-conhecimento-backend",
+  "version": "1.0.0",
+  "description": "API do sistema Trilho do Conhecimento",
+  "main": "app.js",
+  "scripts": {
+  "start": "node backend/app.js",
+  "dev": "nodemon backend/app.js"
+},
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.21.2",
+    "mysql2": "^3.15.1",
+    "sequelize": "^6.37.7"
+  },
   "devDependencies": {
     "@ljharb/tsconfig": "^0.3.2",
     "nodemon": "^3.1.10",
     "typescript": "^5.9.3"
-  },
-  "dependencies": {
-    "mysql2": "^3.15.1",
-    "sequelize": "^6.37.7"
   }
 }
