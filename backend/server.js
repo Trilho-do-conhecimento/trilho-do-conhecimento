@@ -17,8 +17,7 @@ const route = require('./routes/usuarioRoutes.js');
 
 // Rota principal (teste)
 app.get('/', (req, res) => {
-    res.send("Olá, devs! 🚀");
-
+    res.redirect("/pages/index.html");
 });
 
 app.use('/rotas', route);

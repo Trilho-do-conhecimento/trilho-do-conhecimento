@@ -4,10 +4,9 @@
   "description": "API do sistema Trilho do Conhecimento",
   "main": "app.js",
   "scripts": {
-  "start": "node backend/app.js",
-  "dev": "nodemon backend/app.js"
-},
-
+    "start": "node backend/app.js",
+    "dev": "nodemon backend/app.js"
+  },
   "devDependencies": {
     "@ljharb/tsconfig": "^0.3.2",
     "nodemon": "^3.1.10",
@@ -16,6 +15,7 @@
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
+    "debug": "^4.4.3",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",

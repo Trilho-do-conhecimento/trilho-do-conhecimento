@@ -1,1 +1,43 @@
-<!-- Este é o arquivo principal da página web, onde ficam o conteúdo e a estrutura exibidos para o usuário -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login_styles.css">
+    <title>Controle de Treinamentos</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="metro-logo-box">
+                <img src="../assets/metro-painel.png" alt="Logo do Metrô SP" class="metro-logo-image">
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="yellow-shape"></div>
+            
+            <header class="header-grid-area">
+                <h1 class="training-title">CONTROLE DE TREINAMENTOS</h1>
+            </header>
+            
+            <div class="login-box login-grid-area">
+                <p class="access-text">Acesse sua conta</p>
+                <form>
+                    <div class="input-group">
+                        <label for="email" class="input-label">E-mail</label>
+                        <input type="email" id="email" name="email" class="login-input">
+                    </div>
+                    <div class="input-group">
+                        <label for="senha" class="input-label">Senha</label>
+                        <input type="password" id="senha" name="senha" class="login-input">
+                        <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                    </div>
+                    <button type="submit" class="login-button">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="../js/pages/login.js"></script> <!--Conexão com o arquivo JS para adição de eventos-->
+</body>
+</html>
