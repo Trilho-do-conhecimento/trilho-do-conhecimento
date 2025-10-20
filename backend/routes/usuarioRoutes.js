@@ -3,6 +3,10 @@ const router = express.Router();
 const Usuario = require('../models/Usuario.js');  //importa model e bd
 const db = require("../connectionFactory/connectionFactory.js")
 const bcrypt = require('bcrypt'); //Importação do BCrypt : TEM Q DAR O npm install bcrypt
+const {ACCESS_TOKEN_KEY} = process.env;
+const jwt = require('jsonwebtoken');
+console.log(process.env.ACCESS_TOKEN_KEY)
+const saltRounds = 10;
  
 // POST - criação de novos usuarios
 router.post('/', async (req, res) => { 
@@ -68,7 +72,7 @@ router.put('/:id', async (req, res) => {
 
     try {
         if (novosDados.senha) { // verifica se foi alterada a senha, fazer o hash antes de atualizar
-            novosDados.senha = await bcrypt.hash(novosDados.senha, saltRounds);
+            novosDados.senha = await bcrypt.hash(novosDados.senha, saltRounds); // saltRounds fica definido como 15
         }
         const [numRowsUpdated] = await Usuario.update(novosDados, { 
             where: { id_usuario: id } 
@@ -104,5 +108,35 @@ router.delete('/:id', async (req, res) => {
         res.status(500).json({ error: 'Erro ao excluir. Pode haver registros vinculados (turmas, certificados).' }); 
     } 
 }); 
+
+router.post('/login', async (req, res) => {
+    const {email, senha} = req.body;
+    // tenta realizar a busca por usuário   
+    try {
+        const u = await Usuario.findOne({
+            where : {email : email},
+        })
+        if(!u){
+            return res.status(401).json({ error : "Solicitação não autorizada: email inválido!"});
+        }
+        
+        const senhaCorreta = await bcrypt.compare(senha, u.senha);
+        if(!senhaCorreta){
+            return res.status(401).json({ error : "Solicitação não autorizada: senha inválida!"});
+        }
+
+        const token = jwt.sign(
+            {id : u.id_usuario, email : u.email}, 
+            ACCESS_TOKEN_KEY, {
+                expiresIn : "10m"
+            });
+
+            res.json({token});
+
+        } catch(error){
+            console.error("Erro no email:", error);
+            res.status(500).json({error : "Erro ao tentar realizar email. Problema no servidor."});
+        }
+});
 
 module.exports = router; 
