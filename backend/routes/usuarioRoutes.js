@@ -1,51 +1,52 @@
 const express = require('express'); 
 const router = express.Router(); 
-const Usuario = require('../models/Usuario.js');  //importa model e bd
-const db = require("../connectionFactory/connectionFactory.js")
-const bcrypt = require('bcrypt'); //Importação do BCrypt : TEM Q DAR O npm install bcrypt
- 
-// POST - criação de novos usuarios
+const Usuario = require('../models/Usuario.js');  // importa model e bd
+const db = require("../connectionFactory/connectionFactory.js");
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const { ACCESS_TOKEN_KEY } = process.env;
+
+const saltRounds = 10; // número de rounds para hash da senha
+
+// POST - Criação de novos usuários
 router.post('/', async (req, res) => { 
     const { email, senha, nome_completo, registro, cargo, area, tipo_usuario } = req.body; 
 
     try { 
-        //senha é hasheada pelo hook beforeCreate na model 
+        // senha é hasheada pelo hook beforeCreate na model 
         const novoUsuario = await Usuario.create(req.body); 
         
-        // retornar o usuario sem mostrar a senha 
-        res.status(201).json({  
-            id_usuario: novoUsuario.id_usuario,  
-            nome: novoUsuario.nome_completo  
+        // retornar o usuário sem mostrar a senha 
+        res.status(201).json({  
+            id_usuario: novoUsuario.id_usuario,  
+            nome: novoUsuario.nome_completo  
         }); 
 
     } catch (error) { 
         console.error("Erro ao criar usuário:", error); 
         if (error.name === 'SequelizeUniqueConstraintError') {
-             return res.status(409).json({ error: 'O e-mail fornecido já está em uso.' });
+            return res.status(409).json({ error: 'O e-mail fornecido já está em uso.' });
         }
         res.status(500).json({ error: 'Não foi possível criar o usuário.' }); 
     } 
 }); 
 
-//GET - listar todos os usuarios ou listar um usuario especifico por id 
+// GET - Listar todos os usuários
 router.get('/', async (req, res) => { 
-
     try { 
         const usuarios = await Usuario.findAll({ 
             attributes: ['id_usuario', 'email', 'nome_completo', 'cargo', 'tipo_usuario'] // Não seleciona a senha
         }); 
         res.json(usuarios); 
-
     } catch (error) { 
         console.error("Erro ao listar usuários:", error); 
         res.status(500).json({ error: 'Erro ao buscar usuários.' }); 
     } 
 }); 
 
+// GET/:id - Buscar usuário por ID
 router.get('/:id', async (req, res) => {
-
     const { id } = req.params; 
-
     try { 
         const usuario = await Usuario.findByPk(id, { 
             attributes: ['id_usuario', 'email', 'nome_completo', 'cargo', 'area', 'tipo_usuario'] 
@@ -54,20 +55,19 @@ router.get('/:id', async (req, res) => {
             return res.status(404).json({ error: 'Usuário não encontrado.' }); 
         } 
         res.json(usuario); 
-
     } catch (error) { 
         console.error("Erro ao buscar usuário por ID:", error); 
         res.status(500).json({ error: 'Erro ao buscar usuário.' }); 
     } 
 }); 
 
-//PUT - atualizar usuarios
+// PUT - Atualizar usuário
 router.put('/:id', async (req, res) => { 
     const { id } = req.params; 
-    let novosDados = req.body; // 'let' para poder modificar
+    let novosDados = req.body; 
 
     try {
-        if (novosDados.senha) { // verifica se foi alterada a senha, fazer o hash antes de atualizar
+        if (novosDados.senha) { 
             novosDados.senha = await bcrypt.hash(novosDados.senha, saltRounds);
         }
         const [numRowsUpdated] = await Usuario.update(novosDados, { 
@@ -85,9 +85,8 @@ router.put('/:id', async (req, res) => {
     } 
 }); 
 
-//DELETE - deletar usuario
+// DELETE - Deletar usuário
 router.delete('/:id', async (req, res) => {
-
     const { id } = req.params; 
 
     try { 
@@ -105,4 +104,36 @@ router.delete('/:id', async (req, res) => {
     } 
 }); 
 
-module.exports = router; 
+// =====================
+// LOGIN - Autenticação de usuário
+// =====================
+router.post('/login', async (req, res) => {
+    const { email, senha } = req.body;
+
+    try {
+        const u = await Usuario.findOne({ where: { email } });
+
+        if (!u) {
+            return res.status(401).json({ error: "Solicitação não autorizada: email inválido!" });
+        }
+
+        const senhaCorreta = await bcrypt.compare(senha, u.senha);
+        if (!senhaCorreta) {
+            return res.status(401).json({ error: "Solicitação não autorizada: senha inválida!" });
+        }
+
+        const token = jwt.sign(
+            { id: u.id_usuario, email: u.email }, 
+            ACCESS_TOKEN_KEY, 
+            { expiresIn: "10m" }
+        );
+
+        res.json({ token });
+
+    } catch (error) {
+        console.error("Erro no login:", error);
+        res.status(500).json({ error: "Erro ao tentar realizar login. Problema no servidor." });
+    }
+});
+
+module.exports = router;
