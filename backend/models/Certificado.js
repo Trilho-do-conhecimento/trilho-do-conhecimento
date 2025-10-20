@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('backend/connectionFactory/connectionFactory.js');
+const sequelize = require('../connectionFactory/connectionFactory.js');
+const Usuario = require('./Usuario.js'); // importar model Usuario
 
 const Certificado = sequelize.define('Certificado', {
     id_certificado: {
@@ -23,7 +24,7 @@ const Certificado = sequelize.define('Certificado', {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: 'usuario',
+            model: Usuario,
             key: 'id_usuario'
         }
     },

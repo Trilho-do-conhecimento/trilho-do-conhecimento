@@ -1,101 +1,116 @@
 const express = require('express');
 const router = express.Router();
-const Curso = require('../models/Curso.js'); //importa model e bd
-const db = require("../connectionFactory/connectionFactory.js")
+const { body, validationResult } = require('express-validator');
+const CursoDAO = require('../DAO/CursoDAO');
+const Turma = require('../models/Turma');
 
-//POST - cria novo curso
-router.post('/', async (req, res) => {
-    const { nome, data_inicio, data_termino, status, area, carga_horaria } = req.body;
+// POST - criar novo curso
+router.post(
+  '/',
+  [ //camada de validação de dados garante que os dados enviados pelo cliente no corpo da requisição atendam a critérios específicos 
+    //antes de serem processados e salvos.
+    body('nome').notEmpty().withMessage('Nome é obrigatório'),
+    body('data_inicio').isDate().withMessage('Data de início inválida'),
+    body('data_termino').isDate().withMessage('Data de término inválida'),
+    body('status').isIn(['concluido','em andamento','cancelado'])
+      .withMessage('Status inválido'),
+    body('area').notEmpty().withMessage('Área é obrigatória'),
+    body('carga_horaria').isInt({ min: 1 }).withMessage('Carga horária deve ser um número positivo')
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) return res.status(400).json({ success: false, errors: errors.array() });
+
     try {
-        const novoCurso = await Curso.create({
-            nome,
-            data_inicio,
-            data_termino,
-            status,
-            area,
-            carga_horaria
-        });
-        res.status(201).json({ 
-            id_curso: novoCurso.id_curso, 
-            nome: novoCurso.nome 
-        });
+      const novoCurso = await CursoDAO.criar(req.body);
+      res.status(201).json({ success: true, data: novoCurso });
     } catch (error) {
-        console.error("Erro ao criar curso:", error);
-        res.status(500).json({ error: 'Não foi possível criar o curso.' });
+      console.error("Erro ao criar curso:", error);
+      res.status(500).json({ success: false, error: 'Não foi possível criar o curso.' });
     }
+  }
+);
+
+// GET - listar todos os cursos com filtros opcionais
+router.get('/', async (req, res) => {
+  try {
+    const { status, area } = req.query;
+    let cursos = await CursoDAO.buscarTodos();
+
+    if (status) cursos = cursos.filter(c => c.status === status);
+    if (area) cursos = cursos.filter(c => c.area === area);
+
+    res.json({ success: true, data: cursos });
+  } catch (error) {
+    console.error("Erro ao buscar cursos:", error);
+    res.status(500).json({ success: false, error: 'Erro ao buscar cursos.' });
+  }
 });
 
-//GET - lista todos os cursos ou algum especifico por id
-router.get('/', async (req, res) => { //todos os cursos
+// GET - buscar por ID
+router.get('/:id', async (req, res) => {
+  try {
+    const curso = await CursoDAO.buscarPorId(req.params.id);
+    if (!curso) 
+      return res.status(404).json({ success: false, error: 'Curso não encontrado.' });
 
-    try {
-        const cursos = await Curso.findAll({
-            attributes: ['id_curso', 'nome', 'status', 'area', 'carga_horaria', 'data_inicio', 'data_termino']
-        });
-        res.json(cursos);
+    res.json({ success: true, data: curso });
 
-    } catch (error) {
-        console.error("Erro ao listar cursos:", error);
-        res.status(500).json({ error: 'Erro ao buscar cursos.' });
-    }
+  } catch (error) {
+    console.error("Erro ao buscar curso:", error);
+    res.status(500).json({ success: false, error: 'Erro ao buscar curso.' });
+  }
 });
 
-router.get('/:id', async (req, res) => { //por id
-
-    const { id } = req.params;
+// PUT - atualizar curso
+router.put(
+  '/:id',
+  [
+    body('nome').optional().notEmpty().withMessage('Nome não pode ser vazio'),
+    body('data_inicio').optional().isDate().withMessage('Data de início inválida'),
+    body('data_termino').optional().isDate().withMessage('Data de término inválida'),
+    body('status').optional().isIn(['concluido','em andamento','cancelado']).withMessage('Status inválido'),
+    body('area').optional().notEmpty().withMessage('Área não pode ser vazia'),
+    body('carga_horaria').optional().isInt({ min: 1 }).withMessage('Carga horária deve ser positiva')
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) return res.status(400).json({ success: false, errors: errors.array() });
 
     try {
-        const curso = await Curso.findByPk(id); //retorna todos os atributos de curso do id especifico
-        if (!curso) {
-            return res.status(404).json({ error: 'Curso não encontrado.' });
-        }
-        res.json(curso);
+      const cursoAtualizado = await CursoDAO.atualizar(req.params.id, req.body);
+      res.json({ success: true, data: cursoAtualizado });
 
     } catch (error) {
-        console.error("Erro ao buscar curso por ID:", error);
-        res.status(500).json({ error: 'Erro ao buscar curso.' });
-    }
-});
+      if (error.message.includes('não encontrado')) {
+        res.status(404).json({ success: false, error: error.message });
 
-//PUT - atualiza alguma informação do curso
-router.put('/:id', async (req, res) => {
-    const { id } = req.params;
-    const novosDados = req.body;
-    
-    try {
-        const [numRowsUpdated] = await Curso.update(novosDados, {
-            where: { id_curso: id }
-        });
-        
-        if (numRowsUpdated === 0) {
-            return res.status(404).json({ error: 'Curso não encontrado ou nenhum dado para atualizar.' });
-        }
-        res.json({ message: 'Curso atualizado com sucesso!' });
-    } catch (error) {
+      } else {
         console.error("Erro ao atualizar curso:", error);
-        res.status(500).json({ error: 'Erro ao atualizar curso.' });
-    }
-});
+        res.status(500).json({ success: false, error: 'Erro ao atualizar curso.' });
 
-//DELETE - deleta o curso
+      }
+    }
+  }
+);
+
+
+// DELETE - excluir curso
 router.delete('/:id', async (req, res) => {
-    const { id } = req.params;
-    
-    try {
-        const numRowsDeleted = await Curso.destroy({
-            where: { id_curso: id }
-            
-        });
-        if (numRowsDeleted === 0) {
-            return res.status(404).json({ error: 'Curso não encontrado.' });
-        }
-        res.json({ message: 'Curso excluído com sucesso.' });
+  try {
+    await CursoDAO.deletar(req.params.id);
+    res.status(204).send();
 
-    } catch (error) {
-        console.error("Erro ao deletar curso:", error);
-        // Sugestão de erro para Foreign Key (Chave Estrangeira)
-        res.status(500).json({ error: 'Erro ao excluir. Pode haver turmas vinculadas a este curso.' });
+  } catch (error) {
+    if (error.message.includes('não encontrado')) {
+      res.status(404).json({ success: false, error: error.message });
+
+    } else {
+      console.error("Erro ao excluir curso:", error);
+      res.status(500).json({ success: false, error: 'Erro ao excluir. Pode haver turmas vinculadas a este curso.' });
+
     }
+  }
 });
 
 module.exports = router;

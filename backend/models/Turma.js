@@ -1,5 +1,7 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('backend/connectionFactory/connectionFactory.js');
+const sequelize = require('../connectionFactory/connectionFactory.js');
+const Curso = require('./Curso.js');
+const Usuario = require('./Usuario.js');
 
 const Turma = sequelize.define('Turma', {
     id_turma: {
@@ -18,9 +20,9 @@ const Turma = sequelize.define('Turma', {
     id_curso: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: { //chave estrangeira 
+        references: {
             model: 'curso',
-            key: 'id_curso' 
+            key: 'id_curso'
         }
     },
     id_instrutor: {
@@ -28,7 +30,7 @@ const Turma = sequelize.define('Turma', {
         allowNull: false,
         references: {
             model: 'usuario',
-            key: 'id_usuario' // aq é só id usuario pq se usa o id como ponte
+            key: 'id_usuario'
         }
     }
 }, {

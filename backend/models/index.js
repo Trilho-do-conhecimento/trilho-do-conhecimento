@@ -21,8 +21,11 @@ Turma.belongsTo(Usuario, { //cada turma pertence a um instrutor
 //Curso – Turma (1:N)
 Curso.hasMany(Turma, {
     foreignKey: 'id_curso',
-    as: 'Turmas'
+    as: 'Turmas',
+    onDelete: 'RESTRICT',
+    onUpdate: 'CASCADE'
 });
+
 Turma.belongsTo(Curso, {
     foreignKey: 'id_curso',
     as: 'Cursos'

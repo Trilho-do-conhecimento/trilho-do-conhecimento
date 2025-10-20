@@ -1,138 +1,108 @@
-const express = require('express'); 
-const router = express.Router(); 
-const Usuario = require('../models/Usuario.js');  // importa model e bd
-const db = require("../connectionFactory/connectionFactory.js");
-const bcrypt = require('bcrypt');
+const express = require('express');
+const router = express.Router();
+const UsuarioDAO = require('../DAO/UsuarioDAO');
 const jwt = require('jsonwebtoken');
+
 const { ACCESS_TOKEN_KEY } = process.env;
 
-const saltRounds = 10; // número de rounds para hash da senha
-
-// POST - Criação de novos usuários
-router.post('/', async (req, res) => { 
-    const { email, senha, nome_completo, registro, cargo, area, tipo_usuario } = req.body; 
-
-    try { 
-        // senha é hasheada pelo hook beforeCreate na model 
-        const novoUsuario = await Usuario.create(req.body); 
-        
-        // retornar o usuário sem mostrar a senha 
-        res.status(201).json({  
-            id_usuario: novoUsuario.id_usuario,  
-            nome: novoUsuario.nome_completo  
-        }); 
-
-    } catch (error) { 
-        console.error("Erro ao criar usuário:", error); 
-        if (error.name === 'SequelizeUniqueConstraintError') {
-            return res.status(409).json({ error: 'O e-mail fornecido já está em uso.' });
-        }
-        res.status(500).json({ error: 'Não foi possível criar o usuário.' }); 
-    } 
-}); 
-
-// GET - Listar todos os usuários
-router.get('/', async (req, res) => { 
-    try { 
-        const usuarios = await Usuario.findAll({ 
-            attributes: ['id_usuario', 'email', 'nome_completo', 'cargo', 'tipo_usuario'] // Não seleciona a senha
-        }); 
-        res.json(usuarios); 
-    } catch (error) { 
-        console.error("Erro ao listar usuários:", error); 
-        res.status(500).json({ error: 'Erro ao buscar usuários.' }); 
-    } 
-}); 
-
-// GET/:id - Buscar usuário por ID
-router.get('/:id', async (req, res) => {
-    const { id } = req.params; 
-    try { 
-        const usuario = await Usuario.findByPk(id, { 
-            attributes: ['id_usuario', 'email', 'nome_completo', 'cargo', 'area', 'tipo_usuario'] 
-        }); 
-        if (!usuario) { 
-            return res.status(404).json({ error: 'Usuário não encontrado.' }); 
-        } 
-        res.json(usuario); 
-    } catch (error) { 
-        console.error("Erro ao buscar usuário por ID:", error); 
-        res.status(500).json({ error: 'Erro ao buscar usuário.' }); 
-    } 
-}); 
-
-// PUT - Atualizar usuário
-router.put('/:id', async (req, res) => { 
-    const { id } = req.params; 
-    let novosDados = req.body; 
-
+// POST - criar usuario
+router.post('/', async (req, res) => {
     try {
-        if (novosDados.senha) { 
-            novosDados.senha = await bcrypt.hash(novosDados.senha, saltRounds);
-        }
-        const [numRowsUpdated] = await Usuario.update(novosDados, { 
-            where: { id_usuario: id } 
-        }); 
+        const novoUsuario = await UsuarioDAO.criar(req.body);
 
-        if (numRowsUpdated === 0) { 
-            return res.status(404).json({ error: 'Usuário não encontrado ou nenhum dado para atualizar.' }); 
-        } 
-        res.json({ message: 'Usuário atualizado com sucesso!' }); 
+        res.status(201).json({
+            id_usuario: novoUsuario.id_usuario,
+            nome_completo: novoUsuario.nome_completo,
+            email: novoUsuario.email
+        });
 
-    } catch (error) { 
-        console.error("Erro ao atualizar usuário:", error); 
-        res.status(500).json({ error: 'Erro ao atualizar usuário.' }); 
-    } 
-}); 
+    } catch (error) {
+        console.error("Erro ao criar usuário:", error);
 
-// DELETE - Deletar usuário
+        if (error.message.includes('E-mail já cadastrado')) 
+            return res.status(409).json({ error: error.message });
+
+        res.status(500).json({ error: 'Erro ao criar usuário.' });
+    }
+});
+
+// GET - listar
+router.get('/', async (req, res) => {
+    try {
+        const usuarios = await UsuarioDAO.buscarTodos();
+
+        res.json(usuarios);
+        
+    } catch (error) {
+        console.error("Erro ao listar usuários:", error);
+        res.status(500).json({ error: 'Erro ao buscar usuários.' });
+    }
+});
+
+// GET/:id - Buscar por ID
+router.get('/:id', async (req, res) => {
+    try {
+        const usuario = await UsuarioDAO.buscarPorId(req.params.id);
+
+        res.json(usuario);
+
+    } catch (error) {
+        console.error("Erro ao buscar usuário:", error);
+
+        if (error.message.includes('não encontrado')) 
+            return res.status(404).json({ error: error.message });
+
+        res.status(500).json({ error: 'Erro ao buscar usuário.' });
+    }
+});
+
+// PUT/:id - Atualizar usuario
+router.put('/:id', async (req, res) => {
+    try {
+        const usuarioAtualizado = await UsuarioDAO.atualizar(req.params.id, req.body);
+
+        res.json({ message: 'Usuário atualizado com sucesso!', usuario: usuarioAtualizado });
+
+    } catch (error) {
+        console.error("Erro ao atualizar usuário:", error);
+        if (error.message.includes('não encontrado')) 
+            return res.status(404).json({ error: error.message });
+
+        res.status(500).json({ error: 'Erro ao atualizar usuário.' });
+    }
+});
+
+// DELETE/:id - Excluir usuario
 router.delete('/:id', async (req, res) => {
-    const { id } = req.params; 
+    try {
+        await UsuarioDAO.deletar(req.params.id);
+        res.json({ message: 'Usuário excluído com sucesso.' });
+    } catch (error) {
+        console.error("Erro ao deletar usuário:", error);
+        if (error.message.includes('não encontrado')) 
+            return res.status(404).json({ error: error.message });
 
-    try { 
-        const numRowsDeleted = await Usuario.destroy({ 
-            where: { id_usuario: id } 
-        }); 
-        if (numRowsDeleted === 0) { 
-            return res.status(404).json({ error: 'Usuário não encontrado.' }); 
-        } 
-        res.json({ message: 'Usuário excluído com sucesso.' }); 
+        res.status(500).json({ error: 'Erro ao excluir usuário.' });
+    }
+});
 
-    } catch (error) { 
-        console.error("Erro ao deletar usuário:", error); 
-        res.status(500).json({ error: 'Erro ao excluir. Pode haver registros vinculados (turmas, certificados).' }); 
-    } 
-}); 
-
-// =====================
-// LOGIN - Autenticação de usuário
-// =====================
+// POST /login - Autenticação do usuario
 router.post('/login', async (req, res) => {
     const { email, senha } = req.body;
-
     try {
-        const u = await Usuario.findOne({ where: { email } });
+        const usuario = await UsuarioDAO.validarLogin(email, senha);
 
-        if (!u) {
-            return res.status(401).json({ error: "Solicitação não autorizada: email inválido!" });
-        }
-
-        const senhaCorreta = await bcrypt.compare(senha, u.senha);
-        if (!senhaCorreta) {
-            return res.status(401).json({ error: "Solicitação não autorizada: senha inválida!" });
-        }
-
+        if (!usuario) return res.status(401).json({ error: "Email ou senha inválidos!" });
         const token = jwt.sign(
-            { id: u.id_usuario, email: u.email }, 
-            ACCESS_TOKEN_KEY, 
+            { id: usuario.id_usuario, email: usuario.email },
+            ACCESS_TOKEN_KEY,
             { expiresIn: "10m" }
         );
 
         res.json({ token });
-
     } catch (error) {
         console.error("Erro no login:", error);
-        res.status(500).json({ error: "Erro ao tentar realizar login. Problema no servidor." });
+        res.status(500).json({ error: "Erro ao tentar realizar login." });
     }
 });
 
