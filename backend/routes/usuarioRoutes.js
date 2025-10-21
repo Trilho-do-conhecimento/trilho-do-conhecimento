@@ -2,9 +2,11 @@ const express = require('express');
 const router = express.Router();
 const UsuarioDAO = require('../DAO/UsuarioDAO');
 const jwt = require('jsonwebtoken');
-
 const { ACCESS_TOKEN_KEY } = process.env;
+const authMiddleware = require('../middlewares/authMiddleware');
 
+// Rotas públicas, não necessitam de middleware. 
+// Com a privacidade definida dessa forma fica possível cadastrar novos usuários e realizar login 
 // POST - criar usuario
 router.post('/', async (req, res) => {
     try {
@@ -26,6 +28,28 @@ router.post('/', async (req, res) => {
     }
 });
 
+// POST /login - Autenticação do usuario
+router.post('/login', async (req, res) => {
+    const { email, senha } = req.body;
+    try {
+        const usuario = await UsuarioDAO.validarLogin(email, senha);
+
+        if (!usuario) return res.status(401).json({ error: "Email ou senha inválidos!" });
+        const token = jwt.sign(
+            { id: usuario.id_usuario, email: usuario.email },
+            process.env.ACCESS_TOKEN_KEY,
+            { expiresIn: "24h" }
+        );
+
+        res.json({ token });
+    } catch (error) {
+        console.error("Erro no login:", error);
+        res.status(500).json({ error: "Erro ao tentar realizar login." });
+    }
+});
+
+// Rotas privadas, necessitam de middleware
+router.use(authMiddleware);
 // GET - listar
 router.get('/', async (req, res) => {
     try {
@@ -86,24 +110,5 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
-// POST /login - Autenticação do usuario
-router.post('/login', async (req, res) => {
-    const { email, senha } = req.body;
-    try {
-        const usuario = await UsuarioDAO.validarLogin(email, senha);
-
-        if (!usuario) return res.status(401).json({ error: "Email ou senha inválidos!" });
-        const token = jwt.sign(
-            { id: usuario.id_usuario, email: usuario.email },
-            ACCESS_TOKEN_KEY,
-            { expiresIn: "10m" }
-        );
-
-        res.json({ token });
-    } catch (error) {
-        console.error("Erro no login:", error);
-        res.status(500).json({ error: "Erro ao tentar realizar login." });
-    }
-});
 
 module.exports = router;
