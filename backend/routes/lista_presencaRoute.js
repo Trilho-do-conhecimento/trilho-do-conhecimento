@@ -1,128 +1,119 @@
 // a route de lista de presença é uma so tanto pra a lista completa ou apenas por usuario
+const express = require('express'); 
+const router = express.Router(); 
+const ListaPresencaDAO = require('../DAO/ListaPresencaDAO'); 
+const ListaPresencaUsuarioDAO = require('../DAO/ListaPresencaUsuarioDAO'); 
 
-const express = require('express');
-const router = express.Router();
-const ListaPresenca = require('../models/ListaPresenca.js'); // lista em sí
-const ListaPresencaUsuario = require('../models/ListaPresencaUsuario.js'); // Relacionamento N:N ( lista e os usuario)
-const Turma = require('../models/Turma.js'); //relacionamento e bd
-const Usuario = require('../models/Usuario.js'); 
-const db = require("../connectionFactory/connectionFactory.js")
+//enum 
+const StatusAssinatura = { 
+    PRESENTE: 'Presente', 
+    AUSENTE: 'Ausente', 
+    JUSTIFICADO: 'Justificado' 
+}; 
 
-//POST - criação de nova lista de presença
-router.post('/', async (req, res) => {
+router.post('/', async (req, res) => { 
+    try { 
+        const lista = await ListaPresencaDAO.criar(req.body); 
+        res.status(201).json(lista); 
 
-    const { data, id_turma } = req.body;
+    } catch (err) { 
+        console.error("Erro ao criar lista:", err); 
+        res.status(500).json({ error: 'Não foi possível criar a lista.' }); 
 
-    try {
-        const novaLista = await ListaPresenca.create({
-            data,
-            id_turma
-        });
-        res.status(201).json({ 
-            id_lista: novaLista.id_lista, 
-            data: novaLista.data,
-            id_turma: novaLista.id_turma
-        });
+    } 
+}); 
 
-    } catch (error) {
-        console.error("Erro ao criar lista de presença:", error);
-        res.status(500).json({ error: 'Não foi possível criar a lista de presença. Verifique a chave estrangeira (Turma).' });
-    }
+//get -listar
+router.get('/', async (req, res) => { 
+
+    try { 
+        const listas = await ListaPresencaDAO.buscarTodos({ includeAlunos: true }); 
+        res.json(listas); 
+
+    } catch (err) { 
+        console.error("Erro ao listar listas:", err); 
+        res.status(500).json({ error: 'Erro ao buscar listas de presença.' }); 
+
+    } 
+}); 
+
+//get by id - listar
+router.get('/:id', async (req, res) => { 
+
+    try { 
+        const lista = await ListaPresencaDAO.buscarPorId(req.params.id, { includeAlunos: true }); 
+        if (!lista) return res.status(404).json({ error: 'Lista não encontrada.' }); 
+        res.json(lista); 
+
+    } catch (err) { 
+        console.error("Erro ao buscar lista:", err); 
+        res.status(500).json({ error: 'Erro ao buscar lista de presença.' }); 
+    } 
 });
 
-//GET - listar todas as listas de presença ou apenas por id
-router.get('/', async (req, res) => {
+//put - atualizar
+router.put('/:id', async (req, res) => { 
 
-    try {
-        const listas = await ListaPresenca.findAll({
-            include: [
-                { model: Turma, attributes: ['local'] }
-            ]
-        });
-        res.json(listas);
+    try { 
+        const listaAtualizada = await ListaPresencaDAO.atualizar(req.params.id, req.body); 
+        res.json(listaAtualizada); 
 
-    } catch (error) {
-        console.error("Erro ao listar listas de presença:", error);
-        res.status(500).json({ error: 'Erro ao buscar listas de presença.' });
-    }
-});
+    } catch (err) { 
+        console.error("Erro ao atualizar lista:", err); 
+        if (err.message.includes('não encontrada')) { 
+            res.status(404).json({ error: err.message }); 
 
-router.get('/:id', async (req, res) => {
+        } else { 
+            res.status(500).json({ error: 'Erro ao atualizar a lista de presença.' }); 
 
-    const { id } = req.params;
+        } 
+    } 
+}); 
 
-    try {
-        const lista = await ListaPresenca.findByPk(id, {
-            include: [
-                { model: Turma, attributes: ['local'] },
-                { 
-                    model: Usuario, 
-                    through: { attributes: ['status_assinatura'] }, //ve se foi assinado ou não
-                    attributes: ['id_usuario', 'nome_completo', 'registro']
-                }
-            ]
-        });
-        if (!lista) {
-            return res.status(404).json({ error: 'Lista de Presença não encontrada.' });
-        }
-        res.json(lista);
+// atualiza individualmente
+router.put('/:id/aluno/:id_usuario', async (req, res) => { 
 
-    } catch (error) {
-        console.error("Erro ao buscar lista de presença por ID:", error);
-        res.status(500).json({ error: 'Erro ao buscar lista de presença.' });
-    }
-});
+    try { 
+        const { status_assinatura } = req.body; 
+        if (!Object.values(StatusAssinatura).includes(status_assinatura)) { 
+            return res.status(400).json({ error: 'Status inválido.' }); 
 
-//PUT - atualiza a presença de um aluno
-router.put('/:id/aluno/:idAluno', async (req, res) => {
+        } 
 
-    const { id, idAluno } = req.params;
-    const { status_assinatura } = req.body; // 'Presente', 'Ausente', 'Justificado'
-    
-    try {
-        const [numRowsUpdated] = await ListaPresencaUsuario.update(
-            { status_assinatura }, 
-            {
-                where: { 
-                    id_lista: id, 
-                    id_usuario: idAluno 
-                }
-            }
-        );
-        if (numRowsUpdated === 0) {
-            return res.status(404).json({ 
-                error: 'Aluno ou Lista não encontrado, ou nenhum dado para atualizar.' 
-            });
-        }
-        res.json({ message: 'Status de presença atualizado com sucesso!' });
+        const atualizado = await ListaPresencaUsuarioDAO.atualizarStatus( 
+            req.params.id, 
+            req.params.id_usuario, 
+            status_assinatura 
 
-    } catch (error) {
-        console.error("Erro ao atualizar status de presença:", error);
-        res.status(500).json({ error: 'Erro ao atualizar status de presença.' });
-    }
-});
+        ); 
 
+        if (atualizado === 0) 
+            return res.status(404).json({ error: 'Aluno ou lista não encontrado.' }); 
+        res.json({ message: 'Status atualizado com sucesso!' }); 
 
-//DELETE
-router.delete('/:id', async (req, res) => {
-    const { id } = req.params;
-    
-    try {
-        await ListaPresencaUsuario.destroy({ // exclui as presenças
-            where: { id_lista: id }
-        });
-        const numRowsDeleted = await ListaPresenca.destroy({ //exclui o cabeçalho e tals
-            where: { id_lista: id }
-        });
-        
-        if (numRowsDeleted === 0) {
-            return res.status(404).json({ error: 'Lista de Presença não encontrada.' });
-        }
-        res.json({ message: 'Lista de Presença e registros de presença excluídos com sucesso.' });
-    } catch (error) {
-        console.error("Erro ao deletar lista de presença:", error);
-        res.status(500).json({ error: 'Erro ao excluir lista de presença.' });
-    }
-});
+    } catch (err) { 
+        console.error("Erro ao atualizar status:", err); 
+        res.status(500).json({ error: 'Erro ao atualizar status de presença.' }); 
 
-module.exports = router;
+    } 
+}); 
+
+// deletar individualmente
+router.delete('/:id', async (req, res) => { 
+
+    try { 
+        await ListaPresencaDAO.deletar(req.params.id); 
+        res.json({ message: 'Lista de presença e registros de alunos deletados com sucesso!' }); 
+
+    } catch (err) { 
+        console.error("Erro ao deletar lista:", err); 
+        if (err.message.includes('não encontrada')) { 
+            res.status(404).json({ error: err.message }); 
+
+        } else { 
+            res.status(500).json({ error: 'Erro ao deletar lista.' }); 
+        } 
+    } 
+}); 
+
+module.exports = router; 

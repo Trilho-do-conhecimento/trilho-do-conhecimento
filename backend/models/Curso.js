@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../connectionFactory/connectionFactory');
+const sequelize = require('../connectionFactory/connectionFactory.js');
 const Turma = require('./Turma');
 
 const Curso = sequelize.define('Curso', {
