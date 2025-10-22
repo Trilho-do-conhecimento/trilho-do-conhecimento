@@ -50,25 +50,36 @@
         .search-bar button { background-color: var(--white-color); border: none; padding: 0 15px; cursor: pointer; color: var(--primary-blue); font-size: 1rem; }
         .main-nav a { color: var(--white-color); text-decoration: none; margin: 0 10px; font-weight: 600; }
 
-        /* ---- CONTEÚDO PRINCIPAL - FORMULÁRIO (CÓDIGO NOVO) ---- */
+        /* ---- CONTEÚDO PRINCIPAL - FORMULÁRIO ---- */
+        
         .page-title {
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: var(--primary-blue);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             font-weight: 700;
+            text-align: center;
         }
         
-        /* NOVO LAYOUT EM GRID */
+        .page-title::after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 3px;
+            background-color: var(--primary-blue);
+            margin: 10px auto 30px;
+        }
+        
+        /* Layout em Grid do formulário */
         .info-form {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Duas colunas de tamanho igual */
-            gap: 20px 30px; /* 20px de espaço entre linhas, 30px entre colunas */
+            grid-template-columns: 1fr 1fr;
+            gap: 20px 30px;
             margin-bottom: 30px;
         }
 
         .form-group {
             display: flex;
-            flex-direction: column; /* Coloca o label em cima do input */
+            flex-direction: column;
             gap: 8px;
         }
 
@@ -77,17 +88,17 @@
         }
         
         .form-group input[type="text"] {
-            width: 100%; /* Ocupa todo o espaço da célula do grid */
+            width: 100%;
             padding: 8px;
             border: 1px solid var(--border-color);
             border-radius: 4px;
             font-family: 'Poppins', sans-serif;
             font-size: 0.95rem;
         }
-
-        /* Classe para fazer um item ocupar as duas colunas */
+        
+        /* Esta classe não é mais usada, mas pode ser útil no futuro */
         .form-group.full-width {
-            grid-column: 1 / -1; /* Ocupa da primeira à última coluna */
+            grid-column: 1 / -1;
         }
         
         /* ---- Tabela de Presença Editável (Sem alterações) ---- */
@@ -107,11 +118,10 @@
         .btn:hover { opacity: 0.7; }
 
         /* ---- RESPONSIVIDADE (GARANTIDA) ---- */
-        @media (max-width: 412px) {
+        @media (max-width: 600px) {
             .site-header { flex-direction: column; gap: 15px; }
             .form-actions { text-align: center; }
-
-            /* A MÁGICA ACONTECE AQUI: O grid de 2 colunas vira 1 coluna */
+            .page-title { font-size: 1.8rem; }
             .info-form {
                 grid-template-columns: 1fr;
             }
@@ -132,17 +142,21 @@
 
     <main>
         <div class="container">
-            <h1 class="page-title">Lista de presença EPI - Turma 1</h1>
+            <h1 class="page-title">Lista de presença</h1>
             
             <form action="#" method="post">
                 <div class="info-form">
-                    <div class="form-group full-width">
-                        <label for="atividade">Atividade:</label>
+                    
+                    <div class="form-group"> <label for="atividade">Atividade:</label>
                         <input type="text" id="atividade" name="atividade">
                     </div>
 
+                    <div class="form-group"> <label for="turma">Turma:</label>
+                        <input type="text" id="turma" name="turma">
+                    </div>
+
                     <div class="form-group">
-                        <label for="consultor">Consultor ou instrutor:</label>
+                        <label for="consultor">Instrutores:</label>
                         <input type="text" id="consultor" name="consultor">
                     </div>
 
@@ -181,7 +195,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td class="number-cell">1</td><td><input type="text" name="nome_completo[]" value="..."></td><td><input type="text" name="registro[]"></td><td><input type="text" name="cargo[]"></td><td><input type="text" name="area[]"></td><td><input type="text" name="datas[]"></td><td><input type="text" name="assinaturas[]"></td></tr>
+                            <tr><td class="number-cell">1</td><td><input type="text" name="nome_completo[]" value=""></td><td><input type="text" name="registro[]"></td><td><input type="text" name="cargo[]"></td><td><input type="text" name="area[]"></td><td><input type="text" name="datas[]"></td><td><input type="text" name="assinaturas[]"></td></tr>
                             <tr><td class="number-cell">2</td><td><input type="text" name="nome_completo[]"></td><td><input type="text" name="registro[]"></td><td><input type="text" name="cargo[]"></td><td><input type="text" name="area[]"></td><td><input type="text" name="datas[]"></td><td><input type="text" name="assinaturas[]"></td></tr>
                             <tr><td class="number-cell">3</td><td><input type="text" name="nome_completo[]"></td><td><input type="text" name="registro[]"></td><td><input type="text" name="cargo[]"></td><td><input type="text" name="area[]"></td><td><input type="text" name="datas[]"></td><td><input type="text" name="assinaturas[]"></td></tr>
                             <tr><td class="number-cell">4</td><td><input type="text" name="nome_completo[]"></td><td><input type="text" name="registro[]"></td><td><input type="text" name="cargo[]"></td><td><input type="text" name="area[]"></td><td><input type="text" name="datas[]"></td><td><input type="text" name="assinaturas[]"></td></tr>
