@@ -23,11 +23,6 @@ const authMiddleware = (req, res, next) => {
         // Extrai o token (segunda parte do array). 
         const token = parts[1];
         console.log("Token recebido (após split):", token);
-        const bearer = parts[0];
-
-        if(bearer !== "Bearer") {
-            return res.status(401).json({error : "erro: o token não está iniciado com 'Bearer'"})
-        }
     
         // Validação do token de fato. Após a validade e a assinatura forem dadas como ok, 
         // o paylod (infos do user) fica disponível no decoded (objeto js)
