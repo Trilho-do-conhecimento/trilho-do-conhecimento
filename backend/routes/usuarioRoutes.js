@@ -40,8 +40,15 @@ router.post('/login', async (req, res) => {
             process.env.ACCESS_TOKEN_KEY,
             { expiresIn: "24h" }
         );
+         
+        res.cookie('auth_token', token, {httpOnly:true, // nomeia o cookie, proteção contra xss
+            secure: process.env.NODE_TIPO === 'prod', // token só é enviado se for https
+            domain : process.env.COOKIE_DOMAIN, // define o domínio
+            sameSite: process.env.NODE_TIPO === 'prod'? 'none' : 'Lax', // protege contra csrf (croos-site), bloqueia envio de cookies em navegação de terceiros
+            maxAge: 60 * 60 * 1000}); // Quanto tempo dura um cookie (uma hora)
 
-        res.json({ token });
+            return res.status(200).json({ message: "Usuário logado!" });
+        
     } catch (error) {
         console.error("Erro no login:", error);
         res.status(500).json({ error: "Erro ao tentar realizar login." });

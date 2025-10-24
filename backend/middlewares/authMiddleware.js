@@ -2,27 +2,18 @@ require('dotenv').config();
 const jwt = require('jsonwebtoken');
 const userServie = require('../services/usuarioService');
 
-// Authorization com bearer e token ("token de portador"), que será guardado no localstorage.
+// token armazenado em cookie, aumenta o nível de segurança contra XSS.
 // Função para verificar e garantir a segurança das requisições que chegam na aplicação.
 const authMiddleware = (req, res, next) => {
     try{
-        const {authorization} = req.headers; // Essa const desestrutura o objeto headers que é enviado.
-        // Express converte "Authorization" para letras minúsculas. 
+        const token = req.cookies.auth_token; // acessa o valor do token do cookie
     
-        // Verifica se a autorização ta ok ou se o token tem algum problema. 
-        if(!authorization || !authorization.startsWith('Bearer ')){ 
-            return res.status(401).json({error : "erro: acesso negado. Token não fornecido ou mal-formatado"})
+        // Verifica se o token ta ok. 
+        if(!token){ 
+            return res.status(401).json({error : "erro: acesso negado. Token não encontrado no cookie"})
         }
     
-        // Recebe o token e separa em string, transformando em um array de dois itens  
-        const parts = authorization.split(" ");
-        if(parts.length !== 2){
-            return res.status(401).json({error : "erro: token mal-formatado. Formato esperado: 'Bearer <token>'"})
-        }
-    
-        // Extrai o token (segunda parte do array). 
-        const token = parts[1];
-        console.log("Token recebido (após split):", token);
+        console.log("Token recebido do cookie:", token);
     
         // Validação do token de fato. Após a validade e a assinatura forem dadas como ok, 
         // o paylod (infos do user) fica disponível no decoded (objeto js)
@@ -33,8 +24,6 @@ const authMiddleware = (req, res, next) => {
             }
             console.log("Token decodificado!", decoded);
             
-            // Editar aqui quando o usuarioService estiver pronto.
-    
             // Fixa o id do usuário autenticado para as etapas seguintes.
             req.userId = decoded.id;
         
