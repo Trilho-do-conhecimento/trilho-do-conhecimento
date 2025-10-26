@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
     } catch (error) {
         console.error("Erro ao criar usuário:", error);
 
-        if (error.message.includes('E-mail já cadastrado')) 
+        if (error.message.includes('E-mail já cadastrado'))
             return res.status(409).json({ error: error.message });
 
         res.status(500).json({ error: 'Erro ao criar usuário.' });
@@ -40,15 +40,17 @@ router.post('/login', async (req, res) => {
             process.env.ACCESS_TOKEN_KEY,
             { expiresIn: "24h" }
         );
-         
-        res.cookie('auth_token', token, {httpOnly:true, // nomeia o cookie, proteção contra xss
-            secure: process.env.NODE_TIPO === 'prod', // token só é enviado se for https
-            domain : process.env.COOKIE_DOMAIN, // define o domínio
-            sameSite: process.env.NODE_TIPO === 'prod'? 'none' : 'Lax', // protege contra csrf (croos-site), bloqueia envio de cookies em navegação de terceiros
-            maxAge: 60 * 60 * 1000}); // Quanto tempo dura um cookie (uma hora)
 
-            return res.status(200).json({ message: "Usuário logado!" });
-        
+        res.cookie('auth_token', token, {
+            httpOnly: true, // nomeia o cookie, proteção contra xss
+            secure: process.env.NODE_ENV === 'prod', // token só é enviado se for https
+            domain: process.env.COOKIE_DOMAIN, // define o domínio
+            sameSite: process.env.NODE_ENV === 'prod' ? 'none' : 'Lax', // protege contra csrf (croos-site), bloqueia envio de cookies em navegação de terceiros
+            maxAge: 60 * 60 * 1000
+        }); // Quanto tempo dura um cookie (uma hora)
+
+        return res.status(200).json({ message: "Usuário logado!" });
+
     } catch (error) {
         console.error("Erro no login:", error);
         res.status(500).json({ error: "Erro ao tentar realizar login." });
@@ -63,7 +65,7 @@ router.get('/', async (req, res) => {
         const usuarios = await UsuarioDAO.buscarTodos();
 
         res.json(usuarios);
-        
+
     } catch (error) {
         console.error("Erro ao listar usuários:", error);
         res.status(500).json({ error: 'Erro ao buscar usuários.' });
@@ -80,7 +82,7 @@ router.get('/:id', async (req, res) => {
     } catch (error) {
         console.error("Erro ao buscar usuário:", error);
 
-        if (error.message.includes('não encontrado')) 
+        if (error.message.includes('não encontrado'))
             return res.status(404).json({ error: error.message });
 
         res.status(500).json({ error: 'Erro ao buscar usuário.' });
@@ -96,7 +98,7 @@ router.put('/:id', async (req, res) => {
 
     } catch (error) {
         console.error("Erro ao atualizar usuário:", error);
-        if (error.message.includes('não encontrado')) 
+        if (error.message.includes('não encontrado'))
             return res.status(404).json({ error: error.message });
 
         res.status(500).json({ error: 'Erro ao atualizar usuário.' });
@@ -110,7 +112,7 @@ router.delete('/:id', async (req, res) => {
         res.json({ message: 'Usuário excluído com sucesso.' });
     } catch (error) {
         console.error("Erro ao deletar usuário:", error);
-        if (error.message.includes('não encontrado')) 
+        if (error.message.includes('não encontrado'))
             return res.status(404).json({ error: error.message });
 
         res.status(500).json({ error: 'Erro ao excluir usuário.' });
