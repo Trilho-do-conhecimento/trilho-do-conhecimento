@@ -14,6 +14,7 @@ app.use(require('cookie-parser')());
 // Banco e rotas
 const sequelize = require('./connectionFactory/connectionFactory.js');
 const route = require('./routes/usuarioRoutes.js');
+const logger = require('../backend/logs/logger.js');
 
 // Rota principal (teste)
 app.get('/', (req, res) => {
@@ -23,5 +24,5 @@ app.get('/', (req, res) => {
 app.use('/rotas', route);
 
 app.listen(PORT, () => {
-    console.log(`Servidor rodando em http://localhost:${PORT}/`);
+    logger.info(`Servidor rodando em http://localhost:${PORT}/`);
 });

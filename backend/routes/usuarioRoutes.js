@@ -4,6 +4,7 @@ const UsuarioDAO = require('../DAO/UsuarioDAO');
 const jwt = require('jsonwebtoken');
 const { ACCESS_TOKEN_KEY } = process.env;
 const authMiddleware = require('../middlewares/authMiddleware');
+const logger = require('../logs/logger.js')
 
 // Rotas públicas, não necessitam de middleware. 
 // Com a privacidade definida dessa forma fica possível cadastrar novos usuários e realizar login 
@@ -12,19 +13,26 @@ router.post('/', async (req, res) => {
     try {
         const novoUsuario = await UsuarioDAO.criar(req.body);
 
+        logger.info('Novo usuário criado com sucesso!', {
+            id_usuario: novoUsuario.id_usuario,
+            nome_completo: novoUsuario.nome_completo,
+            email: novoUsuario.email
+        });
+
         res.status(201).json({
+            message: 'Novo usuário criado com sucesso!',
             id_usuario: novoUsuario.id_usuario,
             nome_completo: novoUsuario.nome_completo,
             email: novoUsuario.email
         });
 
     } catch (error) {
-        console.error("Erro ao criar usuário:", error);
+        logger.error("Falha ao tentar criar usuário.", error)
 
-        if (error.message.includes('E-mail já cadastrado'))
+        if (error.message.includes('E-mail já cadastrado')) {
+            logger.warn(`Atenção: tentativa de cadastro com um e-mail duplicado ${req.body.email}`);
             return res.status(409).json({ error: error.message });
-
-        res.status(500).json({ error: 'Erro ao criar usuário.' });
+        }
     }
 });
 
@@ -34,7 +42,10 @@ router.post('/login', async (req, res) => {
     try {
         const usuario = await UsuarioDAO.validarLogin(email, senha);
 
-        if (!usuario) return res.status(401).json({ error: "Email ou senha inválidos!" });
+        if (!usuario) {
+            logger.warn("Atenção: credenciais de login incorretas!");
+            return res.status(401).json({ error: "Email ou senha inválidos!" });
+        }
         const token = jwt.sign(
             { id: usuario.id_usuario, email: usuario.email },
             process.env.ACCESS_TOKEN_KEY,
@@ -49,10 +60,14 @@ router.post('/login', async (req, res) => {
             maxAge: 60 * 60 * 1000
         }); // Quanto tempo dura um cookie (uma hora)
 
+        logger.info('Usuário logado com sucesso.', {
+            idUsuario: usuario.id_usuario,
+            email: usuario.email
+        })
         return res.status(200).json({ message: "Usuário logado!" });
 
     } catch (error) {
-        console.error("Erro no login:", error);
+        logger.error("Erro no login:", error);
         res.status(500).json({ error: "Erro ao tentar realizar login." });
     }
 });
@@ -63,11 +78,11 @@ router.use(authMiddleware);
 router.get('/', async (req, res) => {
     try {
         const usuarios = await UsuarioDAO.buscarTodos();
-
+        logger.info("Usuários encontrados com sucesso!");
         res.json(usuarios);
 
     } catch (error) {
-        console.error("Erro ao listar usuários:", error);
+        logger.error("Erro ao listar usuários", error);
         res.status(500).json({ error: 'Erro ao buscar usuários.' });
     }
 });
@@ -76,16 +91,17 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const usuario = await UsuarioDAO.buscarPorId(req.params.id);
-
+        logger.info(`Usuários encontrados por id ${id.params.id} com sucesso!`);
         res.json(usuario);
 
     } catch (error) {
-        console.error("Erro ao buscar usuário:", error);
-
-        if (error.message.includes('não encontrado'))
+        
+        if (error.message.includes('não encontrado')){
+            logger.error("Usuário não encontrado (404).");
             return res.status(404).json({ error: error.message });
-
+        }     
         res.status(500).json({ error: 'Erro ao buscar usuário.' });
+        logger.error("Erro ao buscar usuários", error);
     }
 });
 
@@ -93,14 +109,17 @@ router.get('/:id', async (req, res) => {
 router.put('/:id', async (req, res) => {
     try {
         const usuarioAtualizado = await UsuarioDAO.atualizar(req.params.id, req.body);
-
         res.json({ message: 'Usuário atualizado com sucesso!', usuario: usuarioAtualizado });
-
+        logger.info("Usuário atualizado com sucesso!", {
+            idUsuario: req.params.id
+        });
     } catch (error) {
-        console.error("Erro ao atualizar usuário:", error);
-        if (error.message.includes('não encontrado'))
+        logger.error("Erro ao atualizar usuário:", error);
+        if (error.message.includes('não encontrado')){
+            logger.error("Usuário não encontrado (404).")
             return res.status(404).json({ error: error.message });
-
+        }
+        logger.error("Erro ao atualizar usuário", error);
         res.status(500).json({ error: 'Erro ao atualizar usuário.' });
     }
 });
@@ -110,12 +129,16 @@ router.delete('/:id', async (req, res) => {
     try {
         await UsuarioDAO.deletar(req.params.id);
         res.json({ message: 'Usuário excluído com sucesso.' });
+        logger.info(`Usuário id ${req.params.id} excluido com sucesso.`);
     } catch (error) {
-        console.error("Erro ao deletar usuário:", error);
-        if (error.message.includes('não encontrado'))
+        logger.error("Erro ao deletar usuário:", error);
+        
+        if (error.message.includes('não encontrado')){
+            logger.error(`Erro ao deletar usuário id ${req.params.id}`);
             return res.status(404).json({ error: error.message });
-
+        }
         res.status(500).json({ error: 'Erro ao excluir usuário.' });
+        logger.error("Erro ao excluir usuário.");
     }
 });
 

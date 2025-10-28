@@ -1,0 +1,8 @@
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-10-28T20:20:20.512Z"}
+{"level":"warn","message":"oioi","timestamp":"2025-10-28T20:20:20.725Z"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-10-28T20:20:20.756Z"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-10-28T20:20:20.827Z"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-10-28T20:23:19.111Z"}
+{"level":"warn","message":"oioi","timestamp":"2025-10-28T20:23:19.306Z"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-10-28T20:23:19.328Z"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-10-28T20:23:19.392Z"}

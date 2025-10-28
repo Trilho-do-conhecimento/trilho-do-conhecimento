@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router(); 
 const ListaPresencaDAO = require('../DAO/ListaPresencaDAO'); 
 const ListaPresencaUsuarioDAO = require('../DAO/ListaPresencaUsuarioDAO'); 
+const logger = require('../logs/logger.js')
 
 //enum 
 const StatusAssinatura = { 
@@ -14,10 +15,11 @@ const StatusAssinatura = {
 router.post('/', async (req, res) => { 
     try { 
         const lista = await ListaPresencaDAO.criar(req.body); 
+        logger.info("Nova lista criada com sucesso.")
         res.status(201).json(lista); 
 
     } catch (err) { 
-        console.error("Erro ao criar lista:", err); 
+        logger.error("Erro ao criar lista", err);
         res.status(500).json({ error: 'Não foi possível criar a lista.' }); 
 
     } 
@@ -31,7 +33,7 @@ router.get('/', async (req, res) => {
         res.json(listas); 
 
     } catch (err) { 
-        console.error("Erro ao listar listas:", err); 
+        logger.error("Erro ao listar listas.", err);
         res.status(500).json({ error: 'Erro ao buscar listas de presença.' }); 
 
     } 
@@ -42,11 +44,14 @@ router.get('/:id', async (req, res) => {
 
     try { 
         const lista = await ListaPresencaDAO.buscarPorId(req.params.id, { includeAlunos: true }); 
-        if (!lista) return res.status(404).json({ error: 'Lista não encontrada.' }); 
+        if (!lista) {
+            logger.warn(`Atenção: lista id ${req.params.id} não encontrada (404).`);
+            return res.status(404).json({ error: 'Lista não encontrada.' }); 
+        }    
         res.json(lista); 
 
     } catch (err) { 
-        console.error("Erro ao buscar lista:", err); 
+        logger.error("Erro ao buscar lista.", err);
         res.status(500).json({ error: 'Erro ao buscar lista de presença.' }); 
     } 
 });
@@ -59,13 +64,14 @@ router.put('/:id', async (req, res) => {
         res.json(listaAtualizada); 
 
     } catch (err) { 
-        console.error("Erro ao atualizar lista:", err); 
+        logger.error("Erro ao atualizar lista:", err); 
         if (err.message.includes('não encontrada')) { 
             res.status(404).json({ error: err.message }); 
+            logger.error("Erro ao atualizar lista (404):", err); 
 
         } else { 
             res.status(500).json({ error: 'Erro ao atualizar a lista de presença.' }); 
-
+            logger.error("Erro ao atualizar lista (404):", err); 
         } 
     } 
 }); 
@@ -76,6 +82,7 @@ router.put('/:id/aluno/:id_usuario', async (req, res) => {
     try { 
         const { status_assinatura } = req.body; 
         if (!Object.values(StatusAssinatura).includes(status_assinatura)) { 
+            logger.error("Status status inválido", error);
             return res.status(400).json({ error: 'Status inválido.' }); 
 
         } 
@@ -87,12 +94,16 @@ router.put('/:id/aluno/:id_usuario', async (req, res) => {
 
         ); 
 
-        if (atualizado === 0) 
+        if (atualizado === 0) {
+            logger.error("Aluno ou lista não encontrado (404):", err); 
             return res.status(404).json({ error: 'Aluno ou lista não encontrado.' }); 
+        }
+
+        logger.info("Status atualizado com sucesso!");
         res.json({ message: 'Status atualizado com sucesso!' }); 
 
     } catch (err) { 
-        console.error("Erro ao atualizar status:", err); 
+        logger.error("Erro ao atualizar status:", err); 
         res.status(500).json({ error: 'Erro ao atualizar status de presença.' }); 
 
     } 
@@ -103,15 +114,17 @@ router.delete('/:id', async (req, res) => {
 
     try { 
         await ListaPresencaDAO.deletar(req.params.id); 
+        logger.warn(`Atenção: falha na tentativa de deletar o lista de presença ID ${req.params.id}. Não encontrado (404).`);
         res.json({ message: 'Lista de presença e registros de alunos deletados com sucesso!' }); 
 
     } catch (err) { 
-        console.error("Erro ao deletar lista:", err); 
+        logger.error("Erro ao deletar lista:", err); 
         if (err.message.includes('não encontrada')) { 
             res.status(404).json({ error: err.message }); 
-
+            logger.error("Erro ao deletar lista (404):", err); 
         } else { 
             res.status(500).json({ error: 'Erro ao deletar lista.' }); 
+            logger.error("Erro ao deletar lista:", err); 
         } 
     } 
 }); 

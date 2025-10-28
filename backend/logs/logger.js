@@ -2,6 +2,7 @@ const winston = require('winston');
 const MySQLTransport = require('winston-mysql')
 const { timestamp, errors, json, combine, colorize, simple } = winston.format;
 const { DB_HOST, DB_USER, DB_PASS, DB_NAME_LOGGER } = process.env;
+const path = require('path');
 
 const dbConfig = {
     client: "mysql2",
@@ -17,7 +18,7 @@ const transporteMySQL = new MySQLTransport(dbConfig);
 // função para criar um logger 
 const logger = winston.createLogger({
     // definir o nível mínimo para os transports
-    level: "debug",
+    level: "info",
     // define o transport 
     // formato de registro dos logs (como será salvo?)  
     format: combine(
@@ -28,9 +29,9 @@ const logger = winston.createLogger({
     // onde será salvo 
     transports: [
         // erros crítios
-        new winston.transports.File({ filename: "../logs/error.log", level: "error" }),
+        new winston.transports.File({ filename: path.join(__dirname, 'error.log'), level: "error" }),
         // erros mais básicos
-        new winston.transports.File({ filename: "../logs/combined.log" }),
+        new winston.transports.File({ filename: path.join(__dirname, 'combined.log') }),
         // mysql
         transporteMySQL
     ]
@@ -40,7 +41,7 @@ if (process.env.NODE_ENV !== 'production') {
     logger.add(new winston.transports.Console({
         // Vão existir dois arquivos de texto sempre, mas essa parte do 
         // código permite que apareça no terminal também
-        level: "debug",
+        level: "info",
         format: combine(
             // colore o nível para facilitar a leitura no terminal 
             colorize(),

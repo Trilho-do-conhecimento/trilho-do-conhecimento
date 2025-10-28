@@ -1,5 +1,6 @@
 require('dotenv').config({path: '../.env'});
 
+const logger = require("../logs/logger");
 const Sequelize = require("sequelize");
 
 const {DB_USER, DB_NAME, DB_PASS, DB_HOST} = process.env;
@@ -8,7 +9,7 @@ const {DB_USER, DB_NAME, DB_PASS, DB_HOST} = process.env;
 // const DB_PASS = process.env.DB_PASS;
 // const DB_HOST = process.env.DB_HOST;
 
-console.log(`Tentando conectar com o usuário ${DB_USER}`)
+logger.info(`Tentando conectar com o usuário ${DB_USER}`)
 
 const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASS, {
     host : DB_HOST,
@@ -17,10 +18,9 @@ const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASS, {
 
 sequelize.sync()
 .then(function(){
-    console.log("Conexão com o banco de dados realizada com sucesso!");
+    logger.info("Conexão com o banco de dados realizada com sucesso!");
 }).catch((err) => {
-    console.log("Erro: a conexão com o banco de dados falhou.")
-    console.log(err.message);
+    logger.error("Erro: a conexão com o banco de dados falhou.", err.message);
 });
 
 module.exports = sequelize;
