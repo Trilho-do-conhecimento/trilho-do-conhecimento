@@ -30,7 +30,7 @@
         .site-header {
             background-color: var(--primary-blue);
             padding: 15px 20px;
-            color: var(--white-color);
+            color: var(--primary-blue);
             display: flex;
             justify-content: space-between;
             align-items: center;
