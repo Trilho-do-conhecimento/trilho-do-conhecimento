@@ -4,30 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histórico de Treinamentos</title>
-    
+
+    <!-- FONTES E ÍCONES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="..\css\historicoTreinamentosAluno_style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
-<body>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" 
+        rel="stylesheet"
+    >
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"
+    />
 
+    <!-- ESTILO -->
+    <link rel="stylesheet" href="../css/historicoTreinamentosAluno_style.css">
+</head>
+
+<body>
+    <!-- ===== CABEÇALHO PADRÃO ===== -->
     <header class="site-header">
         <div class="header-left">
             <div class="logo">
-                <img src="..\assets\logo metro.png" alt="Logo Metrô">
+                <img src="../assets/logo metro.png" alt="Logo Metrô de São Paulo">
             </div>
             <div class="search-bar">
                 <input type="text" placeholder="Pesquisar">
-                <button type="submit"><i class="fa fa-search"></i></button>
+                <button type="submit" aria-label="Pesquisar"><i class="fa fa-search"></i></button>
             </div>
         </div>
         <div class="header-right">
-             <nav class="main-nav">
+            <nav class="main-nav">
                 <a href="#">Institucional</a>
                 <a href="#">Ajuda</a>
-                <a href="#">Início</a>
+                <a href="../pages/menuAluno.html">Início</a>
             </nav>
         </div>
     </header>
@@ -35,16 +48,19 @@
     <main>
         <div class="container">
             <h1 class="page-title">Histórico de treinamentos</h1>
-            <p class="page-subtitle">Acesse o seu histórico de treinamentos; treinamentos futuros; situação dos treinamentos e emição do certificado.</p>
-            
-            <div class="controls-container">
-                <button class="filter-button">
-                    Filtro
-                    <i class="fas fa-filter"></i>
-                </button>
-            </div>
+            <p class="page-subtitle">
+                Acompanhe seus treinamentos concluídos, em andamento e futuros.
+                Visualize sua presença em cada módulo e emita certificados disponíveis.
+            </p>
 
-            <div class="table-container">
+            <section class="controls-container">
+                <button class="filter-button" aria-label="Filtrar treinamentos">
+                    Filtro <i class="fas fa-filter"></i>
+                </button>
+            </section>
+
+          
+            <section class="table-container">
                 <table class="trainings-table">
                     <thead>
                         <tr>
@@ -52,74 +68,17 @@
                             <th>Treinamento</th>
                             <th style="width: 15%;">Data</th>
                             <th style="width: 15%;">Status</th>
-                            <th style="width: 20%;"></th>
+                            <th style="width: 20%;">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="expand-icon">></td>
-                            <td class="training-name"><a href="#">Manipul.</a></td>
-                            <td>07/10/2025</td>
-                            <td><span class="status status-concluido">Concluído</span></td>
-                            <td><a href="#" class="action-link">Emitir certificado</a></td>
-                        </tr>
-
-                        <tr class="training-main-row">
-                            <td class="expand-icon">V</td>
-                            <td class="training-name"><a href="#">Primeiros socorros</a></td>
-                            <td>09/09/2025</td>
-                            <td><span class="status status-andamento">Em andamento</span></td>
-                            <td><span class="action-disabled">Emitir certificado</span></td>
-                        </tr>
-                        <tr class="sub-row">
-                            <td></td>
-                            <td class="sub-row-title">Introdução</td>
-                            <td>09/09/2025</td>
-                            <td><span class="status status-presente">Presente</span></td>
-                            <td></td>
-                        </tr>
-                         <tr class="sub-row">
-                            <td></td>
-                            <td class="sub-row-title">Mód 1</td>
-                            <td>16/09/2025</td>
-                            <td><span class="status status-presente">Presente</span></td>
-                            <td></td>
-                        </tr>
-                         <tr class="sub-row">
-                            <td></td>
-                            <td class="sub-row-title">Mód 2</td>
-                            <td>23/09/2025</td>
-                            <td><span class="status status-faltante">Faltante</span></td>
-                            <td></td>
-                        </tr>
-                         <tr class="sub-row">
-                            <td></td>
-                            <td class="sub-row-title">Mód 3</td>
-                            <td>30/09/2025</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td class="expand-icon">></td>
-                            <td class="training-name"><a href="#">EPI</a></td>
-                            <td>10/08/2025</td>
-                            <td><span class="status status-concluido">Concluído</span></td>
-                            <td><span class="action-disabled">Certificado emitido</span></td>
-                        </tr>
-
-                        <tr><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td></td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td></td><td></td><td></td><td></td><td></td></tr>
-
+                
                     </tbody>
                 </table>
-            </div>
+            </section>
         </div>
     </main>
-    
+
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -131,5 +90,10 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
+    <script type="module" src="../js/listeners/historicoTreinamentosAlunoListeners.js"></script>
 </body>
 </html>
+
+<!-- Atenção! Mexi no html para que ele responda a renderização dos elementos de cada treinamento 
+ de acordo com o controller, então de primeira mão não irão aparecer nenhum treinamento, apenas com 
+ uma requisição do usuário-->
