@@ -1,6 +1,5 @@
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
-const userServie = require('../services/usuarioService');
 const logger = require('../logs/logger')
 
 // token armazenado em cookie, aumenta o nível de segurança contra XSS.

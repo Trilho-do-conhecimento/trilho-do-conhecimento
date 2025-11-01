@@ -1,19 +1,9 @@
+require('dotenv').config();
+
 const winston = require('winston');
-const MySQLTransport = require('winston-mysql')
-const { timestamp, errors, json, combine, colorize, simple } = winston.format;
-const { DB_HOST, DB_USER, DB_PASS, DB_NAME_LOGGER } = process.env;
+const { timestamp, json, combine, colorize, simple, printf} = winston.format;
 const path = require('path');
-
-const dbConfig = {
-    client: "mysql2",
-    host: DB_HOST,
-    user: DB_USER,
-    password: DB_PASS,
-    database: DB_NAME_LOGGER,
-    table: "infologs"
-}
-
-const transporteMySQL = new MySQLTransport(dbConfig);
+const MySQLTransport = require('./mysqlTransport')
 
 // função para criar um logger 
 const logger = winston.createLogger({
@@ -22,18 +12,21 @@ const logger = winston.createLogger({
     // define o transport 
     // formato de registro dos logs (como será salvo?)  
     format: combine(
-        timestamp(),
-        errors({ stack: true }), // registro de chamadas de função quando o erro ocorreu (o que fez ele chegar no topo da pilha?)
+        timestamp({format: 'YYYY-MM-DD HH:mm:ss'}),
+        printf((timestamp, level, message)=>{
+            return `${timestamp} [${level}]: ${message}`
+        }),
         json() // armazena no json
     ),
     // onde será salvo 
     transports: [
+        new winston.transports.Console(),
         // erros crítios
         new winston.transports.File({ filename: path.join(__dirname, 'error.log'), level: "error" }),
         // erros mais básicos
         new winston.transports.File({ filename: path.join(__dirname, 'combined.log') }),
         // mysql
-        transporteMySQL
+        new MySQLTransport()
     ]
 });
 
