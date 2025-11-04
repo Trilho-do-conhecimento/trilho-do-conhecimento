@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset();
     } catch (err) {
       console.error("Erro ao salvar lista:", err);
-      alert("❌ Erro ao salvar a lista de presença.\n" + (err?.message || ""));
+      alert(" Erro ao salvar a lista de presença.\n" + (err?.message || ""));
     } finally {
       btnSalvar.removeAttribute("aria-busy");
     }
