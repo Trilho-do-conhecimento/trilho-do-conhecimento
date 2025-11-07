@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Certificados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Caminho corrigido de ..\ para ../ -->
+    <link rel="stylesheet" href="../css/telaCertificado_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-left">
+            <!-- Caminho corrigido de ..\ para ../ -->
+            <div class="logo"><img src="../assets/metro_logo.png" alt="Logo Metrô"></div>
+            <div class="search-bar"><input type="text" placeholder="Pesquisar"><button type="submit"><i
+                        class="fa fa-search"></i></button></div>
+        </div>
+        <div class="header-right">
+            <nav class="main-nav"><a href="#">Institucional</a><a href="#">Ajuda</a><a href="#">Início</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="page-title">Certificados</h1>
+
+            <!-- 
+Container de Feedback: 
+Usado para mostrar mensagens de "Carregando..." ou Erro.
+-->
+            <div id="loading-certificados" style="display: none; font-size: 1.2rem; text-align: center; padding: 20px;">
+                <i class="fa fa-spinner fa-spin"></i> Carregando certificados...
+            </div>
+            <div id="error-message" style="color: red; text-align: center; padding: 20px;"></div>
+            <!-- 
+GRID DINÂMICO:
+Este container agora está vazio. 
+O JS vai preenchê-lo com os dados da API.
+-->
+            <div class="certificate-grid" id="certificate-grid">
+                <!-- Os <div class="certificate-item"> serão inseridos aqui pelo JavaScript -->
+            </div>
+        </div>
+    </main>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper">
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script> new window.VLibras.Widget('https://vlibras.gov.br/app'); </script>
+    <!-- 
+NOSSO SCRIPT:
+Carrega o JS que busca os dados da API. 
+O caminho é ../js/ porque este HTML está em 'pages/'.
+-->
+    <script src="../js/certificados.js"></script>
+</body>
+
+</html>

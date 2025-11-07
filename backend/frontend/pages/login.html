@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Controle de Treinamentos</title>
+    <link rel="stylesheet" href="..\css\login_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+<body>
+
+    <main class="login-container" style="height: 100vh">
+        
+        <section class="login-form-area"  style="height: 90vh; padding-top: 15vh;">
+            <div class="login-content">
+                <img src="..\assets\logo metro.png" alt="Logo Metrô" class="logo-metro">
+                
+                <h1 class="login-title">CONTROLE DE TREINAMENTOS</h1>
+                <h2 class="login-subtitle">Acesse sua conta</h2>
+
+                <form class="login-form" action="#">
+                    <div class="form-group">
+                        <fieldset>
+                            <legend>E-mail</legend>
+                            <input type="email" id="email" name="email">
+                        </fieldset>
+                    </div>
+
+                    <div class="form-group">
+                        <fieldset>
+                            <legend>Senha</legend>
+                            <input type="password" id="senha" name="senha">
+                        </fieldset>
+                        <div class="password-options">
+                            <a href="#" class="forgot-password" id="forgot-password-link">Esqueceu a senha?</a>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-login">Entrar</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="login-image-area">
+            <div class="image-background-curve"></div>
+            <img src="/backend/frontend/assets/operária.png" alt="Trabalhadora da construção" class="worker-image">
+        </section>
+
+    </main>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <h2>Recuperar Senha</h2>
+            <p>Digite seu e-mail cadastrado para enviarmos um link de recuperação.</p>
+            
+            <form class="modal-form" id="recovery-form">
+                <div class="form-group">
+                    <fieldset>
+                        <legend>E-mail</legend>
+                        <input type="email" id="recovery-email" name="recovery-email" required>
+                    </fieldset>
+                </div>
+                <button type="submit" class="btn-login">Enviar</button>
+            </form>
+        </div>
+    </div>
+    
+    <div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper"><div class="vw-plugin-top-wrapper"></div></div></div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script> new window.VLibras.Widget('https://vlibras.gov.br/app'); </script>
+    
+    <!--Caminho para o listener de eventos -->
+    <script src="../js/listeners/loginListeners.js"></script>
+     <script>
+        // Pegar os elementos do DOM
+        const openModalLink = document.getElementById('forgot-password-link');
+        const closeModalBtn = document.getElementById('modal-close');
+        const modalOverlay = document.getElementById('modal-overlay');
+        const recoveryForm = document.getElementById('recovery-form');
+
+        // Abrir o modal
+        openModalLink.addEventListener('click', function(e) {
+            e.preventDefault(); // Impede que o link '#' mude a URL
+            modalOverlay.classList.add('active');
+        });
+
+        // Função para fechar o modal
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+        }
+
+        // Fechar o modal (pelo botão 'X')
+        closeModalBtn.addEventListener('click', closeModal);
+
+        // Fechar o modal (clicando fora da caixa de conteúdo)
+        modalOverlay.addEventListener('click', function(e) {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+
+        // Simular envio de e-mail ao submeter o formulário
+        recoveryForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('recovery-email').value;
+
+            // Simulação de envio
+            alert('Funcionalidade de front-end concluída!\n\nUm e-mail de recuperação seria enviado para: ' + email + '\n\n(Esta ação precisa de um servidor back-end para funcionar de verdade.)');
+
+            closeModal(); // Fecha o modal após o envio
+        });
+    </script>
+</body>
+</html>

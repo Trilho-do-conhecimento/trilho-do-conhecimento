@@ -1,223 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle de Treinamentos</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="..\css\menuAluno_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style>
-        /* ---- RESET E VARIÁVEIS GLOBAIS ---- */
-        :root {
-            --primary-blue: #001489;
-            --light-gray: #f4f4f4;
-            --text-color: #333;
-            --white-color: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--white-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* ---- HEADER (Padrão) ---- */
-        .site-header {
-            background-color: var(--primary-blue);
-            padding: 15px 0;
-            color: var(--white-color);
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .logo img {
-            max-height: 40px;
-        }
-
-        .search-bar {
-            display: flex;
-            align-items: center;
-            border: 1px solid var(--white-color);
-            border-radius: 20px;
-            overflow: hidden;
-            background-color: var(--white-color);
-        }
-
-        .search-bar input {
-            border: none;
-            padding: 8px 15px;
-            outline: none;
-            font-size: 1rem;
-        }
-
-        .search-bar button {
-            background-color: var(--white-color);
-            border: none;
-            padding: 0 15px;
-            cursor: pointer;
-            color: var(--primary-blue);
-            font-size: 1rem;
-        }
-
-        .main-nav a {
-            color: var(--white-color);
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
-        }
-
-        /* ---- SEÇÃO DE CONTROLE ---- */
-        .trainings-control {
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .greeting {
-            font-size: 1.2rem;
-            color: #555;
-        }
-
-        .trainings-control h1 {
-            color: var(--primary-blue);
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-        }
-
-        .trainings-control h1::after {
-            content: '';
-            display: block;
-            width: 120px;
-            height: 3px;
-            background-color: var(--primary-blue);
-            margin: 10px auto 0;
-        }
-        
-        .button-group {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            max-width: 600px;
-            margin: 50px auto 0; /* Espaçamento entre título e botões */
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            text-align: center;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            background-color: var(--primary-blue);
-            color: var(--white-color);
-            flex-basis: 250px;
-            flex-grow: 1;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        /* ---- SEÇÃO SOBRE NÓS (Padrão) ---- */
-        .about-us {
-            background-color: var(--primary-blue);
-            color: var(--white-color);
-            padding: 60px 0 0 0;
-            overflow: hidden;
-        }
-
-        .about-us h2 {
-            text-align: left;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .about-us h2::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 3px;
-            background-color: var(--white-color);
-            margin: 10px 0 0 0;
-        }
-
-        .about-us-container {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .about-us-text { flex: 1; }
-
-        .about-us-text p {
-            font-size: 1.1rem;
-            max-width: 450px;
-        }
-
-        .about-us-image { flex: 1; text-align: right; }
-
-        .about-us-image img {
-            max-width: 100%;
-            display: block;
-        }
-
-        /* ---- RESPONSIVIDADE ---- */
-        @media (max-width: 992px) {
-            .about-us-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .about-us h2 { text-align: center; }
-            .about-us h2::after { margin: 10px auto 0; }
-            .about-us-text { order: 2; padding-bottom: 40px; }
-            .about-us-image { order: 1; }
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 1.8rem; }
-            .header-container { flex-direction: column; gap: 15px; }
-            .trainings-control { padding: 60px 0; }
-        }
-    </style>
 </head>
+
 <body>
 
     <header class="site-header">
-        <div class="container header-container">
+        <div class="header-left">
             <div class="logo">
-                <img src="/backend/frontend/assets/logo metro.png" alt="Logo Metrô">
+                <img src="../assets/logo metro.png" alt="Logo Metrô">
             </div>
             <div class="search-bar">
-                <input type="text" placeholder="Pesquisar">
-                <button type="submit"><i class="fa fa-search"></i></button>
+                <input type="text" placeholder="Pesquisar" aria-label="Pesquisar conteúdo">
+                <button type="button" aria-label="Buscar"><i class="fa fa-search"></i></button>
             </div>
-            <nav class="main-nav">
+        </div>
+
+        <div class="header-right">
+            <nav class="main-nav" aria-label="Menu principal">
                 <a href="#">Institucional</a>
                 <a href="#">Ajuda</a>
             </nav>
@@ -229,7 +42,7 @@
             <div class="container">
                 <p class="greeting">Olá, usuário!</p>
                 <h1>CONTROLE DE TREINAMENTOS</h1>
-                
+
                 <div class="button-group">
                     <a href="#" class="btn">Meus treinamentos</a>
                     <a href="#" class="btn">Certificados</a>
@@ -253,7 +66,7 @@
             </div>
         </section>
     </main>
-    
+
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -264,6 +77,7 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-
+    <script type="module" src="../js/listeners/menuAlunoListeners.js"></script>
 </body>
+
 </html>

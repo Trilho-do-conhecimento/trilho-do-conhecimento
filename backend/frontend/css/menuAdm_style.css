@@ -1,0 +1,280 @@
+/* ---- RESET E VARIÁVEIS GLOBAIS ---- */
+        :root {
+            --primary-blue: #001489;
+            --accent-blue: #001489;
+            --light-gray: #f4f4f4;
+            --text-color: #333;
+            --white-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--white-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+
+        /* ---- HEADER (Padrão) ---- */
+        .site-header { background-color: var(--primary-blue); padding: 15px 20px; color: var(--white-color); display: flex; justify-content: space-between; align-items: center; }
+        .header-left, .header-right { display: flex; align-items: center; gap: 20px; }
+        .logo img { max-height: 40px; }
+        .search-bar { display: flex; align-items: center; border: 1px solid var(--white-color); border-radius: 20px; overflow: hidden; background-color: var(--white-color); }
+        .search-bar input { border: none; padding: 8px 15px; outline: none; font-size: 1rem; }
+        .search-bar button { background-color: var(--white-color); border: none; padding: 0 15px; cursor: pointer; color: var(--primary-blue); font-size: 1rem; }
+        .main-nav a { color: var(--white-color); text-decoration: none; margin: 0 10px; font-weight: 600; }
+
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        h1::after, h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--text-color);
+            margin: 10px auto 0;
+        }
+
+        /* ---- HEADER ---- */
+        .site-header {
+            background-color: var(--primary-blue);
+            padding: 15px 20px;
+            color: var(--white-color);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 40px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--white-color);
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: var(--white-color);
+        }
+
+        .search-bar input {
+            border: none;
+            padding: 8px 15px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .search-bar button {
+            background-color: var(--white-color);
+            border: none;
+            padding: 0 15px;
+            cursor: pointer;
+            color: var(--primary-blue);
+            font-size: 1rem;
+        }
+
+        .main-nav a {
+            color: var(--white-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+
+        .accessibility {
+            display: flex;
+            gap: 5px;
+        }
+
+
+        /* ---- SEÇÃO DE CONTROLE DE TREINAMENTOS ---- */
+        .trainings-control {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .greeting {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .trainings-control h1 {
+            color: var(--primary-blue);
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+
+        .trainings-control h1::after {
+            background-color: var(--primary-blue);
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 700px;
+            margin: 0 auto 20px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: var(--white-color);
+        }
+        .btn-primary:hover {
+            background-color: #00005a;
+        }
+
+        .single-button-container {
+            margin-top: 30px;
+        }
+
+        .btn-secondary {
+            background-color: var(--accent-blue);
+            color: var(--white-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-secondary:hover {
+            background-color: #00005a;
+        }
+
+
+        /* ---- SEÇÃO SOBRE NÓS ---- */
+        .about-us {
+            background-color: var(--primary-blue);
+            color: var(--white-color);
+            padding: 60px 0 0 0; /* No padding at the bottom */
+            overflow: hidden; /* Prevents image overflow issues */
+        }
+
+        .about-us-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-us-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .about-us-text h2 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .about-us-text h2::after {
+            margin: 10px 0 0 0; /* Align underline to the left */
+            background-color: var(--white-color);
+        }
+
+        .about-us-text p {
+            font-size: 1.1rem;
+            max-width: 450px;
+        }
+
+        .about-us-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .about-us-image img {
+            max-width: 100%;
+            display: block; /* Removes bottom space under image */
+        }
+
+        /* ---- RESPONSIVIDADE ---- */
+
+        /* Tablets e telas menores */
+        @media (max-width: 992px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .about-us-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-us-text {
+                order: 2; /* Texto vem depois da imagem */
+                text-align: center;
+                padding-bottom: 40px;
+            }
+            .about-us-text h2, .about-us-text h2::after {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .about-us-image {
+                order: 1; /* Imagem vem primeiro */
+                text-align: center;
+            }
+        }
+
+        /* Celulares */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .button-grid {
+                grid-template-columns: 1fr; /* Uma coluna */
+            }
+
+            .header-container {
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: center;
+            }
+
+            .logo {
+                flex-basis: 50%;
+            }
+
+            .accessibility {
+                flex-basis: 50%;
+                justify-content: flex-end;
+            }
+
+            .search-bar, .main-nav {
+                flex-basis: 100%;
+                justify-content: center;
+                margin-top: 15px;
+            }
+        }
