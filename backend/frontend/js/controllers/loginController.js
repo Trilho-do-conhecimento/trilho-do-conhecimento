@@ -15,8 +15,11 @@ export async function handleLogin(event) {
   try {
     const response = await loginUser(email, senha);
     if (response.success) {
-      // Redireciona conforme o tipo de usuário
-      window.location.href = "menuAdm.html";
+      if (response.userType === 'admin') {
+                window.location.href = "/pages/menuAdm.html"; 
+            } else {
+                window.location.href = "/pages/menuAluno.html"; 
+            }
     } else {
       alert(response.message || "Usuário ou senha inválidos.");
     }

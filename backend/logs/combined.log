@@ -744,3 +744,60 @@
 {"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:53:50"}
 {"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:53:50"}
 {"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 08:54:01"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 09:52:03"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 09:52:03"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 09:52:03"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 09:53:52"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 09:55:34"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 09:55:34"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 09:55:34"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 09:55:35"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 09:56:59"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 09:56:59"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 09:56:59"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 09:57:08"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 09:57:08"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 09:57:08"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 09:57:11"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 09:57:11"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 09:57:12"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 09:57:13"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 09:57:14"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 09:57:14"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 09:57:17"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 09:57:17"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 09:57:18"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 09:57:27"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 09:58:34"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 09:58:35"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 09:58:35"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 09:58:37"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 09:58:37"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 09:58:37"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 09:58:47"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 09:58:47"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 09:58:47"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 09:59:00"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 09:59:10"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 09:59:11"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 09:59:11"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 09:59:13"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 09:59:13"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 09:59:13"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 09:59:18"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 09:59:18"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 09:59:18"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 09:59:19"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 10:00:40"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 10:00:47"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:05:00"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:05:00"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:05:00"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:05:09"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:05:09"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:05:09"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 10:06:03"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:12:09"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:12:09"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:12:09"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 10:12:22"}
