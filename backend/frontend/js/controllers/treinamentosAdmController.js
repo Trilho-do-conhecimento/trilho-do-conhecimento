@@ -1,4 +1,4 @@
-import { buscarTreinamentos } from "../services/treinamentosAdmService.js";
+import { buscarTreinamentos } from "../../../../services/treinamentosAdmService.js";
 
 export async function initTreinamentosAdm() {
   try {

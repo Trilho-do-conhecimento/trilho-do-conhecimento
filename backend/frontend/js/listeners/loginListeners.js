@@ -1,5 +1,3 @@
-// Caminho: backend/frontend/js/listeners/loginListeners.js
-
 import { handleLogin, handleOpenModal, handleCloseModal, handleRecoverySubmit } from "../controllers/loginController.js";
 
 // Selecionar elementos do DOM
@@ -24,4 +22,4 @@ modalOverlay.addEventListener("click", (e) => {
 });
 
 // Envio do formulário de recuperação
-recoveryForm.addEventListener("submit", handleRecoverySubmit);
+recoveryForm.addEventListener("submit", handleRecoverySubmit);  

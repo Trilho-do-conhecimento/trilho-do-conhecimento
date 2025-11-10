@@ -233,3 +233,514 @@
 {"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-01 14:41:20"}
 {"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-01 14:41:20"}
 {"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-01 14:41:20"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 19:49:41"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 19:49:41"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 19:49:41"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 19:56:36"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 19:56:37"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 19:56:37"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:04:33"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:04:33"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:04:33"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:04:36"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:04:36"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:04:36"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:04:53"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:04:53"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:04:53"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:04:56"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:04:56"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:04:56"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:05:02"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:05:02"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:05:02"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:05:03"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:05:03"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:05:03"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:05:05"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:05:05"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:05:05"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:05:07"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:05:07"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:05:08"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:05:17"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:05:17"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:05:18"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:06:11"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:06:12"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:06:12"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:06:15"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:06:15"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:06:15"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:06:18"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:06:18"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:06:18"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:07:20"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:07:21"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:07:21"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:07:25"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:07:25"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:07:25"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:07:27"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:07:27"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:07:27"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:07:31"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:07:31"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:07:31"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:07:34"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:07:34"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:07:34"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:07:38"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:07:38"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:07:38"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:07:45"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:07:45"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:07:45"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:07:47"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:07:47"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:07:47"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:07:50"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:07:51"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:07:51"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:07:52"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:07:53"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:07:53"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:07:54"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:07:54"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:07:55"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:07:57"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:07:57"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:07:57"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:07:59"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:08:00"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:08:00"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:08:14"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:08:14"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:08:14"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:09:31"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:09:31"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:09:32"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:09:32"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:09:32"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:11:54"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:11:54"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:11:54"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:11:56"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:11:56"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:11:56"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:12:14"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:12:14"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:12:14"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:12:16"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:12:17"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:12:17"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:14:50"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:14:50"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:14:50"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:14:52"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:14:52"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:14:53"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:15:03"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:15:03"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:15:03"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:15:50"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:15:50"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:15:50"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:15:53"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:15:53"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:15:53"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:15:56"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:15:56"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:15:56"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:15:57"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:15:57"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:15:57"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:15:59"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:16:00"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:16:00"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:17:08"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:17:09"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:17:09"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:17:24"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:17:24"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:17:24"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:17:31"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:17:31"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:17:31"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:17:34"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:17:34"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:17:34"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:17:39"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:17:40"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:17:40"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:17:42"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:17:42"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:17:42"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:17:59"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:17:59"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:18:00"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:18:08"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:18:08"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:18:08"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:18:09"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:18:09"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:18:09"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:18:11"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:18:11"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:18:11"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:18:17"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:18:17"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:18:17"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:18:23"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:18:23"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:18:23"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:19:52"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:19:52"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:19:53"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:20:13"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:20:13"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:20:13"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:21:55"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:21:55"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:21:55"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:21:58"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:21:58"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:21:58"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:24:55"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:24:55"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:24:55"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:29:30"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:29:31"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:29:31"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:30:35"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:30:36"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:30:36"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:30:47"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:30:47"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:30:47"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:31:17"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:31:17"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:31:17"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:31:41"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:31:42"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:31:42"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:31:53"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:31:53"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:31:53"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:32:39"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:32:39"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:32:39"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:33:49"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:33:50"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:33:50"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:34:13"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:34:13"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:34:13"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:34:19"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:34:19"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:34:19"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:34:21"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:34:21"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:34:21"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:34:27"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:34:27"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:34:27"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:34:30"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:34:31"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:34:31"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:34:36"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:34:36"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:34:36"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:34:38"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:34:38"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:34:38"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:34:40"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:34:40"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:34:40"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:34:43"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:34:43"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:34:43"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:34:45"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:34:45"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:34:45"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:34:48"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:34:48"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:34:48"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:35:10"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:35:10"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:35:10"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:35:29"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:35:30"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:35:30"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:35:57"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:35:57"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:35:57"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:35:59"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:35:59"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:35:59"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:36:02"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:36:02"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:36:02"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:37:39"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:37:39"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:37:39"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:37:43"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:37:43"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:37:43"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:39:00"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:39:00"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:39:00"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:39:24"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:39:24"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:39:24"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:39:27"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:39:27"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:39:27"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:39:30"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:39:30"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:39:30"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:39:44"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:39:44"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:39:44"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:39:47"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:39:47"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:39:47"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:39:49"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:39:49"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:39:49"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:39:50"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:39:50"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:39:50"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:39:53"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:39:53"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:39:53"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:39:54"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:39:54"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:39:55"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:39:56"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:39:56"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:39:56"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-09 20:39:59"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-09 20:39:59"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-09 20:39:59"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-09 20:43:48"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-09 20:43:55"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-09 20:44:21"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 07:52:06"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 07:52:06"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 07:52:06"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 07:52:32"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 07:52:40"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 07:58:30"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 07:58:31"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 07:58:31"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 07:58:45"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 07:58:50"}
+{"level":"warn","message":"Atenção: credenciais de login incorretas!","timestamp":"2025-11-10 07:59:43"}
+{"level":"warn","message":"Atenção: credenciais de login incorretas!","timestamp":"2025-11-10 07:59:43"}
+{"level":"warn","message":"Atenção: credenciais de login incorretas!","timestamp":"2025-11-10 07:59:43"}
+{"level":"warn","message":"Atenção: credenciais de login incorretas!","timestamp":"2025-11-10 08:01:09"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 08:01:15"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 08:03:53"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:04:03"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:04:04"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:04:04"}
+{"level":"warn","message":"Atenção: credenciais de login incorretas!","timestamp":"2025-11-10 08:04:16"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:19:22"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:19:22"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:19:22"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:23:59"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:23:59"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:24:00"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:24:08"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:24:08"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:24:08"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:24:10"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:24:10"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:24:11"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:24:12"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:24:12"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:24:16"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:24:16"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:24:16"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:24:18"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:24:19"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:24:19"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:24:21"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:24:22"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:24:22"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:25:12"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:25:12"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:25:13"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:25:15"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:25:15"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:25:15"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:25:21"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:25:21"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:25:21"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:25:24"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:25:24"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:25:24"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:25:27"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:25:27"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:25:27"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:25:29"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:25:29"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:25:30"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:25:59"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:26:01"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:26:01"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:26:01"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:26:09"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:26:10"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:26:10"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:26:19"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:26:19"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:26:19"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:26:21"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:26:21"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:26:21"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:30:31"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:30:31"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:30:31"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:30:46"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:30:46"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:30:46"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:31:29"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:31:29"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:31:29"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:32:19"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:32:19"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:32:19"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:32:22"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:32:22"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:32:22"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:32:28"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:32:28"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:32:28"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:32:50"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:32:50"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:32:50"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:33:04"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:33:04"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:33:04"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:33:05"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:33:05"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:33:05"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:33:08"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:33:08"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:33:08"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:33:13"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:33:13"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:33:14"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:33:15"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:33:15"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:33:15"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:33:44"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:33:44"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:33:44"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:34:46"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:34:46"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:34:46"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:34:49"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:34:49"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:34:49"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:35:32"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:35:32"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:35:32"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:35:35"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:35:35"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:35:35"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:35:37"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:35:37"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:35:37"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:36:02"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:36:02"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:36:02"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:36:03"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:36:04"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:36:04"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:36:07"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:36:07"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:36:09"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:36:09"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:36:09"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:37:19"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:37:19"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:37:19"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:37:21"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:37:21"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:37:21"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:37:23"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:37:23"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:37:23"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:37:25"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:37:25"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:37:25"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:45:09"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:45:09"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:45:09"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:45:48"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:45:48"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:45:48"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:45:56"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:45:56"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:45:56"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:45:58"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:45:59"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:45:59"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:46:02"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:46:02"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:46:02"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:46:04"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:46:05"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:46:05"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:46:15"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:46:15"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:46:15"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:47:45"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:47:45"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:47:45"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:47:48"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:47:48"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:47:48"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:47:59"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:47:59"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:48:00"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:48:01"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:48:01"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:48:02"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:50:34"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:50:34"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:50:34"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:50:37"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:50:37"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:50:37"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:50:39"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:50:39"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:50:39"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:50:56"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:50:56"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:50:56"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:51:00"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:51:00"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:51:00"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:51:44"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:51:44"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:51:44"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:52:07"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:52:08"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:52:08"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:52:11"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:52:12"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:52:12"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:53:43"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:53:43"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:53:43"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:53:48"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:53:48"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:53:48"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 08:53:49"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 08:53:50"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 08:53:50"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 08:54:01"}

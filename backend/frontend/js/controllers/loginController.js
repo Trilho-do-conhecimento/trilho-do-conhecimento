@@ -1,6 +1,4 @@
-// Caminho: backend/frontend/js/controllers/loginController.js
-
-import { loginUser, sendRecoveryEmail } from "../services/loginService.js";
+import { loginUser, sendRecoveryEmail } from "../services/loginService.js"
 
 // Login
 export async function handleLogin(event) {
@@ -18,7 +16,7 @@ export async function handleLogin(event) {
     const response = await loginUser(email, senha);
     if (response.success) {
       // Redireciona conforme o tipo de usuário
-      window.location.href = "../pages/menuAdm.html";
+      window.location.href = "menuAdm.html";
     } else {
       alert(response.message || "Usuário ou senha inválidos.");
     }

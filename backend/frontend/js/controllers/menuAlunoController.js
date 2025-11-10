@@ -3,7 +3,7 @@ import {
   buscarTreinamentos,
   buscarCertificados,
   clearAuthToken
-} from "../services/menuAlunoService.js";
+} from "../../../../services/menuAlunoService.js";
 
 export async function initMenuAluno() {
   try {

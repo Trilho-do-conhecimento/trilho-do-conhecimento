@@ -1,5 +1,3 @@
-// Caminho: backend/frontend/js/services/loginService.js
-
 const API_URL = "http://localhost:3000/rotas"; // ajuste conforme o backend
 
 // 🔹 Login do usuário
