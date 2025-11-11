@@ -1,11 +1,11 @@
 import {
-  initMenuAluno,
+  // initMenuAluno,
   handleOpenTreinamentos,
   handleOpenCertificados
 } from "../controllers/menuAlunoController.js";
 
 // Garante inicialização ao carregar a página
-window.addEventListener("DOMContentLoaded", initMenuAluno);
+// window.addEventListener("DOMContentLoaded", initMenuAluno);
 
 // Botões do HTML
 const btnTreinamentos = document.querySelector(".button-group a:nth-child(1)");

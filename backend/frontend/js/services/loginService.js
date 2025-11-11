@@ -5,6 +5,7 @@ export async function loginUser(email, senha) {
   const response = await fetch(`${API_URL}/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
+    credentials: "include",
     body: JSON.stringify({ email, senha }),
   });
 
@@ -18,6 +19,7 @@ export async function sendRecoveryEmail(email) {
   const response = await fetch(`${API_URL}/recovery`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
+    credentials: "include",
     body: JSON.stringify({ email }),
   });
 

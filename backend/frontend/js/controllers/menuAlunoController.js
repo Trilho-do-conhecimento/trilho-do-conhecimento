@@ -3,18 +3,18 @@ import {
   buscarTreinamentos,
   buscarCertificados,
   clearAuthToken
-} from "../../../../services/menuAlunoService.js";
+} from "../services/menuAlunoService.js";
 
-export async function initMenuAluno() {
-  try {
-    await verifySessionAluno();
-    console.log("Sessão do aluno validada com sucesso.");
-  } catch (error) {
-    console.error("Sessão inválida:", error);
-    alert("Sua sessão expirou. Faça login novamente.");
-    window.location.href = "../pages/login.html";
-  }
-}
+// export async function initMenuAluno() {
+//   try {
+//     await verifySessionAluno();
+//     console.log("Sessão do aluno validada com sucesso.");
+//   } catch (error) {
+//     console.error("Sessão inválida:", error);
+//     alert("Sua sessão expirou. Faça login novamente.");
+//     window.location.href = "../pages/index.html";
+//   }
+// }
 
 // === Meus treinamentos ===
 export async function handleOpenTreinamentos(event) {
@@ -79,5 +79,5 @@ export async function handleOpenCertificados(event) {
 export function handleLogout(event) {
   event.preventDefault();
   clearAuthToken();
-  window.location.href = "../pages/login.html";
+  window.location.href = "/pages/index.html";
 }

@@ -4,11 +4,11 @@ import {
   handleOpenMenuAluno,
   handleOpenCertificados,
   handleOpenCadastroUsuario,
-  initMenuAdm
+  // initMenuAdm
 } from "../controllers/menuAdmController.js";
 
 //  Escuta o carregamento da página
-window.addEventListener("DOMContentLoaded", initMenuAdm);
+// window.addEventListener("DOMContentLoaded", initMenuAdm);
 
 //  Pega os botões do HTML
 const btnTreinamentos = document.querySelector(".button-grid a:nth-child(1)");

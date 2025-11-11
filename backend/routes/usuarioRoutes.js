@@ -64,7 +64,7 @@ router.post('/login', async (req, res) => {
             idUsuario: usuario.id_usuario,
             email: usuario.email
         })
-        return res.status(200).json({ success: true, message: "Usuário logado!", userType: usuario.perfil});
+        return res.status(200).json({ success: true, message: "Usuário logado!", userType: usuario.tipo_usuario.toLowerCase()});
 
     } catch (error) {
         logger.error("Erro no login:", error);

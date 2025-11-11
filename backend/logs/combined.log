@@ -801,3 +801,238 @@
 {"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:12:09"}
 {"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:12:09"}
 {"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 10:12:22"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:25:38"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:25:38"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:25:38"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 10:25:48"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:27:42"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:27:42"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:27:43"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 10:27:52"}
+{"level":"warn","message":"Atenção: credenciais de login incorretas!","timestamp":"2025-11-10 10:37:47"}
+{"email":"novoadm@teste.com","id_usuario":12,"level":"info","message":"Novo usuário criado com sucesso!","nome_completo":"Administrador Cripto","timestamp":"2025-11-10 10:44:10"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 10:44:50"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:45:35"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:45:35"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:45:35"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:46:06"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:46:06"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:46:06"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 10:46:16"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 10:46:24"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 10:46:37"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:47:30"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:47:30"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:47:30"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:47:33"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:47:33"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:47:33"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:47:36"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:47:37"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:47:37"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:47:40"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:47:40"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:47:41"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:47:43"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:47:43"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:47:43"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:47:52"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:47:53"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:47:53"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 10:48:07"}
+{"ip":"::1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-10 10:48:08"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:50:12"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:50:12"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:50:12"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:52:26"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:52:27"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:52:27"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:52:29"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:52:29"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:52:29"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:52:31"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:52:31"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:52:31"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:52:34"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:52:34"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:52:34"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:52:38"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:52:38"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:52:38"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 10:55:43"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 10:55:43"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 10:55:43"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 10:56:22"}
+{"ip":"::1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-10 10:56:22"}
+{"ip":"::1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-10 10:57:02"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 10:57:50"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 10:59:04"}
+{"ip":"::1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-10 10:59:04"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 11:02:00"}
+{"ip":"::1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-10 11:02:00"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:08:58"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:08:59"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:08:59"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 11:09:10"}
+{"ip":"::1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-10 11:09:10"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:16:43"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:16:43"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:16:43"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:16:45"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:16:46"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:16:46"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:17:01"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:17:01"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:17:02"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:17:15"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:17:15"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:17:16"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:17:28"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:17:28"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:17:29"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 11:17:43"}
+{"ip":"::1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-10 11:17:43"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:21:03"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:21:03"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:21:03"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:33:00"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:33:00"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:33:00"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:34:26"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:34:26"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:34:26"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:35:51"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:35:52"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:35:52"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:38:33"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:38:34"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:38:34"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:38:50"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:38:51"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:38:51"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:38:55"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:38:55"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:38:55"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:39:03"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:39:04"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:39:04"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 11:39:17"}
+{"ip":"::1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-10 11:39:17"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:39:46"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:39:46"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:39:46"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 11:40:06"}
+{"ip":"::1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-10 11:40:07"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:41:12"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:41:12"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:41:13"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:41:20"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:41:20"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:41:20"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:41:23"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:41:23"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:41:23"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:41:36"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:41:36"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:41:36"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 11:41:48"}
+{"ip":"::1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-10 11:41:48"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:42:45"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:42:45"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:42:45"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 11:43:02"}
+{"ip":"::1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-10 11:43:02"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:53:12"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:53:13"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:53:13"}
+{"ip":"::ffff:127.0.0.1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-10 11:54:46"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 11:55:12"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 11:55:12"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 11:55:12"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-10 19:20:22"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 19:21:40"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-10 19:21:53"}
+{"level":"error","message":"Erro no login: Table 'defaultdb.usuario' doesn't exist","name":"SequelizeDatabaseError","original":{"code":"ER_NO_SUCH_TABLE","errno":1146,"sql":"SELECT `id_usuario`, `email`, `senha`, `nome_completo`, `registro`, `cargo`, `area`, `tipo_usuario` FROM `usuario` AS `Usuario` WHERE `Usuario`.`email` = 'pedro.brasil@gmail.com';","sqlMessage":"Table 'defaultdb.usuario' doesn't exist","sqlState":"42S02"},"parameters":{},"parent":{"code":"ER_NO_SUCH_TABLE","errno":1146,"sql":"SELECT `id_usuario`, `email`, `senha`, `nome_completo`, `registro`, `cargo`, `area`, `tipo_usuario` FROM `usuario` AS `Usuario` WHERE `Usuario`.`email` = 'pedro.brasil@gmail.com';","sqlMessage":"Table 'defaultdb.usuario' doesn't exist","sqlState":"42S02"},"sql":"SELECT `id_usuario`, `email`, `senha`, `nome_completo`, `registro`, `cargo`, `area`, `tipo_usuario` FROM `usuario` AS `Usuario` WHERE `Usuario`.`email` = 'pedro.brasil@gmail.com';","stack":"Error\n    at Query.run (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\dialects\\mysql\\query.js:52:25)\n    at C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async MySQLQueryInterface.select (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:407:12)\n    at async Usuario.findAll (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:1140:21)\n    at async Usuario.findOne (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:1240:12)\n    at async Object.validarLogin (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\DAO\\UsuarioDAO.js:41:25)\n    at async C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\routes\\usuarioRoutes.js:43:25","timestamp":"2025-11-10 19:22:16"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 19:29:19"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 19:29:20"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 19:29:20"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 19:33:03"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 19:33:03"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 19:33:04"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 19:33:28"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 19:34:37"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 19:36:23"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 19:39:07"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 19:43:18"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 19:43:19"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 19:43:19"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 19:43:37"}
+{"level":"error","message":"Erro no login: Cannot read properties of undefined (reading 'toLowerCase')","stack":"TypeError: Cannot read properties of undefined (reading 'toLowerCase')\n    at C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\routes\\usuarioRoutes.js:67:107","timestamp":"2025-11-10 19:43:37"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 21:09:41"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 21:09:41"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 21:09:41"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 21:09:58"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 21:11:39"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 21:11:39"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 21:11:39"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 21:12:02"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 21:13:00"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 21:13:00"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 21:13:00"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 21:13:33"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-10 21:13:33"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-10 21:13:33"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 21:16:17"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 21:16:17"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 21:16:17"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 21:16:32"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 21:17:15"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 21:18:29"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 21:18:29"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 21:18:29"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 21:18:50"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-10 21:18:56"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-10 21:18:56"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 21:19:45"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-10 21:19:49"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-10 21:19:49"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 21:20:09"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-10 21:20:16"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-10 21:20:16"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 21:27:23"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 21:27:23"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 21:27:23"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 21:27:37"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-10 21:27:37"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-10 21:27:37"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 21:28:48"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-10 21:28:48"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-10 21:28:49"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 21:31:41"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 21:31:41"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 21:31:41"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 21:31:57"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-10 21:31:57"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-10 21:31:57"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 21:41:43"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 21:41:43"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 21:41:43"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 21:41:58"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 21:42:38"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 21:42:57"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 21:44:18"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 21:46:55"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 21:46:55"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 21:46:55"}
+{"level":"warn","message":"Atenção: credenciais de login incorretas!","timestamp":"2025-11-10 21:47:11"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 21:47:17"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-10 22:14:20"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-10 22:14:20"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-10 22:14:20"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 22:14:53"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 22:16:24"}
+{"email":"pedro.brasil@gmail.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-10 22:16:36"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-10 22:16:47"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-10 22:16:47"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-10 22:16:51"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-10 22:16:51"}
