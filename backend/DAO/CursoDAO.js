@@ -9,11 +9,11 @@ const CursoDAO = {
   async buscarTodos() {
     return await Curso.findAll(
       { 
-        include: 
-        { 
-          model: Turma, 
-          as: 'Turmas' 
-        } 
+        //include: 
+        //{ 
+        //  model: Turma, 
+        //  as: 'Turmas' 
+        //} 
       });
   },
 

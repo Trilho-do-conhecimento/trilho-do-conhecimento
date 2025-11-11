@@ -14,12 +14,12 @@ const CertificadoDAO = {
     async buscarTodos() {
         try {
             return await Certificado.findAll({
-                include: [
-                    { 
-                        model: Usuario, 
-                        as: 'concluinte', 
-                        attributes: ['id_usuario', 'nome_completo', 'registro', 'cargo', 'area'] }
-                ]
+                //include: [
+                //    { 
+                //        model: Usuario, 
+                //        as: 'concluinte', 
+                //        attributes: ['id_usuario', 'nome_completo', 'registro', 'cargo', 'area'] }
+                //]
             });
         } catch (err) {
             throw err;

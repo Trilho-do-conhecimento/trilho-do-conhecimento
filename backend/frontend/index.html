@@ -81,5 +81,44 @@
     
     <!--Caminho para o listener de eventos -->
     <script type="module" src="./js//listeners/loginListeners.js"></script>
+      <script>
+        // Pegar os elementos do DOM
+        const openModalLink = document.getElementById('forgot-password-link');
+        const closeModalBtn = document.getElementById('modal-close');
+        const modalOverlay = document.getElementById('modal-overlay');
+        const recoveryForm = document.getElementById('recovery-form');
+
+        // Abrir o modal
+        openModalLink.addEventListener('click', function(e) {
+            e.preventDefault(); // Impede que o link '#' mude a URL
+            modalOverlay.classList.add('active');
+        });
+
+        // Função para fechar o modal
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+        }
+
+        // Fechar o modal (pelo botão 'X')
+        closeModalBtn.addEventListener('click', closeModal);
+
+        // Fechar o modal (clicando fora da caixa de conteúdo)
+        modalOverlay.addEventListener('click', function(e) {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+
+        // Simular envio de e-mail ao submeter o formulário
+        recoveryForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('recovery-email').value;
+
+            // Simulação de envio
+            alert('Funcionalidade de front-end concluída!\n\nUm e-mail de recuperação seria enviado para: ' + email + '\n\n(Esta ação precisa de um servidor back-end para funcionar de verdade.)');
+
+            closeModal(); // Fecha o modal após o envio
+        });
+    </script>
 </body>
 </html>

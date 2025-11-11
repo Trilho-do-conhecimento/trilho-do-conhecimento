@@ -27,7 +27,7 @@ class MySQLTransport extends Transport {
         const sql = `INSERT INTO infologs(level, message, timestamp) VALUES (?, ?, ?)`
         this.connection.query(sql, [level, message, timestamp], (err => {
             if(err){
-                logger.log(err);
+                console.log(err);
             }
         }))
 

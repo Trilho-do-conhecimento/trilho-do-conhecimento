@@ -1036,3 +1036,105 @@
 {"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-10 22:16:47"}
 {"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-10 22:16:51"}
 {"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-10 22:16:51"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-11 16:57:32"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-11 16:57:32"}
+{"level":"error","message":"Erro: a conexão com o banco de dados falhou.","timestamp":"2025-11-11 16:57:33"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-11 17:00:18"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-11 17:00:19"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-11 17:00:53"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-11 17:00:53"}
+{"level":"error","message":"Erro: a conexão com o banco de dados falhou.","timestamp":"2025-11-11 17:00:53"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-11 17:06:27"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-11 17:06:27"}
+{"level":"error","message":"Erro: a conexão com o banco de dados falhou.","timestamp":"2025-11-11 17:06:27"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-11 17:15:00"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-11 17:15:00"}
+{"level":"error","message":"Erro: a conexão com o banco de dados falhou.","timestamp":"2025-11-11 17:15:00"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-11 17:16:00"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-11 17:16:00"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-11 17:16:00"}
+{"level":"warn","message":"Atenção: credenciais de login incorretas!","timestamp":"2025-11-11 17:50:52"}
+{"email":"maria.santiago@aluno.com","id_usuario":1,"level":"info","message":"Novo usuário criado com sucesso!","nome_completo":"Maria Santiago Santos","timestamp":"2025-11-11 17:51:28"}
+{"ip":"::ffff:127.0.0.1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-11 17:51:51"}
+{"ip":"::ffff:127.0.0.1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-11 17:51:59"}
+{"email":"maria.santiago@aluno.com","idUsuario":1,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-11 17:53:12"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 17:53:32"}
+{"level":"info","message":"Usuários encontrados com sucesso!","timestamp":"2025-11-11 17:53:32"}
+{"email":"maria.santiago@aluno.com","idUsuario":1,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-11 17:57:39"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 17:57:42"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-11 17:57:42"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:06:37"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-11 18:06:37"}
+{"email":"maria.santiago@aluno.com","idUsuario":1,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-11 18:07:08"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:07:11"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-11 18:07:11"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:10:18"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-11 18:10:18"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-11 18:10:49"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-11 18:10:49"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-11 18:10:49"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-11 18:11:46"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-11 18:11:46"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-11 18:11:46"}
+{"email":"maria.santiago@aluno.com","idUsuario":1,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-11 18:11:55"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:11:57"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-11 18:11:57"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:11:59"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-11 18:11:59"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:16:01"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-11 18:16:01"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:16:03"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-11 18:16:03"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-11 18:17:28"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-11 18:17:28"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-11 18:17:28"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:17:31"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-11 18:17:31"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:17:38"}
+{"errors":[{"instance":{"id_certificado":null},"message":"Certificado.certificador1 cannot be null","origin":"CORE","path":"certificador1","type":"notNull Violation","validatorArgs":[],"validatorKey":"is_null","validatorName":null,"value":null},{"instance":{"id_certificado":null},"message":"Certificado.registro_c1 cannot be null","origin":"CORE","path":"registro_c1","type":"notNull Violation","validatorArgs":[],"validatorKey":"is_null","validatorName":null,"value":null},{"instance":{"id_certificado":null},"message":"Certificado.cargo_c1 cannot be null","origin":"CORE","path":"cargo_c1","type":"notNull Violation","validatorArgs":[],"validatorKey":"is_null","validatorName":null,"value":null},{"instance":{"id_certificado":null},"message":"Certificado.id_concluinte cannot be null","origin":"CORE","path":"id_concluinte","type":"notNull Violation","validatorArgs":[],"validatorKey":"is_null","validatorName":null,"value":null},{"instance":{"id_certificado":null},"message":"Certificado.nome_certificado cannot be null","origin":"CORE","path":"nome_certificado","type":"notNull Violation","validatorArgs":[],"validatorKey":"is_null","validatorName":null,"value":null},{"instance":{"id_certificado":null},"message":"Certificado.descricao cannot be null","origin":"CORE","path":"descricao","type":"notNull Violation","validatorArgs":[],"validatorKey":"is_null","validatorName":null,"value":null}],"level":"error","name":"SequelizeValidationError","timestamp":"2025-11-11 18:17:38"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:17:44"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-11 18:17:44"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:18:21"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-11 18:18:21"}
+{"email":"maria.santiago@aluno.com","idUsuario":1,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-11 18:19:02"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:19:04"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-11 18:19:04"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:19:06"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-11 18:19:06"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-11 18:22:01"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-11 18:22:01"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-11 18:22:01"}
+{"email":"maria.santiago@aluno.com","idUsuario":1,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-11 18:22:18"}
+{"level":"error","message":"Erro ao buscar cursos. Turma is not associated to Curso!","name":"SequelizeEagerLoadingError","stack":"SequelizeEagerLoadingError: Turma is not associated to Curso!\n    at Curso._getIncludedAssociation (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:565:13)\n    at Curso._validateIncludedElement (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:502:53)\n    at C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:421:37\n    at Array.map (<anonymous>)\n    at Curso._validateIncludedElements (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:417:39)\n    at Curso.findAll (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:1124:12)\n    at async Object.buscarTodos (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\backend\\DAO\\CursoDAO.js:10:12)\n    at async C:\\Users\\L\\Documents\\trilho-do-conhecimento\\backend\\routes\\cursoRoutes.js:49:18","timestamp":"2025-11-11 18:22:19"}
+{"level":"error","message":"Erro ao buscar todos os certificados Usuario is not associated to Certificado!","name":"SequelizeEagerLoadingError","stack":"SequelizeEagerLoadingError: Usuario is not associated to Certificado!\n    at Certificado._getIncludedAssociation (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:565:13)\n    at Certificado._validateIncludedElement (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:502:53)\n    at C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:421:37\n    at Array.map (<anonymous>)\n    at Certificado._validateIncludedElements (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:417:39)\n    at Certificado.findAll (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:1124:12)\n    at async Object.buscarTodos (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\backend\\DAO\\CertificadoDAO.js:16:20)\n    at async C:\\Users\\L\\Documents\\trilho-do-conhecimento\\backend\\routes\\certificadoRoutes.js:33:30","timestamp":"2025-11-11 18:22:21"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-11 18:26:16"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-11 18:26:16"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-11 18:26:16"}
+{"email":"maria.santiago@aluno.com","idUsuario":1,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-11 18:26:51"}
+{"email":"maria.santiago@aluno.com","idUsuario":1,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-11 18:26:56"}
+{"level":"error","message":"Erro ao buscar todos os certificados Usuario is not associated to Certificado!","name":"SequelizeEagerLoadingError","stack":"SequelizeEagerLoadingError: Usuario is not associated to Certificado!\n    at Certificado._getIncludedAssociation (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:565:13)\n    at Certificado._validateIncludedElement (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:502:53)\n    at C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:421:37\n    at Array.map (<anonymous>)\n    at Certificado._validateIncludedElements (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:417:39)\n    at Certificado.findAll (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:1124:12)\n    at async Object.buscarTodos (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\backend\\DAO\\CertificadoDAO.js:16:20)\n    at async C:\\Users\\L\\Documents\\trilho-do-conhecimento\\backend\\routes\\certificadoRoutes.js:33:30","timestamp":"2025-11-11 18:26:57"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-11 18:28:05"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-11 18:28:05"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-11 18:28:05"}
+{"email":"maria.santiago@aluno.com","idUsuario":1,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-11 18:28:32"}
+{"email":"maria.santiago@aluno.com","idUsuario":1,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-11 18:28:36"}
+{"email":"maria.santiago@aluno.com","idUsuario":1,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-11 18:28:45"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:29:08"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-11 18:35:53"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-11 18:35:53"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-11 18:35:53"}
+{"level":"error","message":"Falha ao iniciar recuperação de senha. UsuarioDAO.iniciarRecuperacaoSenha is not a function","stack":"TypeError: UsuarioDAO.iniciarRecuperacaoSenha is not a function\n    at C:\\Users\\L\\Documents\\trilho-do-conhecimento\\backend\\routes\\usuarioRoutes.js:19:26\n    at Layer.handleRequest (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\router\\lib\\layer.js:152:17)\n    at C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\router\\index.js:295:15\n    at processParams (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\router\\index.js:582:12)\n    at next (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\router\\index.js:291:5)\n    at router.handle (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\node_modules\\router\\index.js:186:3)","timestamp":"2025-11-11 18:36:16"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-11 18:39:49"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-11 18:39:49"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-11 18:39:50"}
+{"level":"error","message":"Falha ao iniciar recuperação de senha. gerarToken is not defined","stack":"ReferenceError: gerarToken is not defined\n    at Object.recuperaSenha (C:\\Users\\L\\Documents\\trilho-do-conhecimento\\backend\\DAO\\UsuarioDAO.js:52:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async C:\\Users\\L\\Documents\\trilho-do-conhecimento\\backend\\routes\\usuarioRoutes.js:19:9","timestamp":"2025-11-11 18:40:09"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:41:57"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-11 18:41:57"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:42:23"}
+{"level":"error","message":"Usuário não encontrado (404).","timestamp":"2025-11-11 18:42:23"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-11 18:42:57"}
+{"level":"info","message":"Usuários encontrados com sucesso!","timestamp":"2025-11-11 18:42:57"}
+{"level":"warn","message":"Atenção: credenciais de login incorretas!","timestamp":"2025-11-11 18:44:46"}
+{"email":"adminPrimeiro@admin.com","id_usuario":2,"level":"info","message":"Novo usuário criado com sucesso!","nome_completo":"Primeiro Administrador","timestamp":"2025-11-11 18:45:01"}
+{"email":"adminPrimeiro@admin.com","idUsuario":2,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-11 18:45:19"}
+{"email":"adminPrimeiro@admin.com","idUsuario":2,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-11 18:45:51"}

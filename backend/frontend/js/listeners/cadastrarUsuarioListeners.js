@@ -1,4 +1,4 @@
-import { handleSubmitCadastro, handleCancelarCadastro } from "../controllers/cadastrarUsuarioController.js";
+import { handleSubmitCadastro, handleCancelarCadastro, handleMascaraData } from "../controllers/cadastrarUsuarioController.js";
 
 const form = document.getElementById('form-cadastrar-usuario');
 const btnCancelar = document.getElementById('btn-cancelar');
