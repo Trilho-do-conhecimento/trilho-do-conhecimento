@@ -1,6 +1,6 @@
-const ListaPresenca = require('../models/ListaPresenca'); 
+const ListaPresenca = require('../models/Lista_presenca'); 
 const Usuario = require('../models/Usuario'); 
-const ListaPresencaUsuario = require('../models/ListaPresencaUsuario'); 
+const ListaPresencaUsuario = require('../models/lista_presenca_usuario'); 
 const Turma = require('../models/Turma'); 
 const Curso = require('../models/Curso');
 

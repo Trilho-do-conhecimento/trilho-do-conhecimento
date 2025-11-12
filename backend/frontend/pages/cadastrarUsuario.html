@@ -10,8 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/cadastrarUsuario_style.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -47,7 +46,7 @@
 
                     <div class="form-group">
                         <label for="nome"><span class="required">*</span> Nome:</label>
-                        <input type="text" id="nome" name="nome" required>
+                        <input type="text" id="nome" name="nome_completo" required>
                     </div>
 
                     <div class="form-group">
@@ -75,11 +74,17 @@
                         <input type="text" id="registro" name="registro">
                     </div>
 
-                    <div class="form-group full-width">
-                        <label for="arquivo">Arquivo (upload):</label>
-                        <input type="file" id="arquivo" name="arquivo_para_enviar" required>
+                    <div class="form-group">
+                        <label for="tipo_usuario">Tipo de usuário:</label>
+                        <input type="text" id="tipo_usuario" name="tipo_usuario">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="senha"><span class="required">*</span>  Senha:</label>
+                        <input type="password" id="senha" name="senha" required>
                     </div>
                 </div>
+
 
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary">Salvar</button>
@@ -104,4 +109,5 @@
     <!-- SCRIPT DO LISTENER  -->
     <script type="module" src="../js/listeners/cadastrarUsuarioListeners.js"></script>
 </body>
+
 </html>

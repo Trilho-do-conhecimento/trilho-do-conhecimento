@@ -1,5 +1,5 @@
-const ListaDePresencaService = require('../services/ListaDePresencaService');
-const logger = require('../logs/logger');
+const ListaDePresencaService = require('../services/criarListaPresencaService');
+const logger = require('../../../logs/logger');
 
 class ListaDePresencaController {
   static async criar(req, res) {

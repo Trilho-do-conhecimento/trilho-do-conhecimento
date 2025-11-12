@@ -1,9 +1,20 @@
 const API_URL = "http://localhost:3000/rotas";
 
+function formDataParaJson(formData) {
+  var objeto = {};
+  formData.forEach((value, key) => {objeto[key] = value;    
+  });
+  return objeto;
+}
+
 export async function cadastrarUsuario(formData) {
-  const response = await fetch(`${API_URL}/usuarios/cadastrar`, {
+  const dadosJson = formDataParaJson(formData);
+  const response = await fetch(`${API_URL}`, {
     method: "POST",
-    body: formData,
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(dadosJson),
   });
 
   const result = await response.json();

@@ -1,5 +1,5 @@
-const ListaPresencaDAO = require('../DAO/ListaPresencaDAO');
-const ListaPresencaUsuarioDAO = require('../DAO/ListaPresencaUsuarioDAO');
+const ListaPresencaDAO = require('../../../DAO/lista_presencaDAO');
+const ListaPresencaUsuarioDAO = require('../../../DAO/lista_presenca_usuarioDAO');
 
 class ListaDePresencaService {
   static async criar(body) {

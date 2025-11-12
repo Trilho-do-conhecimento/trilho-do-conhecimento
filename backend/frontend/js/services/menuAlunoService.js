@@ -2,7 +2,7 @@ const API_URL = "http://localhost:3000/rotas";
 
 export async function verifySessionAluno() {
   try {
-    const response = await fetch(`${API_URL}/usuarios`, {
+    const response = await fetch(`${API_URL}/`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
       credentials: "include" // envia cookie JWT
