@@ -1,9 +1,9 @@
 // A rota de lista de presença é uma só — tanto para a lista completa quanto por usuário
 const express = require('express'); 
 const router = express.Router(); 
-const ListaDePresencaController = require('../controllers/ListaDePresencaController'); 
+const ListaDePresencaController = require('../frontend/js/controllers/criarListaPresencaController'); 
 const logger = require('../logs/logger');
-const authMiddleware = require('../middleware/authMiddleware'); // se quiser proteger as rotas
+const authMiddleware = require('../middlewares/authMiddleware'); // se quiser proteger as rotas
 
 // Enum de status 
 const StatusAssinatura = { 

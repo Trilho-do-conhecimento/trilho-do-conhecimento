@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../connectionFactory/connectionFactory.js'); 
 const Turma = require('./Turma'); 
 const Usuario = require('./Usuario'); 
-const ListaPresencaUsuario = require('./ListaPresencaUsuario'); 
+const ListaPresencaUsuario = require('./lista_presenca_usuario.js'); 
 
 const ListaPresenca = sequelize.define('ListaPresenca', { 
     id_lista: 

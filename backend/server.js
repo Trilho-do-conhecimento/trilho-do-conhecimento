@@ -16,7 +16,9 @@ app.use(require('cookie-parser')());
 const sequelize = require('./connectionFactory/connectionFactory.js');
 const usuarioRoute = require('./routes/usuarioRoutes.js');
 const cursoRoute = require('./routes/cursoRoutes.js');
-const certificadoRoute = require('./routes/certificadoRoutes.js')
+const certificadoRoute = require('./routes/certificadoRoutes.js');
+const turmaRoute = require('./routes/turmaRoute.js')
+const listaPresecaRoute = require('./routes/lista_presencaRoute.js')
 const logger = require('./logs/logger.js');
 
 // Rota principal (teste)
@@ -26,6 +28,8 @@ app.get('/', (req, res) => {
 
 app.use('/rotas/cursos', cursoRoute);
 app.use('/rotas/certificados', certificadoRoute);
+app.use('/rotas/turma', turmaRoute);
+app.use('/rotas/lista', listaPresecaRoute);
 app.use('/rotas', usuarioRoute);
 
 app.listen(PORT, () => {

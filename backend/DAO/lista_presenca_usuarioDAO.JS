@@ -1,5 +1,5 @@
-const ListaPresencaUsuario = require('../models/ListaPresencaUsuario'); 
-const ListaPresencaUsuario = require('../models/Usuario'); 
+const ListaPresencaUsuario = require('../models/lista_presenca_usuario'); 
+const Usuario = require('../models/Usuario'); 
 const ListaPresencaUsuarioDAO = { 
 
     // Adiciona um aluno a uma lista 
