@@ -76,6 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
       empresa: val("empresa"),
       local: val("local"),
       carga_horaria: val("carga_horaria"),
+      data: val("data"),
+      id_turma: val("id_turma"),
       // Arrays dos participantes (mantém o padrão name="campo[]")
       nome_completo: linhas.nome_completo,
       registro: linhas.registro,
@@ -96,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btnSalvar.setAttribute("aria-busy", "true");
 
     try {
-      const resp = await fetch("/listaDePresenca", {
+      const resp = await fetch("/rotas/lista", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include", // necessário para enviar o cookie do JWT

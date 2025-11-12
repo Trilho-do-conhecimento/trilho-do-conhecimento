@@ -1219,3 +1219,68 @@
 {"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-12 10:30:41"}
 {"email":"rudolphbecker@aluno.com","id_usuario":13,"level":"info","message":"Novo usuário criado com sucesso!","nome_completo":"Rudolph Becker","timestamp":"2025-11-12 10:30:58"}
 {"email":"conrado.caqui@admin.com","id_usuario":14,"level":"info","message":"Novo usuário criado com sucesso!","nome_completo":"Conrrado Silva Caqui","timestamp":"2025-11-12 10:47:34"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 11:23:48"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-12 11:23:51"}
+{"level":"error","message":"Erro no login: Table 'defaultdb.usuario' doesn't exist","name":"SequelizeDatabaseError","original":{"code":"ER_NO_SUCH_TABLE","errno":1146,"sql":"SELECT `id_usuario`, `email`, `senha`, `nome_completo`, `registro`, `cargo`, `area`, `tipo_usuario` FROM `usuario` AS `Usuario` WHERE `Usuario`.`email` = 'novoadm@teste.com';","sqlMessage":"Table 'defaultdb.usuario' doesn't exist","sqlState":"42S02"},"parameters":{},"parent":{"code":"ER_NO_SUCH_TABLE","errno":1146,"sql":"SELECT `id_usuario`, `email`, `senha`, `nome_completo`, `registro`, `cargo`, `area`, `tipo_usuario` FROM `usuario` AS `Usuario` WHERE `Usuario`.`email` = 'novoadm@teste.com';","sqlMessage":"Table 'defaultdb.usuario' doesn't exist","sqlState":"42S02"},"sql":"SELECT `id_usuario`, `email`, `senha`, `nome_completo`, `registro`, `cargo`, `area`, `tipo_usuario` FROM `usuario` AS `Usuario` WHERE `Usuario`.`email` = 'novoadm@teste.com';","stack":"Error\n    at Query.run (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\dialects\\mysql\\query.js:52:25)\n    at C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async MySQLQueryInterface.select (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:407:12)\n    at async Usuario.findAll (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:1140:21)\n    at async Usuario.findOne (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:1240:12)\n    at async Object.validarLogin (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\DAO\\UsuarioDAO.js:41:25)\n    at async C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\routes\\usuarioRoutes.js:43:25","timestamp":"2025-11-12 11:24:05"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-12 11:25:14"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 11:25:14"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-12 11:25:14"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-12 11:25:27"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-12 11:34:29"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 11:34:29"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-12 11:34:29"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-12 11:34:47"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-12 11:37:05"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 11:37:05"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-12 11:37:05"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-12 11:37:19"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-12 11:42:19"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 11:42:19"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-12 11:42:19"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-12 11:42:35"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-12 11:45:04"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 11:45:05"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-12 11:45:05"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-12 11:45:15"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 11:45:15"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-12 11:45:15"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-12 11:45:47"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 11:45:47"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-12 11:45:47"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-12 11:46:02"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-12 11:49:32"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 11:49:32"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-12 11:49:33"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-12 11:50:47"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 11:50:47"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-12 11:50:47"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-12 11:51:04"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-12 11:51:55"}
+{"errors":[{"instance":{"id_lista":null},"message":"ListaPresenca.data cannot be null","origin":"CORE","path":"data","type":"notNull Violation","validatorArgs":[],"validatorKey":"is_null","validatorName":null,"value":null},{"instance":{"id_lista":null},"message":"ListaPresenca.id_turma cannot be null","origin":"CORE","path":"id_turma","type":"notNull Violation","validatorArgs":[],"validatorKey":"is_null","validatorName":null,"value":null}],"level":"error","message":"Erro ao criar lista notNull Violation: ListaPresenca.data cannot be null,\nnotNull Violation: ListaPresenca.id_turma cannot be null","name":"SequelizeValidationError","stack":"SequelizeValidationError: notNull Violation: ListaPresenca.data cannot be null,\nnotNull Violation: ListaPresenca.id_turma cannot be null\n    at InstanceValidator._validate (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\instance-validator.js:50:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async InstanceValidator._validateAndRunHooks (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\instance-validator.js:60:7)\n    at async InstanceValidator.validate (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\instance-validator.js:54:12)\n    at async model.save (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:2426:7)\n    at async ListaPresenca.create (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:1362:12)\n    at async ListaDePresencaService.criar (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\frontend\\js\\services\\criarListaPresencaService.js:6:12)\n    at async ListaDePresencaController.criar (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\frontend\\js\\controllers\\criarListaPresencaController.js:7:25)","timestamp":"2025-11-12 11:51:55"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-12 12:00:11"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 12:00:11"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-12 12:00:11"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-12 12:00:13"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 12:00:14"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-12 12:00:14"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-12 12:00:16"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 12:00:16"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-12 12:00:16"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-12 12:00:25"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 12:00:25"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-12 12:00:25"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-12 12:00:30"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 12:00:30"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-12 12:00:30"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-12 12:05:20"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 12:05:20"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-12 12:05:20"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-12 12:05:52"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-12 12:07:31"}
+{"level":"error","message":"Erro ao criar lista Incorrect date value: 'Invalid date' for column 'data' at row 1","name":"SequelizeDatabaseError","original":{"code":"ER_TRUNCATED_WRONG_VALUE","errno":1292,"parameters":["Invalid date","1"],"sql":"INSERT INTO `lista_presenca` (`id_lista`,`data`,`id_turma`) VALUES (DEFAULT,?,?);","sqlMessage":"Incorrect date value: 'Invalid date' for column 'data' at row 1","sqlState":"22007"},"parameters":["Invalid date","1"],"parent":{"code":"ER_TRUNCATED_WRONG_VALUE","errno":1292,"parameters":["Invalid date","1"],"sql":"INSERT INTO `lista_presenca` (`id_lista`,`data`,`id_turma`) VALUES (DEFAULT,?,?);","sqlMessage":"Incorrect date value: 'Invalid date' for column 'data' at row 1","sqlState":"22007"},"sql":"INSERT INTO `lista_presenca` (`id_lista`,`data`,`id_turma`) VALUES (DEFAULT,?,?);","stack":"Error\n    at Query.run (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\dialects\\mysql\\query.js:52:25)\n    at C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async MySQLQueryInterface.insert (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:308:21)\n    at async model.save (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:2490:35)\n    at async ListaPresenca.create (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:1362:12)\n    at async ListaDePresencaService.criar (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\frontend\\js\\services\\criarListaPresencaService.js:6:12)\n    at async ListaDePresencaController.criar (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\frontend\\js\\controllers\\criarListaPresencaController.js:7:25)","timestamp":"2025-11-12 12:07:31"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-12 12:10:14"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-12 12:10:14"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-12 12:10:14"}
+{"email":"novoadm@teste.com","idUsuario":12,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-12 12:12:52"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-12 12:15:47"}
+{"level":"info","message":"Nova lista criada com sucesso.","timestamp":"2025-11-12 12:15:47"}

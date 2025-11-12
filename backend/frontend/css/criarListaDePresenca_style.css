@@ -73,7 +73,8 @@
             font-weight: 600;
         }
         
-        .form-group input[type="text"] {
+        .form-group input[type="text"], 
+        .form-group input[type="date"] {
             width: 100%;
             padding: 8px;
             border: 1px solid var(--border-color);
