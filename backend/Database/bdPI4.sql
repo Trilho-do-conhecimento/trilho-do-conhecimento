@@ -141,14 +141,19 @@ CREATE TABLE lista_presenca_usuario (
 -- Certificado vinculado ao usuário que concluiu 
 CREATE TABLE certificado (
    id_certificado INT PRIMARY KEY AUTO_INCREMENT,
-   certificador1 VARCHAR(100) NOT NULL,
-   registro_c1 VARCHAR(100) NOT NULL,
-   cargo_c1 VARCHAR(100) NOT NULL,
+   certificador VARCHAR(100) NOT NULL,
+   registro_certificador VARCHAR(100) NOT NULL,
+   cargo_certificador VARCHAR(100) NOT NULL,
    id_concluinte INT NOT NULL,
    nome_certificado VARCHAR(100) NOT NULL,
    descricao TEXT NOT NULL,
+   nivel ENUM('iniciante', 'intermediario', 'avancado') NOT NULL,
+   tabela TEXT(100) NOT NULL,
+   cidade TEXT(100) NOT NULL,
+   data_certficado DATE NOT NULL,
    FOREIGN KEY (id_concluinte) REFERENCES usuario(id_usuario)
 );
 
 
 
+    
