@@ -113,3 +113,108 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* ==== FILTRO LATERAL ==== */
+        .filtro-btn {
+            background: #003A8C;
+            color: #fff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+            margin-bottom: 15px;
+        }
+        .filtro-btn:hover {
+            background: #003A8C;
+        }
+        
+        .painel-filtro {
+            position: fixed;
+            top: 0;
+            right: -400px; /* painel começa escondido */
+            width: 350px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: -2px 0 10px #003A8C;
+            transition: right 0.3s ease;
+            padding: 20px;
+            z-index: 9999;
+        }
+        
+        /* Painel lateral limpo */
+        .painel-filtro {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 360px;
+            height: 100%;
+            background: #fff;
+            box-shadow: -2px 0 10px #003A8C;
+            transition: right 0.3s ease;
+            padding: 0;
+            z-index: 1000;
+            overflow-y: auto;
+            border: none;
+            border-radius: 0;
+        }
+        
+        /* Quando ativo */
+        .painel-filtro.ativo {
+            right: 0;
+        }
+        
+        /* Cabeçalho azul */
+        .filtro-header {
+            background-color: #001489  !important ; 
+            color: #fff;
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        /* Botão fechar */
+        .fechar-btn {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Conteúdo do filtro */
+        .filtro-conteudo {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .filtro-conteudo label {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.3rem;
+        }
+        
+        .filtro-conteudo input {
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+        
+        .aplicar-btn {
+            background: #003A8C;
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .aplicar-btn:hover {
+            background:#003A8C;
+        }
+        

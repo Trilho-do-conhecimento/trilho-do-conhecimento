@@ -108,3 +108,53 @@
 {"ip":"::ffff:127.0.0.1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-12 16:31:09"}
 {"ip":"::ffff:127.0.0.1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-12 16:33:49"}
 {"errors":[{"instance":{"email":"jorge.amado@admin.com","id_usuario":null,"senha":"admin","tipo_usuario":"aluno"},"message":"Usuario.nome_completo cannot be null","origin":"CORE","path":"nome_completo","type":"notNull Violation","validatorArgs":[],"validatorKey":"is_null","validatorName":null,"value":null}],"level":"error","message":"Falha ao tentar criar usuário. notNull Violation: Usuario.nome_completo cannot be null","name":"SequelizeValidationError","stack":"SequelizeValidationError: notNull Violation: Usuario.nome_completo cannot be null\n    at InstanceValidator._validate (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\instance-validator.js:50:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async InstanceValidator._validateAndRunHooks (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\instance-validator.js:60:7)\n    at async InstanceValidator.validate (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\instance-validator.js:54:12)\n    at async model.save (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:2426:7)\n    at async Usuario.create (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\node_modules\\sequelize\\lib\\model.js:1362:12)\n    at async Object.criar (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\DAO\\UsuarioDAO.js:7:20)\n    at async C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\routes\\usuarioRoutes.js:14:29","timestamp":"2025-11-12 16:37:10"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:22:01"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:22:08"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:22:14"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:22:20"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:22:27"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:22:34"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:22:41"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:22:47"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:22:53"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:23:00"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:23:06"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:23:13"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:23:19"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:23:25"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:23:31"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:23:38"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:23:44"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:23:50"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:23:57"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:24:03"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:24:09"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:24:16"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:24:28"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:24:34"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:24:40"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:24:46"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:27:21"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:27:27"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:27:35"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:27:42"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:27:51"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:28:00"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:28:09"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:28:18"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:28:27"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:28:37"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:28:47"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:28:59"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:29:05"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:29:38"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:31:12"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:31:19"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:31:28"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:31:40"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:31:49"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:35:52"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:36:08"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:39:54"}
+{"level":"error","message":"Falha ao conectar no Aiven: ${err.message}","timestamp":"2025-11-13 08:40:00"}
+{"ip":"::1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-13 08:51:03"}
