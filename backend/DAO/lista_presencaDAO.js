@@ -16,12 +16,13 @@ const ListaPresencaDAO = {
         const include = [ 
             { 
                 model: Turma, 
+                as: 'Turma',
                 attributes: ['local','horario'],
-                include: [ //tem q incluir o curso dentro da turma
-                    { 
-                    model: Curso, 
-                    attributes: ['nome', 'data_inicio', 'data_termino', 'status'] 
-                }]
+                // include: [ //tem q incluir o curso dentro da turma
+                //     { 
+                //     model: Curso, 
+                //     attributes: ['nome', 'data_inicio', 'data_termino', 'status'] 
+                // }]
             } 
         ]; 
 
@@ -30,7 +31,7 @@ const ListaPresencaDAO = {
                 model: Usuario, 
                 through: { attributes: ['status_assinatura'] }, 
                 attributes: ['id_usuario', 'nome_completo', 'registro', 'cargo', 'area', 'tipo_usuario'], 
-                as: 'alunos' 
+                as: 'Usuarios' 
             }); 
         } 
         return ListaPresenca.findAll({ include }); 
@@ -40,22 +41,23 @@ const ListaPresencaDAO = {
     buscarPorId(id_lista, options = { includeAlunos: false }) { 
         const include = [ 
             { 
-                model: Turma, Curso, //não sei se fiz certo qlq coisa alg arruma - by lari
+                model: Turma, 
+                as: 'Turma', 
                 attributes: ['local', 'horario'],
-                include: [ //tem q incluir o curso dentro da turma
-                    { 
-                    model: Curso, 
-                    attributes: ['nome', 'data_inicio', 'data_termino', 'status'] 
-                }]
+                // include: [ //tem q incluir o curso dentro da turma
+                //     { 
+                //     model: Curso, 
+                //     attributes: ['nome', 'data_inicio', 'data_termino', 'status'] 
+                // }]
             } 
         ]; 
 
         if (options.includeAlunos) { 
             include.push({ 
-                model: Usuario, 
+                model: Usuario,
                 through: { attributes: ['status_assinatura'] }, 
                 attributes: ['id_usuario', 'nome_completo', 'registro'], 
-                as: 'alunos' 
+                as: 'Usuarios' 
             }); 
         } 
 

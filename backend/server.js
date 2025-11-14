@@ -5,11 +5,18 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const corsOpt = {
+    origin: ["http://127.0.0.1:5501", "http://localhost:5501", "http://localhost:3000"],
+    credentials: true,
+    methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}
+
 // Middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOpt));
 app.use(express.static(path.join(__dirname, 'frontend')));
-app.use('js', express.static(path.join(__dirname, 'frontend', 'js')));
+app.use('/js', express.static(path.join(__dirname, 'frontend', 'js')));
 app.use(require('cookie-parser')());
 
 // Banco e rotas
