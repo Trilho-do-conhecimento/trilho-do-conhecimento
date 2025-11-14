@@ -1,12 +1,6 @@
 const Certificado = require('../models/Certificado');
 const Usuario = require('../models/Usuario');
 
-// Cada certificado pertence a um usuário (concluinte), o belongsTo dinamiza a busca.
-Certificado.belongsTo(Usuario, {
-  as: 'concluinte',
-  foreignKey: 'id_concluinte'
-});
-
 const CertificadoDAO = {
 
     async criar(dados) {
