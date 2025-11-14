@@ -105,9 +105,7 @@ CREATE TABLE turma (
     horario DATETIME NOT NULL,
     local VARCHAR(200) NOT NULL,
     id_curso INT NOT NULL,
-    id_instrutor INT NOT NULL,
-    FOREIGN KEY (id_curso) REFERENCES curso(id_curso),
-    FOREIGN KEY (id_instrutor) REFERENCES usuario(id_usuario)
+    FOREIGN KEY (id_curso) REFERENCES curso(id_curso)
 );
 
 -- Relacionamento turma : instrutor
@@ -141,14 +139,20 @@ CREATE TABLE lista_presenca_usuario (
 -- Certificado vinculado ao usuário que concluiu 
 CREATE TABLE certificado (
    id_certificado INT PRIMARY KEY AUTO_INCREMENT,
-   certificador1 VARCHAR(100) NOT NULL,
-   registro_c1 VARCHAR(100) NOT NULL,
-   cargo_c1 VARCHAR(100) NOT NULL,
+   certificador VARCHAR(100) NOT NULL,
+   registro_certificador VARCHAR(100) NOT NULL,
+   cargo_certificador VARCHAR(100) NOT NULL,
    id_concluinte INT NOT NULL,
    nome_certificado VARCHAR(100) NOT NULL,
    descricao TEXT NOT NULL,
+   nivel ENUM('iniciante', 'intermediario', 'avancado') NOT NULL,
+   tabela VARCHAR(100) NOT NULL,
+   normas TEXT NOT NULL,
+   cidade VARCHAR(100) NOT NULL,
+   data_certificado DATE NOT NULL,
    FOREIGN KEY (id_concluinte) REFERENCES usuario(id_usuario)
 );
 
 
 
+    
