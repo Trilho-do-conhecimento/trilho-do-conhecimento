@@ -1,7 +1,4 @@
 import {
-  verifySessionAluno,
-  buscarTreinamentos,
-  buscarCertificados,
   clearAuthToken
 } from "../services/menuAlunoService.js";
 
@@ -17,62 +14,15 @@ import {
 // }
 
 // === Meus treinamentos ===
-export async function handleOpenTreinamentos(event) {
-  event.preventDefault();
-
-  try {
-    const cursos = await buscarTreinamentos();
-
-    const container = document.querySelector(".trainings-control .container");
-    container.innerHTML = `
-      <h1>Meus Treinamentos</h1>
-      <ul class="lista-treinamentos">
-        ${cursos
-          .map(
-            c => `
-            <li>
-              <strong>${c.nome}</strong> — ${c.area} <br>
-              <em>Status: ${c.status}</em> • 
-              <span>${c.carga_horaria}h</span>
-            </li>
-          `
-          )
-          .join("")}
-      </ul>
-    `;
-  } catch (error) {
-    console.error("Erro ao carregar treinamentos:", error);
-    alert("Não foi possível carregar seus treinamentos.");
-  }
+export function handleOpenTreinamentos(event) {
+    event.preventDefault(); 
+        window.location.href = "historicoTreinamentosAluno.html"; 
 }
 
 // === Meus certificados ===
-export async function handleOpenCertificados(event) {
-  event.preventDefault();
-
-  try {
-    const certificados = await buscarCertificados();
-
-    const container = document.querySelector(".trainings-control .container");
-    container.innerHTML = `
-      <h1>Meus Certificados</h1>
-      <ul class="lista-certificados">
-        ${certificados
-          .map(
-            cert => `
-            <li>
-              <strong>${cert.nome_certificado}</strong> <br>
-              <em>ID:</em> ${cert.id_certificado}
-            </li>
-          `
-          )
-          .join("")}
-      </ul>
-    `;
-  } catch (error) {
-    console.error("Erro ao carregar certificados:", error);
-    alert("Não foi possível carregar seus certificados.");
-  }
+export function handleOpenCertificados(event) {
+    event.preventDefault(); 
+        window.location.href = "telaCertificado.html"; 
 }
 
 // === Logout opcional ===

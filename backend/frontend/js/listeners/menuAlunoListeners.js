@@ -1,34 +1,26 @@
-import {
-  // initMenuAluno,
-  handleOpenTreinamentos,
-  handleOpenCertificados
-} from "../controllers/menuAlunoController.js";
+document.addEventListener("DOMContentLoaded", () => {
 
-// Garante inicialização ao carregar a página
-// window.addEventListener("DOMContentLoaded", initMenuAluno);
+    const goBack = (event) => {
+        if (event) {
+            event.preventDefault();
+        }
+        
+        window.location.href = "menuAdm.html"; 
+    };
 
-// Botões do HTML
-const btnTreinamentos = document.querySelector(".button-group a:nth-child(1)");
-const btnCertificados = document.querySelector(".button-group a:nth-child(2)");
+    // Ícone de Seta de Voltar (Link)
+    const linkVoltar = document.getElementById('link-voltar');
+    
+    if (linkVoltar) {
+        linkVoltar.addEventListener('click', goBack);
+    }
+});
 
-// Eventos de clique
-btnTreinamentos.addEventListener("click", handleOpenTreinamentos);
-btnCertificados.addEventListener("click", handleOpenCertificados);
-
-
-    //voltar para a tela anterior
-  document.addEventListener('DOMContentLoaded', () => {
-      // Ação de Voltar para tela anterior
-      const goBack = (event) => {
-          if (event) {
-              event.preventDefault();
-          }
-          window.history.back();
-      };
-
-      // Ícone de Seta de Voltar (Link)
-      const linkVoltar = document.getElementById('link-voltar');
-      if (linkVoltar) {
-          linkVoltar.addEventListener('click', goBack);
-      }
-  });
+    // Ícone de Seta de Voltar (Link)
+    const linkVoltar = document.getElementById('link-voltar');
+    
+    if (linkVoltar) {
+        linkVoltar.addEventListener('click', goBack);
+    } else {
+        console.error("Erro: Link de Voltar não encontrado.");
+    }
