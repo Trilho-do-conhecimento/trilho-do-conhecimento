@@ -38,13 +38,7 @@ export function handleOpenMenuAluno(event) {
   window.location.href = "../pages/menuEuAluno.html";
 }
 
-/**
- * Redireciona para a tela de certificados.
- */
-export function handleOpenCertificados(event) {
-  event.preventDefault();
-  window.location.href = "../pages/telaCertificado.html";
-}
+
 
 /**
  * Redireciona para a página de cadastro de novos usuários.
