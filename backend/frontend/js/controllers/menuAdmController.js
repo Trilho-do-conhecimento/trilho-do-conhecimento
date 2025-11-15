@@ -35,7 +35,7 @@ export function handleOpenListaPresenca(event) {
  */
 export function handleOpenMenuAluno(event) {
   event.preventDefault();
-  window.location.href = "../pages/menuAluno.html";
+  window.location.href = "../pages/menuEuAluno.html";
 }
 
 /**

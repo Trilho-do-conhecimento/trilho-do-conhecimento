@@ -47,10 +47,9 @@
 
     <main>
         <div class="container">
-            <a href="menuAluno.html" id="link-voltar" class="back-link" title="Voltar à tela anterior">
+            <a href="#" id="link-voltar" class="back-link" title="Voltar à tela anterior">
                 <i class="fas fa-arrow-left"></i>
             </a>
-
             <h1 class="page-title">Histórico de treinamentos</h1>
             <p class="page-subtitle">
                 Acompanhe seus treinamentos concluídos, em andamento e futuros.
@@ -138,7 +137,16 @@
         // backend + att lista        
         painelFiltro.classList.remove('ativo');
       });
+
+      const linkVoltar = document.getElementById('link-voltar');
+
+    linkVoltar.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        window.history.back();
     });
+    });
+
+</script>
     </script>    
 </body>
 </html>

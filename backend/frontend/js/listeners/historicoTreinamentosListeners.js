@@ -27,3 +27,16 @@ document.querySelector(".table-container").addEventListener("click", (event) => 
     handleEmitirCertificado(event);
   }
 });
+
+function configurarBotaoVoltar() {
+    const linkVoltar = document.getElementById('link-voltar');
+
+    if (linkVoltar) {
+        linkVoltar.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            window.history.back(); 
+        });
+    }
+}
+
+document.addEventListener("DOMContentLoaded", configurarBotaoVoltar);

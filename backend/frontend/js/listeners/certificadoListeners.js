@@ -1,17 +1,14 @@
 
-    //voltar para a tela anterior
-  document.addEventListener('DOMContentLoaded', () => {
-      // Ação de Voltar para tela anterior
-      const goBack = (event) => {
-          if (event) {
-              event.preventDefault();
-          }
-          window.history.back();
-      };
+export function configurarBotaoVoltar() {
+    const linkVoltar = document.getElementById('link-voltar');
 
-      // Ícone de Seta de Voltar (Link)
-      const linkVoltar = document.getElementById('link-voltar');
-      if (linkVoltar) {
-          linkVoltar.addEventListener('click', goBack);
-      }
-  });
+    if (linkVoltar) {
+        linkVoltar.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            window.history.back(); 
+        });
+    }
+}
+
+document.addEventListener("DOMContentLoaded", configurarBotaoVoltar); 
+
