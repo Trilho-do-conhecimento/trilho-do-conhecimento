@@ -107,3 +107,30 @@
             .site-header { flex-direction: column; gap: 15px; }
             .page-title { font-size: 1.8rem; }
         }
+
+             /* --- ESTILOS PARA O BOTÃO DE VOLTAR (SETA) --- */
+
+     .back-link {
+        display: inline-flex; 
+        align-items: center;
+        justify-content: center;
+                
+        font-size: 1.2rem; 
+        color: #001489; 
+        text-decoration: none;
+                
+         /* Espaçamento em relação ao título */
+        margin-bottom: 25px; 
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%; /* Transforma em círculo */   
+        transition: all 0.2s ease;
+     }
+
+    .back-link:hover {
+        color: #001489; /* Exemplo: Cor de destaque */
+        background-color: #f0f0f0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+

@@ -22,8 +22,16 @@ export async function handleSubmitCadastro(event) {
   }
 }
 
+// Função para Limpar o Formulário (Resetar)
 export function handleCancelarCadastro() {
-  window.location.href = "/pages/menuAdm.html";
+   const form = document.getElementById('form-cadastrar-usuario');
+
+   if (form) {
+      form.reset();
+      alert('Campos de cadastro limpos!'); 
+   } else {
+       console.error('Formulário não encontrado!');
+   }
 }
 
 export function handleMascaraData(event) {

@@ -120,11 +120,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Cancelar → volta
-  if (btnCancelar) {
-    btnCancelar.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.history.back();
-    });
-  }
+ // limpa o formulário
+    if (btnCancelar) {
+        btnCancelar.addEventListener("click", (e) => {
+          e.preventDefault();
+                
+        if (form) {
+          form.reset();      
+          alert("Formulário limpo com sucesso!"); 
+        } else {
+          console.error("Formulário 'form-cadastrar-usuario' não encontrado.");
+        }
+      });
+    }
 });
