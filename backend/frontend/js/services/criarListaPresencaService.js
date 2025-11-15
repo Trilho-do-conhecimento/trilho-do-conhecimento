@@ -25,6 +25,12 @@ class ListaDePresencaService {
   static async deletar(id) {
     return await ListaPresencaDAO.deletar(id);
   }
+
+      static async filtrarAlunos(filtros) {
+        // Chama a função DAO responsável pela consulta complexa com filtros
+        // Você precisará implementar este método no seu DAO.
+        return await ListaPresencaDAO.filtrarAlunos(filtros);
+    }
 }
 
 module.exports = ListaDePresencaService;

@@ -2,6 +2,23 @@ const ListaDePresencaService = require('../services/criarListaPresencaService');
 const logger = require('../../../logs/logger');
 
 class ListaDePresencaController {
+  static async filtrar(req, res) {
+        try {
+            const filtros = req.body;
+            const alunosFiltrados = await ListaDePresencaService.filtrarAlunos(filtros);
+            
+            res.json({
+                sucesso: true,
+                participantes: alunosFiltrados
+            });
+        } catch (err) {
+            logger.error("Erro ao aplicar filtros na lista de presença:", err);
+            res.status(500).json({ 
+                sucesso: false, 
+                error: 'Não foi possível aplicar os filtros na lista.' 
+            });
+        }
+    }
   static async criar(req, res) {
     try {
       const resultado = await ListaDePresencaService.criar(req.body);

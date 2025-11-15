@@ -77,7 +77,52 @@ const ListaPresencaDAO = {
         const numRowsDeleted = await ListaPresenca.destroy({ where: { id_lista } }); 
         if (numRowsDeleted === 0) throw new Error('Lista de presença não encontrada'); 
         return true; 
-    } 
+    },
+    
+    async filtrarAlunos(filtros) {
+        const whereUsuario = {};
+        const whereListaPresenca = {};
+        
+        if (filtros.Nome) {
+            whereUsuario.nome_completo = { [Op.like]: `%${filtros.Nome}%` };
+        }
+        if (filtros.Registro) {
+            whereUsuario.registro = filtros.Registro;
+        }
+        if (filtros.Cargo) {
+            whereUsuario.cargo = filtros.Cargo;
+        }
+        if (filtros.Area) {
+            whereUsuario.area = filtros.Area;
+        }
+
+        if (filtros.data) {
+            whereListaPresenca.data = filtros.data;
+        }
+
+        const resultados = await Usuario.findAll({
+            attributes: ['nome_completo', 'registro', 'cargo', 'area'], 
+            where: whereUsuario, 
+            include: [
+                {
+                    model: ListaPresenca,
+                    through: { model: ListaPresencaUsuario, attributes: ['status_assinatura'] },
+                    as: 'Listas', 
+                    required: true, 
+                    where: whereListaPresenca,
+                    attributes: ['data'] 
+                }
+            ],
+        });
+                return resultados.map(usuario => ({
+            nome_completo: usuario.nome_completo,
+            registro: usuario.registro,
+            cargo: usuario.cargo,
+            area: usuario.area,
+            datas: usuario.Listas.map(l => l.data).join(', '),
+            assinaturas: usuario.Listas.map(l => l.ListaPresencaUsuario.status_assinatura).join(', '),
+        }));
+    }
 }; 
 
 module.exports = ListaPresencaDAO; 

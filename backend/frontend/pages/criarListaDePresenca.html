@@ -180,14 +180,77 @@
         painelFiltro.classList.remove('ativo');
       });
     
-      // Aplica o filtro
-      formFiltro.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const data = Object.fromEntries(new FormData(formFiltro));
-        console.log('Filtros aplicados:', data);
-    
-        // backend + att lista        
-        painelFiltro.classList.remove('ativo');
+  //filtro
+      document.addEventListener("DOMContentLoaded", () => {
+          const btnFiltro = document.getElementById('btnFiltro');
+          const painelFiltro = document.getElementById('painelFiltro');
+          const fecharFiltro = document.getElementById('fecharFiltro');
+          const formFiltro = document.getElementById('formFiltro');
+
+          // Função para atualizar a tabela
+          function atualizarTabela(participantes) {
+              const tbody = document.querySelector('.attendance-table tbody');
+              tbody.innerHTML = '';
+
+              if (!participantes || participantes.length === 0) {
+                  const row = tbody.insertRow();
+                  const cell = row.insertCell();
+                  cell.colSpan = 7; 
+                  cell.textContent = 'Nenhum participante encontrado com os filtros aplicados.';
+                  cell.style.textAlign = 'center';
+                  return;
+              }
+
+              // Adiciona as novas linhas baseadas nos dados do backend
+              participantes.forEach((p, index) => {
+                  const row = tbody.insertRow();
+                  row.innerHTML = `
+                      <td class="number-cell">${index + 1}</td>
+                      <td><input type="text" name="nome_completo[]" value="${p.nome_completo || ''}"></td>
+                      <td><input type="text" name="registro[]" value="${p.registro || ''}"></td>
+                      <td><input type="text" name="cargo[]" value="${p.cargo || ''}"></td>
+                      <td><input type="text" name="area[]" value="${p.area || ''}"></td>
+                      <td><input type="text" name="datas[]" value="${p.datas || ''}"></td>
+                      <td><input type="text" name="assinaturas[]" value="${p.assinaturas || ''}"></td>
+                  `;
+              });
+          }
+
+          // Aplica o filtro
+          formFiltro.addEventListener('submit', async (e) => { 
+              e.preventDefault();
+              
+              const filtros = Object.fromEntries(new FormData(formFiltro));
+              console.log('Filtros aplicados:', filtros);
+
+              // Chamada para a nova rota do backend
+              try {
+                  const resp = await fetch("/rotas/lista/filtrar", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      credentials: "include",
+                      body: JSON.stringify(filtros),
+                  });
+
+                  if (!resp.ok) {
+                      const erro = await resp.json();
+                      throw new Error(erro.error || "Falha ao aplicar filtro.");
+                  }
+
+                  const data = await resp.json();
+                  
+                  if (data.sucesso) {
+                      // Atualizar a tabela com os novos dados
+                      atualizarTabela(data.participantes);
+                      painelFiltro.classList.remove('ativo');
+                  } else {
+                      alert('Erro ao aplicar filtros: ' + (data.error || "Erro desconhecido."));
+                  }
+              } catch (err) {
+                  console.error("Erro na requisição de filtro:", err);
+                  alert("Erro ao buscar a lista de presença com os filtros.\n" + (err?.message || ""));
+              }
+          });
       });
     });
     </script>    

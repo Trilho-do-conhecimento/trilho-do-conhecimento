@@ -46,4 +46,9 @@ router.delete('/:id', authMiddleware, (req, res) => {
     ListaDePresencaController.deletar(req, res);
 });
 
+// NOVO: Rota POST para aplicar filtros
+router.post('/filtrar', authMiddleware, (req, res) => {
+    ListaDePresencaController.filtrar(req, res);
+});
+
 module.exports = router;
