@@ -34,18 +34,31 @@
 
     <main>
         <div class="container">
+            <!-- Painel lateral do filtro -->
+        <aside id="painelFiltro" class="painel-filtro">
+            <div class="filtro-header">
+            <h3>Filtros</h3>
+            <span id="fecharFiltro" class="fechar-btn">&times;</span>
+            </div>
+            <form id="formFiltro" class="filtro-conteudo">
+            <label>Cursos</label>
+            <input type="text" name="Cursos" placeholder="Exemplo: desenvolvimento de front-end  ">
+            <label>Data de inicio </label>
+            <input type="date" name="data">
+            <label>Status</label>
+            <input type="text" name="Status" placeholder="Exemplo:concluido">
+            </form>
+        </aside>
             <a href="menuAdm.html" id="link-voltar" class="back-link" title="Voltar à tela anterior">
                 <i class="fas fa-arrow-left"></i>
             </a>
             <h1 class="page-title">Treinamentos</h1>
             <p class="page-subtitle">Aqui o instrutor poderá acessar as listas de presença das turmas e visualizar as informações das mesmas</p>
             
-            <div class="controls-container">
-                <button class="filter-button">
-                    Filtro
-                    <i class="fas fa-filter"></i>
-                </button>
-            </div>
+        <!-- Botão do filtro -->
+        <button id="btnFiltro" class="filtro-btn" type="button">
+            <i class="fa fa-sliders"></i> Filtros
+      </button>
 
             <div class="table-container">
                 <table class="trainings-table">
@@ -151,6 +164,35 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+      <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const btnFiltro = document.getElementById('btnFiltro');
+      const painelFiltro = document.getElementById('painelFiltro');
+      const fecharFiltro = document.getElementById('fecharFiltro');
+      const formFiltro = document.getElementById('formFiltro');
+    
+      // Abre o painel
+      btnFiltro.addEventListener('click', (e) => {
+        e.preventDefault();
+        painelFiltro.classList.add('ativo');
+      });
+    
+      // Fecha o painel
+      fecharFiltro.addEventListener('click', () => {
+        painelFiltro.classList.remove('ativo');
+      });
+    
+      // Aplica o filtro
+      formFiltro.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(formFiltro));
+        console.log('Filtros aplicados:', data);
+    
+        // backend + att lista        
+        painelFiltro.classList.remove('ativo');
+      });
+    });
+    </script>    
 
 </body>
 </html>

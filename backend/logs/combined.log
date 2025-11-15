@@ -1622,3 +1622,9 @@
 {"email":"ana.souza@empresa.com.br","idUsuario":5,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-14 20:28:26"}
 {"email":"admin@metro.com","idUsuario":6,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-14 21:01:22"}
 {"email":"admin@metro.com","idUsuario":6,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-14 21:01:22"}
+{"email":"ana.souza@empresa.com.br","idUsuario":5,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-14 21:52:47"}
+{"email":"ana.souza@empresa.com.br","idUsuario":5,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-14 21:53:25"}
+{"email":"ana.souza@empresa.com.br","idUsuario":5,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-14 21:53:25"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-14 22:15:21"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-14 22:15:23"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-14 22:15:32"}
