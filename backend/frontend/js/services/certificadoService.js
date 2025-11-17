@@ -64,7 +64,8 @@ async function gerarCertificado(id_certificado) {
   return outputPath;
 }
 
-async function gerarCertificadoStream(id_certificado) {
+async function gerarCertificadoStream(req, res) {
+  const id_certificado = req.params.id;
 
   const certificado = await CertificadoDAO.buscarPorId(id_certificado);
   if (!certificado) throw new Error('Certificado não encontrado');
@@ -113,7 +114,13 @@ async function gerarCertificadoStream(id_certificado) {
 
   const pdfBytes = await pdfDoc.save();
 
-  return pdfBytes;
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader(
+    'Content-Disposition',
+    `attachment; filename=certificado-${id_certificado}.pdf`
+  );
+
+  return res.send(pdfBytes);
 }
 
 module.exports = { 
