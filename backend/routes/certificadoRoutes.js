@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const CertificadoDAO = require('../DAO/CertificadoDAO.js');
 const logger = require('../logs/logger.js');
+const { gerarCertificadoStream } = require('../services/CertificadoService.js');
 
 // Função para validar campos obrigatórios 
 function validarCamposObrigatorios(body) {
@@ -107,6 +108,31 @@ router.put('/:id', async (req, res) => {
         console.error(err);
         logger.error(`Erro ao atualizar certificado ${req.params.id}.`, err);
         res.status(500).json({ error: err.message });
+    }
+});
+
+// GET - certificados de um aluno
+router.get('/aluno/:id_concluinte', async (req, res) => {
+    try {
+        const certificados = await CertificadoDAO.buscarPorConcluinte(req.params.id_concluinte);
+        res.json(certificados);
+    } catch (err) {
+        res.status(500).json({ error: 'Erro ao buscar certificados do aluno.' });
+    }
+});
+
+// GET - download do certificado em PDF
+router.get('/:id/download', async (req, res) => {
+    try {
+        await gerarCertificadoStream(req, res);
+
+    } catch (err) {
+        console.error('Erro ao gerar PDF do certificado:', err);
+        logger.error(`Erro ao gerar PDF do certificado ${req.params.id}`, err);
+
+        res.status(500).json({
+            error: 'Erro ao gerar o PDF do certificado.'
+        });
     }
 });
 
