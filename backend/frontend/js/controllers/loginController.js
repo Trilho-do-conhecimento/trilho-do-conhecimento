@@ -15,11 +15,16 @@ export async function handleLogin(event) {
   try {
     const response = await loginUser(email, senha);
     if (response.success) {
+
+      localStorage.setItem("userId", response.userId);   // ID do usuário
+      localStorage.setItem("userType", response.userType);  // tipo (admin/aluno)
+      localStorage.setItem("email", email);  // email
+
       if (response.userType === 'admin') {
-                window.location.href = "/pages/menuAdm.html"; 
-            } else {
-                window.location.href = "/pages/menuAluno.html"; 
-            }
+        window.location.href = "/pages/menuAdm.html";
+      } else {
+        window.location.href = "/pages/menuAluno.html";
+      }
     } else {
       alert(response.message || "Usuário ou senha inválidos.");
     }
