@@ -83,7 +83,7 @@ async function preencherCertificado(certificado, page, font, bold, color) {
   const lineHeight = 15; 
   const fontSize = 10; 
   
-  const xAlign = 120; s
+  const xAlign = 120; 
   const textMaxWidth = width - (2 * xAlign); 
   
   let currentY = height - 160; 
