@@ -1,122 +1,181 @@
-const { error } = require('winston');
-
 require('dotenv').config();
 const ACCESS_TOKEN_API = process.env.CLICKSIGN_TOKEN;
-const URL_API = `https://sandbox.clicksign.com/api/v3/envelopes?access_token=${ACCESS_TOKEN_API}`
-const URL_BASE_ENVELOPES = "https://sandbox.clicksign.com/api/v3/envelopes"
-const ENVELOPE_ID = 'df916589-3bb9-4b7b-a585-fb6b853b0554'
-const URL_ALTERA_ENVELOPES = `https://sandbox.clicksign.com/api/v3/envelopes/${ENVELOPE_ID}`
-const URL_DOCUMENTOS = `https://sandbox.clicksign.com/api/v3/envelopes/${ENVELOPE_ID}/documents`
+const { parse } = require('dotenv');
+const logger = require('../logs/logger')
 
 const options = {
     headers: {
         'accept': 'application/json',
-        'Authorization': `${ACCESS_TOKEN_API}`,
-        'content-type': 'application/vnd.api+json'
+        'Authorization': ACCESS_TOKEN_API,
+        'content-type': 'application/json'
     }
 }
 
-async function listaEnvelope() {
-    const resp = await fetch(URL_BASE_ENVELOPES, {
-        method: 'GET',
-        headers: options.headers
-    })
-        .then(res => res.json())
-        .then(res => console.log(res))
-        .catch(err => console.log(err));
-}
+async function enviarParaAssinatura(fileBase64, filename, signatarios) {
 
-async function criaEnvelope() {
-    const body = '\n{\n"data": {\n"type": "envelopes",\n"attributes": {\n"name": "Envelope de Teste",\n"locale": "pt-BR",\n"auto_close": true,\n"remind_interval": "3",\n"block_after_refusal": false\n}\n}\n}\n'
-    const resp = await fetch(URL_BASE_ENVELOPES, {
-        method: 'POST',
-        headers: options.headers,
-        body: body
-    })
-        .then(res => res.json())
-        .then(res => console.log(res))
-        .catch(err => console.log(err));
-}
-
-async function editaEnvelope() {
-    const body = JSON.stringify({
-        "data" : {
-            "type" : "envelopes",
-            "id" : ENVELOPE_ID,
-            "attributes" : {
-                "name" : "Envelope editado no back"
-            }
-        }
-    });
+    console.log("Token API:", ACCESS_TOKEN_API ? "ok" : "token vazio");
 
     try {
-        const resp = await fetch(URL_ALTERA_ENVELOPES, {
-            method: 'PATCH',
-            headers: options.headers,
-            body: body
-        })
-    
-        console.log("Status: ", resp.status)
-    
-            if(!resp.ok){
-                const errorBody = await resp.text()  
-                console.error("erro: ", resp.status)
-                console.log("mensagem da api: ", errorBody)
-                return 
+        let base64final = fileBase64;
+
+        if (!fileBase64.startsWith('data:application/pdf;base64,')) {
+            base64final = `data:application/pdf;base64,${fileBase64}`;
+        }
+
+        // corpo do documento - isso funciona
+        const bodyDocumento = JSON.stringify({
+            "document": {
+                "path": `/${filename}`,
+                "content_base64": base64final,
             }
+        });
 
-            const data = await resp.json()
-            console.log("Sucesso! Envelope editado.")
-            console.log("Envelope: ", data.data.id, "-", data.data.attributes.name)
-
-    } catch (err) {
-        console.error("Erro ao tentar editar o envelope: ", err.message || err)
-    }
-}
-
-async function exibeDetalhesEnvelope() {
-    const resp = await fetch(URL_ALTERA_ENVELOPES, {
-        method: 'GET',
-        headers: options.headers
-    })
-
-    .then(res => res.json())
-    .then(res => console.log(res))
-    .catch(err => console.log(err));
-}
-
-async function deletaEnvelope() {
-    try{
-        const resp = await fetch(URL_ALTERA_ENVELOPES, {
-            method: 'DELETE',
-            headers: options.headers
+        // cria documento - isso funciona 
+        const documentoResp = await fetch(`https://sandbox.clicksign.com/api/v1/documents`, {
+            method: 'POST',
+            headers: options.headers,
+            body: bodyDocumento
         })
-    
-        if(!resp.ok){
-            const errorDel = await resp.text()
-            console.log("Erro:", resp.status)
-            console.log("Mensagem da API:", errorDel)
-            return;
+
+        if (!documentoResp.ok) {
+            const errorBody = await documentoResp.text();
+            logger.error("Erro ao criar documento:", documentoResp.status, errorBody);
+            return {
+                success: false,
+                error: `Erro na criação do documento: ${documentoResp.status}`
+            }
+        }
+
+        const docData = await documentoResp.json();
+        const DOCUMENT_KEY = docData.document?.key;
+        logger.info("Documento criado com sucesso:", DOCUMENT_KEY);
+
+        if (!DOCUMENT_KEY) {
+            return {
+                success: false,
+                error: "Não encontrou DOCUMENT_KEY"
+            };
+        }
+
+        let signatariosCriados = []
+        let docsFinalizado = false;
+
+        // corpo do signatário - funcionando tb
+        for (const signatario of signatarios) {
+            try {
+                const bodySignatario = JSON.stringify({
+                    "signer": {
+                        "email": signatario.email,
+                        "name": signatario.name,
+                        "auths": ["email"]
+                    }
+                });
+
+                // cria signatarios
+                const respSign = await fetch(`https://sandbox.clicksign.com/api/v1/signers`, {
+                    method: 'POST',
+                    headers: options.headers,
+                    body: bodySignatario
+                });
+
+                if (!respSign.ok) {
+                    logger.error(`Erro ao criar signatário ${signatario.email}, ${respSign.status}`, respSignatarioTexto);
+                    continue;
+                }
+
+                const respSignatario = await respSign.json()
+                const SIGNER_KEY = respSignatario.signer?.key;
+
+                if (!SIGNER_KEY) {
+                    logger.warn("SIGNER_KEY não foi encontrado para:", signatario.email)
+                    continue;
+                }
+
+                let adicionaSignatario = false;
+
+                try {
+                    // corpo para enviar para a assinatura
+                    const bodyLista = JSON.stringify({
+                        "list": {
+                            "document_key": DOCUMENT_KEY,
+                            "signer_key": SIGNER_KEY,
+                            "sign_as": "sign",
+                            "message": ""
+                        }
+                    });
+
+                    const respLista = await fetch(`https://sandbox.clicksign.com/api/v1/lists`, {
+                        method: 'POST',
+                        headers: options.headers,
+                        body: bodyLista
+                    });
+
+                    adicionaSignatario = respLista.ok;
+
+                    if (!adicionaSignatario) {
+                        logger.warn(`Signatário ${signatario.email} criado, mas não adicionado`)
+                    }
+
+                } catch (listaError) {
+                    logger.warn(`Erro ao adicionar ${signatario.email} na lista: `, listaError.message)
+                }
+
+                signatariosCriados.push({
+                    email: signatario.email,
+                    name: signatario.name,
+                    key: SIGNER_KEY,
+                    adicionadoAoDocumento: adicionaSignatario,
+                    signingUrl: `https://sandbox.clicksign.com/documents/${DOCUMENT_KEY}?signer=${SIGNER_KEY}`
+                });
+
+                logger.info(`Signatário processado: ${signatario.name}`, {
+                    adicionado: adicionaSignatario
+                });
+
+            } catch (signatarioError) {
+                logger.error(`Erro ao processar signatário ${signatario.email}`, signatarioError)
+            }
         }
         
-        if(resp.status === 204) {
-            console.log("Sucesso! Envelope deletado") 
-            return;  
-        }
 
-        if(resp.ok){ 
-            const data = await resp.json()
-            console.log("Sucesso! Envelope deletado.")
-            console.log("Envelope:", data.data.id, "-", data.data.attributes.name);
-        }
+        try {
+            // finaliza recursos e assinatura
+            const bodyFinalizar = JSON.stringify({
+                "document": {
+                    "auto_close": true
+                }
+            });
 
-    } catch (err) {
-        console.error("Erro ao tentar deletar envelope:", err.message || err)
+            const respFinalizar = await fetch(`https://sandbox.clicksign.com/api/v1/documents/${DOCUMENT_KEY}/finalize`, {
+                method: 'PATCH',
+                headers: options.headers,
+                body: bodyFinalizar
+            })
+
+            docsFinalizado = respFinalizar.ok;
+
+        } catch (finalizarError) {
+            logger.warn("Erro ao finalizar documento:", finalizarError.message);
+        }
+        return {
+            success: true,
+            documentKey: DOCUMENT_KEY,
+            signatarios: signatariosCriados,
+            documentUrl: `https://sandbox.clicksign.com/documents/${DOCUMENT_KEY}`,
+            message: "Documento criado e signatários adicionados!",
+            metadata: {
+                totalSignatarios: signatarios.length,
+                signatariosProcessados: signatariosCriados.length,
+                documentoFinalizado: docsFinalizado
+            }
+        };
+    } catch (error) {
+        logger.error('Erro na integração Clicksign:', error);
+        return {
+            success: false,
+            error: "Erro ao processar solicitação de assinatura"
+        };
     }
 }
 
-// listaEnvelope();
-// criaEnvelope();
-// editaEnvelope();
-// exibeDetalhesEnvelope();
-// deletaEnvelope();
+module.exports = { enviarParaAssinatura }

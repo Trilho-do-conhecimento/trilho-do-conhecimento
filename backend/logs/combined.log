@@ -233,3 +233,11 @@
 {"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-01 14:41:20"}
 {"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-01 14:41:20"}
 {"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-01 14:41:20"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-23 14:21:28"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-23 14:21:28"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-23 14:21:28"}
+{"ip":"::ffff:127.0.0.1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-23 14:21:36"}
+{"level":"info","message":"Tentando conectar com o usuário root","timestamp":"2025-11-23 14:21:52"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-23 14:21:52"}
+{"level":"info","message":"Conexão com o banco de dados realizada com sucesso!","timestamp":"2025-11-23 14:21:52"}
+{"ip":"::ffff:127.0.0.1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-23 14:21:53"}

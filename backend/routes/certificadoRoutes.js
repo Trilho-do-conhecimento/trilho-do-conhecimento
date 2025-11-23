@@ -90,4 +90,27 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
+// rota da api
+router.post('/enviarAssinatura', async (req, res) => {
+    try {
+        const { fileBase64, fileName, signatarios } = req.body;
+
+        if (!fileBase64 || !fileName) {
+            return res.status(400).json();
+        }
+        const resultado = await enviarParaAssinatura(fileBase64, fileName, signatarios);
+        console.log("Resultado da função:", resultado);
+        if (resultado.success) {
+            logger.info('Sucesso! Envelope ID:', resultado.envelopeId);
+            res.json(resultado);
+        } else {
+            res.status(500).json({error: resultado.error});
+        }
+
+    } catch (error) {
+        logger.error('Erro na rota de assinatura:', error);
+        res.status(500).json({error: error.message});
+    }
+}); 
+
 module.exports = router;

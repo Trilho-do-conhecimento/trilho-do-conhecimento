@@ -33,3 +33,5 @@
 {"level":"error","message":"this is a error message","timestamp":"01-11-2025 14:33:30"}
 {"level":"error","message":"this is a error message","timestamp":"2025-11-01 14:38:08"}
 {"level":"error","message":"this is a error message","timestamp":"2025-11-01 14:38:57"}
+{"ip":"::ffff:127.0.0.1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-23 14:21:36"}
+{"ip":"::ffff:127.0.0.1","level":"error","message":"Tentativa de acesso negado: o token não foi encontrado no cookie.","timestamp":"2025-11-23 14:21:53"}
