@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { PDFDocument, rgb, StandardFonts } = require('pdf-lib');
-const CertificadoDAO = require('../DAO/CertificadoDAO');
+const CertificadoDAO = require('../../../DAO/CertificadoDAO')
 
 async function gerarCertificado(id_certificado) {
   // 1. Busca os dados no banco
@@ -87,7 +87,7 @@ async function gerarCertificadoStream(req, res) {
     registroCertificador: certificado.registro_certificador
   };
 
-  const modeloPath = path.join(__dirname, '../templates/certificado_0.pdf');
+  const modeloPath = path.join(__dirname, '..', '..', '../templates/certificado_0.pdf');
   const modeloBytes = fs.readFileSync(modeloPath);
 
   const pdfDoc = await PDFDocument.load(modeloBytes);

@@ -1632,3 +1632,31 @@
 {"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-15 17:06:00"}
 {"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-15 17:06:08"}
 {"email":"admin@metro.com","idUsuario":6,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-15 17:06:18"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-23 14:39:38"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-23 14:39:41"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-23 14:39:49"}
+{"email":"daniel.santos@aluno.com","idUsuario":3,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-23 14:40:07"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-23 14:43:56"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-23 14:43:57"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-23 14:43:59"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-23 14:44:02"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-23 14:44:05"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-23 14:44:07"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-23 14:44:16"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-23 14:45:05"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-23 14:45:07"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-23 14:45:16"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-23 14:47:56"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-23 14:47:58"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-23 14:48:00"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-23 14:48:02"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-23 14:48:04"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-23 14:48:13"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-23 14:48:28"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-23 14:48:30"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-23 14:48:38"}
+{"code":"ENOENT","errno":-4058,"level":"error","message":"Erro ao gerar PDF do certificado 1 ENOENT: no such file or directory, open 'C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\frontend\\js\\templates\\certificado_0.pdf'","path":"C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\frontend\\js\\templates\\certificado_0.pdf","stack":"Error: ENOENT: no such file or directory, open 'C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\frontend\\js\\templates\\certificado_0.pdf'\n    at Object.openSync (node:fs:561:18)\n    at Object.readFileSync (node:fs:445:35)\n    at gerarCertificadoStream (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\frontend\\js\\services\\certificadoService.js:91:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\routes\\certificadoRoutes.js:127:9","syscall":"open","timestamp":"2025-11-23 14:48:41"}
+{"code":"ENOENT","errno":-4058,"level":"error","message":"Erro ao gerar PDF do certificado 1 ENOENT: no such file or directory, open 'C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\frontend\\js\\templates\\certificado_0.pdf'","path":"C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\frontend\\js\\templates\\certificado_0.pdf","stack":"Error: ENOENT: no such file or directory, open 'C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\frontend\\js\\templates\\certificado_0.pdf'\n    at Object.openSync (node:fs:561:18)\n    at Object.readFileSync (node:fs:445:35)\n    at gerarCertificadoStream (C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\frontend\\js\\services\\certificadoService.js:91:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async C:\\Users\\Admin\\Downloads\\trilho-do-conhecimento\\backend\\routes\\certificadoRoutes.js:127:9","syscall":"open","timestamp":"2025-11-23 14:54:18"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-23 14:56:16"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-23 14:56:18"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-23 14:56:26"}

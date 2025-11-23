@@ -28,7 +28,7 @@ async function carregarCertificados() {
     }
 
     try {
-        const response = await fetch(`http://localhost:3000/certificados/aluno/${userId}`, {
+        const response = await fetch(`http://localhost:3000/rotas/certificados/aluno/${userId}`, {
             method: "GET",
             credentials: "include"
         });
@@ -60,12 +60,12 @@ function renderizarCertificados(certificados) {
         const item = document.createElement("div");
         item.classList.add("certificate-item");
 
-        item.innerHTML = item.innerHTML = `
+        item.innerHTML = `
     <div class="certificate-card">
         
         <div class="certificate-info">
             <div class="certificate-name">${cert.nome_certificado}</div>
-            <div class="certificate-date">Emitido em: ${formatarData(cert.data_emissao)}</div>
+            <div class="certificate-date">Emitido em: ${formatarData(cert.data_certificado)}</div>
         </div>
 
         <button class="download-icon" onclick="baixarCertificado(${cert.id_certificado})" title="Baixar Certificado">
@@ -87,7 +87,7 @@ function formatarData(data) {
 
 // DOWNLOAD
 window.baixarCertificado = function (idCertificado) {
-    window.open(`http://localhost:3000/certificados/${idCertificado}/download`, "_blank");
+    window.open(`http://localhost:3000/rotas/certificados/${idCertificado}/download`, "_blank");
 };
 
 // === INICIALIZAÇÃO ===

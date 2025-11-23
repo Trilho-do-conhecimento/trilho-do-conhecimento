@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const CertificadoDAO = require('../DAO/CertificadoDAO.js');
 const logger = require('../logs/logger.js');
-const { gerarCertificadoStream } = require('../services/CertificadoService.js');
+const { gerarCertificadoStream } = require('../../backend/frontend/js/services/certificadoService.js')
 
 // Função para validar campos obrigatórios 
 function validarCamposObrigatorios(body) {

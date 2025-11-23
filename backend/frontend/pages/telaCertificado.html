@@ -51,24 +51,24 @@ GRID DINÂMICO:
 Este container agora está vazio. 
 O JS vai preenchê-lo com os dados da API.
 -->
-            <div class="certificate-grid" id="certificate-grid">
+            <div class="certificate-grid" id="certificate-grid"></div>
                 <!-- Os <div class="certificate-item"> serão inseridos aqui pelo JavaScript -->
-                <div vw class="enabled">
-                    <div vw-access-button class="active"></div>
-                    <div vw-plugin-wrapper>
-                        <div class="vw-plugin-top-wrapper"></div>
+                    <div vw class="enabled">
+                        <div vw-access-button class="active"></div>
+                        <div vw-plugin-wrapper>
+                            <div class="vw-plugin-top-wrapper"></div>
+                        </div>
                     </div>
-                </div>
-                <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-                <script>
-                    new window.VLibras.Widget('https://vlibras.gov.br/app');
-                </script>
-                <!-- 
-NOSSO SCRIPT:
-Carrega o JS que busca os dados da API. 
-O caminho é ../js/ porque este HTML está em 'pages/'.
--->
-                 <script type="module" src="../js/listeners/certificadoListeners.js"></script>;
+                    <!-- 
+                    NOSSO SCRIPT:
+                    Carrega o JS que busca os dados da API. 
+                    O caminho é ../js/ porque este HTML está em 'pages/'.
+                    -->
+                    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+                    <script>
+                        new window.VLibras.Widget('https://vlibras.gov.br/app');
+                    </script>
+                <script type="module" src="../js/listeners/certificadoListeners.js"></script>;
 </body>
 
 </html>
