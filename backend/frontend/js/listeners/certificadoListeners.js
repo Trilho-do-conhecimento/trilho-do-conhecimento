@@ -1,4 +1,3 @@
-// === BOTÃO DE VOLTAR ===
 function configurarBotaoVoltar() {
     const linkVoltar = document.getElementById('link-voltar');
 
@@ -78,11 +77,20 @@ function renderizarCertificados(certificados) {
     });
 }
 
-// formata a data do certificado
-function formatarData(data) {
-    if (!data) return "—";
-    const [ano, mes, dia] = data.split("-");
-    return `${dia}/${mes}/${ano}`;
+// formata a data do certificado 
+function formatarData(dataString) {
+    if (!dataString) return "—";
+    
+    const date = new Date(dataString);
+
+    if (isNaN(date.getTime())) {
+        return "Data Inválida";
+    }
+    return date.toLocaleDateString('pt-BR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+    });
 }
 
 // DOWNLOAD
