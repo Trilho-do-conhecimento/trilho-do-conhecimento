@@ -23,39 +23,49 @@ const Usuario = sequelize.define('Usuario', {
         type: DataTypes.STRING(100),
         allowNull: false
     },
-    registro: { type: DataTypes.STRING(100), 
-    allowNull: true 
+    registro: {
+        type: DataTypes.STRING(100),
+        allowNull: true
     },
-    cargo: { 
-        type: DataTypes.STRING(100), 
-        allowNull: true 
+    cargo: {
+        type: DataTypes.STRING(100),
+        allowNull: true
     },
-    area: { 
-        type: DataTypes.STRING(100), 
-        allowNull: true 
+    area: {
+        type: DataTypes.STRING(100),
+        allowNull: true
     },
     tipo_usuario: {
         type: DataTypes.ENUM('aluno', 'professor', 'admin'),
         allowNull: false, //não pode ser nulo
         defaultValue: 'aluno' //tipo normalmente atribuido quando criado
     }
-}, 
-{
-    tableName: 'usuario',
-    timestamps: false,
+},
+    {
+        tableName: 'usuario',
+        timestamps: false,
 
-    defaultScope: {
-        attributes: { exclude: ['senha'] } // nunca retorna senha
-    },
-    hooks: {
-        beforeCreate: async (usuario) => {
-            if (usuario.senha) usuario.senha = await bcrypt.hash(usuario.senha, saltRounds);
+        defaultScope: {
+            attributes: { exclude: ['senha'] } // nunca retorna senha
         },
-        beforeUpdate: async (usuario) => {
-            if (usuario.changed('senha')) usuario.senha = await bcrypt.hash(usuario.senha, saltRounds);
+        hooks: {
+            beforeCreate: async (usuario) => {
+                if (usuario.senha) usuario.senha = await bcrypt.hash(usuario.senha, saltRounds);
+            },
+            beforeUpdate: async (usuario) => {
+                if (usuario.changed('senha')) usuario.senha = await bcrypt.hash(usuario.senha, saltRounds);
+            }
         }
-    }
-});
+    });
+
+Usuario.associate = function (models) {
+    Usuario.belongsToMany(models.ListaPresenca, {
+        through: models.ListaPresencaUsuario,
+        foreignKey: 'id_usuario',
+        otherKey: 'id_lista',
+        as: 'Listas'
+    });
+};
 
 //validar senha
 Usuario.prototype.validarSenha = async function (senhaDigitada) {

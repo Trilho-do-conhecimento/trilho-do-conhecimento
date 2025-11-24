@@ -2,7 +2,7 @@ import {
   handleOpenTreinamentos,
   handleOpenListaPresenca,
   handleOpenMenuAluno,
-  handleOpenCertificados,
+  // handleOpenCertificados,
   handleOpenCadastroUsuario,
   // initMenuAdm
 } from "../controllers/menuAdmController.js";

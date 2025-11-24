@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,10 @@
 
   <link rel="stylesheet" href="../css/criarListaDePresenca_style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
 
   <header class="site-header">
@@ -39,7 +41,7 @@
   <main>
     <div class="container">
       <a href="menuAdm.html" id="link-voltar" class="back-link" title="Voltar ao Menu">
-          <i class="fas fa-arrow-left"></i>
+        <i class="fas fa-arrow-left"></i>
       </a>
       <h1 class="page-title">Lista de presença</h1>
       <!-- Painel lateral do filtro -->
@@ -99,23 +101,23 @@
             <label for="carga_horaria">Carga horária:</label>
             <input type="text" id="carga_horaria" name="carga_horaria">
           </div>
-          
+
           <div class="form-group">
             <label for="data">Data:</label>
             <input type="date" id="data" name="data" placeholder="AAAA-MM-DD">
           </div>
-          
+
           <div class="form-group">
             <label for="id_turma">ID da turma:</label>
             <input type="text" id="id_turma" name="id_turma">
           </div>
         </div>
 
-      <!-- Botão do filtro -->
-      <button id="btnFiltro" class="filtro-btn" type="button">
-        <i class="fa fa-sliders"></i> Filtros
-      </button>
-      
+        <!-- Botão do filtro -->
+        <button id="btnFiltro" class="filtro-btn" type="button">
+          <i class="fa fa-sliders"></i> Filtros
+        </button>
+
         <div class="table-container">
           <table class="attendance-table">
             <thead>
@@ -130,15 +132,6 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="number-cell">1</td>
-                <td><input type="text" name="nome_completo[]" value=""></td>
-                <td><input type="text" name="registro[]"></td>
-                <td><input type="text" name="cargo[]"></td>
-                <td><input type="text" name="area[]"></td>
-                <td><input type="text" name="datas[]"></td>
-                <td><input type="text" name="assinaturas[]"></td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -151,7 +144,7 @@
     </div>
   </main>
 
-  <!-- Mantido no final para acessibilidade --> 
+  <!-- Mantido no final para acessibilidade -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -163,96 +156,192 @@
 
   <script type="module" src="../js/listeners/criarListaDePresencaListeners.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const btnFiltro = document.getElementById('btnFiltro');
-      const painelFiltro = document.getElementById('painelFiltro');
-      const fecharFiltro = document.getElementById('fecharFiltro');
-      const formFiltro = document.getElementById('formFiltro');
-    
-      // Abre o painel
-      btnFiltro.addEventListener('click', (e) => {
-        e.preventDefault();
-        painelFiltro.classList.add('ativo');
-      });
-    
-      // Fecha o painel
-      fecharFiltro.addEventListener('click', () => {
-        painelFiltro.classList.remove('ativo');
-      });
-    
-  //filtro
-      document.addEventListener("DOMContentLoaded", () => {
+    // funcao para adicionar uma nova linha vazia na tabela
+    function adicionarLinhaVazia(tbody) {
+      // caso nao passe o tbody, busca o primeiro da pagina
+      if (!tbody) tbody = document.querySelector('.attendance-table tbody');
+      // calculo de linhas baseado nas existentes 
+      const rowCount = tbody.querySelectorAll('tr').length + 1;
+      const row = tbody.insertRow();
+
+      // html da linha com inputs para cada campo
+      row.innerHTML = `
+        <td class="number-cell">${rowCount}</td>
+        <td><input type="text" name="nome_completo[]" value=""></td>
+        <td><input type="text" name="registro[]" value=""></td>
+        <td><input type="text" name="cargo[]"></td>
+        <td><input type="text" name="area[]"></td>
+        <td><input type="text" name="datas[]"></td>
+        <td>
+            <select name="assinaturas[]">
+                <option value="presente">Presente</option>
+                <option value="ausente">Ausente</option>
+            </select>
+        </td>
+    `;
+    }
+
+    // Função para atualizar a tabela
+    function atualizarTabela(participantes, limparTabela = false) {
+      const tbody = document.querySelector('.attendance-table tbody');
+
+      // limpa a tabela se solicitado 
+      if (limparTabela) {
+        tbody.innerHTML = '';
+      }
+
+      // verificador de participantes
+      if (!participantes || participantes.length === 0) {
+        if (limparTabela) {
+          const row = tbody.insertRow();
+          const cell = row.insertCell();
+          cell.colSpan = 7;
+          cell.textContent = 'Nenhum participante encontrado com os filtros aplicados.';
+          cell.style.textAlign = 'center';
+        }
+        return;
+      }
+
+      const todasLinhas = tbody.querySelectorAll('tr');
+      if (todasLinhas.length > 0) {
+        const ultimaLinha = todasLinhas[todasLinhas.length - 1];
+        const inputs = ultimaLinha.querySelectorAll('input[type="text"]');
+        const estaVazia = Array.from(inputs).every(input => input.value.trim() === '');
+        if (estaVazia) {
+          ultimaLinha.remove();
+        }
+      }
+
+          const linhasExistentes = tbody.querySelectorAll('tr').length;
+
+          // Adiciona as novas linhas baseadas nos dados do back
+          participantes.forEach((p, index) => {
+            const row = tbody.insertRow();
+            const rowNumber = linhasExistentes + index + 1;
+
+            // preenche a linha com os dados do participante 
+            row.innerHTML = `
+          <td class="number-cell">${rowNumber}</td>
+          <td><input type="text" name="nome_completo[]" value="${p.nome_completo || ''}" class="auto-row"></td>
+          <td><input type="text" name="registro[]" value="${p.registro || ''}" class="auto-row"></td>
+          <td><input type="text" name="cargo[]" value="${p.cargo || ''}" class="auto-row"></td>
+          <td><input type="text" name="area[]" value="${p.area || ''}" class="auto-row"></td>
+          <td><input type="text" name="datas[]" value="${p.datas || ''}" class="auto-row"></td>
+          <td>
+            <select name="assinaturas[]" class="auto-row">
+              <option value="presente" ${p.status_assinatura === 'presente' ? 'selected' : ''}>Presente</option>
+              <option value="ausente" ${p.status_assinatura === 'ausente' ? 'selected' : ''}>Ausente</option>
+            </select>
+          </td>
+              `;
+          });
+          // adicionar linha vazia no final para novos registros
+          adicionarLinhaVazia(tbody);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
           const btnFiltro = document.getElementById('btnFiltro');
           const painelFiltro = document.getElementById('painelFiltro');
           const fecharFiltro = document.getElementById('fecharFiltro');
           const formFiltro = document.getElementById('formFiltro');
+          const tbody = document.querySelector('.attendance-table tbody');
 
-          // Função para atualizar a tabela
-          function atualizarTabela(participantes) {
-              const tbody = document.querySelector('.attendance-table tbody');
-              tbody.innerHTML = '';
+          adicionarLinhaVazia();
 
-              if (!participantes || participantes.length === 0) {
-                  const row = tbody.insertRow();
-                  const cell = row.insertCell();
-                  cell.colSpan = 7; 
-                  cell.textContent = 'Nenhum participante encontrado com os filtros aplicados.';
-                  cell.style.textAlign = 'center';
-                  return;
+          tbody.addEventListener('input', (e) => {
+            if (e.target.matches('input[type="text"]') || e.target.matches('select')) {
+              const linhaAtual = e.target.closest('tr');
+              const todasLinhas = Array.from(tbody.querySelectorAll('tr'));
+              const ultimaLinha = todasLinhas[todasLinhas.length - 1];
+
+              if (linhaAtual === ultimaLinha && !tbody.dataset.adicionando) {
+                const inputsTexto = Array.from(linhaAtual.querySelectorAll('input[type="text"]'));
+                const temValor = inputsTexto.some(input => input.value.trim() !== '');
+
+                if (temValor) {
+                  tbody.dataset.adicionando = 'true';
+                  setTimeout(() => {
+                    adicionarLinhaVazia(tbody);
+                    delete tbody.dataset.adicionando;
+                  }, 100);
+                }
               }
+            }
+          });
 
-              // Adiciona as novas linhas baseadas nos dados do backend
-              participantes.forEach((p, index) => {
-                  const row = tbody.insertRow();
-                  row.innerHTML = `
-                      <td class="number-cell">${index + 1}</td>
-                      <td><input type="text" name="nome_completo[]" value="${p.nome_completo || ''}"></td>
-                      <td><input type="text" name="registro[]" value="${p.registro || ''}"></td>
-                      <td><input type="text" name="cargo[]" value="${p.cargo || ''}"></td>
-                      <td><input type="text" name="area[]" value="${p.area || ''}"></td>
-                      <td><input type="text" name="datas[]" value="${p.datas || ''}"></td>
-                      <td><input type="text" name="assinaturas[]" value="${p.assinaturas || ''}"></td>
-                  `;
-              });
-          }
+          tbody.addEventListener('change', (e) => {
+            if (e.target.matches('select')) {
+              const linhaAtual = e.target.closest('tr');
+              const todasLinhas = Array.from(tbody.querySelectorAll('tr'));
+              const ultimaLinha = todasLinhas[todasLinhas.length - 1];
+
+              if (linhaAtual === ultimaLinha && !tbody.dataset.adicionando) {
+                tbody.dataset.adicionando = 'true';
+                setTimeout(() => {
+                  adicionarLinhaVazia(tbody);
+                  delete tbody.dataset.adicionando;
+                }, 100);
+              }
+            }
+          });
+
+          // Abre o painel
+          btnFiltro.addEventListener('click', (e) => {
+            e.preventDefault();
+            painelFiltro.classList.add('ativo');
+          });
+
+          // Fecha o painel
+          fecharFiltro.addEventListener('click', () => {
+            painelFiltro.classList.remove('ativo');
+          });
 
           // Aplica o filtro
-          formFiltro.addEventListener('submit', async (e) => { 
-              e.preventDefault();
-              
-              const filtros = Object.fromEntries(new FormData(formFiltro));
-              console.log('Filtros aplicados:', filtros);
+          formFiltro.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const filtros = Object.fromEntries(new FormData(formFiltro));
 
-              // Chamada para a nova rota do backend
-              try {
-                  const resp = await fetch("/rotas/lista/filtrar", {
-                      method: "POST",
-                      headers: { "Content-Type": "application/json" },
-                      credentials: "include",
-                      body: JSON.stringify(filtros),
-                  });
+            try {
+              const resp = await fetch("/rotas/lista/filtrar", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                credentials: "include",
+                body: JSON.stringify(filtros),
+              });
 
-                  if (!resp.ok) {
-                      const erro = await resp.json();
-                      throw new Error(erro.error || "Falha ao aplicar filtro.");
-                  }
-
-                  const data = await resp.json();
-                  
-                  if (data.sucesso) {
-                      // Atualizar a tabela com os novos dados
-                      atualizarTabela(data.participantes);
-                      painelFiltro.classList.remove('ativo');
-                  } else {
-                      alert('Erro ao aplicar filtros: ' + (data.error || "Erro desconhecido."));
-                  }
-              } catch (err) {
-                  console.error("Erro na requisição de filtro:", err);
-                  alert("Erro ao buscar a lista de presença com os filtros.\n" + (err?.message || ""));
+              if (resp.status === 401) {
+                alert('Sessão expirou. Faça login novamente.');
+                window.location.href = '../index.html';
+                return;
               }
+
+              if (!resp.ok) throw new Error("Falha ao filtrar");
+
+              const data = await resp.json();
+
+              if (data.sucesso) {
+                atualizarTabela(data.participantes, false);
+                painelFiltro.classList.remove('ativo');
+              } else {
+                alert('Nenhum resultado encontrado');
+              }
+            } catch (err) {
+              alert("Erro ao filtrar: " + err.message);
+            }
           });
-      });
-    });
-    </script>    
+
+          document.getElementById('btnCancelar').addEventListener('click', (e) => {
+            e.preventDefault();
+
+            document.getElementById('form-lista').reset();
+            document.getElementById('formFiltro').reset();
+
+            const tbody = document.querySelector('.attendance-table tbody');
+            tbody.innerHTML = ``;
+            adicionarLinhaVazia(tbody)
+          })
+        });
+  </script>
 </body>
+
 </html>

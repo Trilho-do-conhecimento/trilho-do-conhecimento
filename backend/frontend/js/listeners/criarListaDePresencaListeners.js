@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       alert(" Lista salva com sucesso!");
+      window.location.href="/pages/menuAdm.html"
       form.reset();
     } catch (err) {
       console.error("Erro ao salvar lista:", err);

@@ -1,8 +1,10 @@
+const { DataTypes, Op } = require('sequelize');
 const ListaPresenca = require('../models/Lista_presenca'); 
 const Usuario = require('../models/Usuario'); 
 const ListaPresencaUsuario = require('../models/lista_presenca_usuario'); 
 const Turma = require('../models/Turma'); 
 const Curso = require('../models/Curso');
+const sequelize = require('../connectionFactory/connectionFactory')
 
 const ListaPresencaDAO = { 
     // Criar lista de presença 
@@ -80,47 +82,33 @@ const ListaPresencaDAO = {
     },
     
     async filtrarAlunos(filtros) {
-        const whereUsuario = {};
-        const whereListaPresenca = {};
+        const where = {};
         
         if (filtros.Nome) {
-            whereUsuario.nome_completo = { [Op.like]: `%${filtros.Nome}%` };
+            where.nome_completo = { [Op.like]: `%${filtros.Nome}%` };
         }
         if (filtros.Registro) {
-            whereUsuario.registro = filtros.Registro;
+            where.registro = filtros.Registro;
         }
         if (filtros.Cargo) {
-            whereUsuario.cargo = filtros.Cargo;
+            where.cargo = filtros.Cargo;
         }
         if (filtros.Area) {
-            whereUsuario.area = filtros.Area;
+            where.area = filtros.Area;
         }
 
-        if (filtros.data) {
-            whereListaPresenca.data = filtros.data;
-        }
-
-        const resultados = await Usuario.findAll({
+        const resultados = await Usuario.unscoped().findAll({
             attributes: ['nome_completo', 'registro', 'cargo', 'area'], 
-            where: whereUsuario, 
-            include: [
-                {
-                    model: ListaPresenca,
-                    through: { model: ListaPresencaUsuario, attributes: ['status_assinatura'] },
-                    as: 'Listas', 
-                    required: true, 
-                    where: whereListaPresenca,
-                    attributes: ['data'] 
-                }
-            ],
+            where: where, 
+            limit: 100
         });
                 return resultados.map(usuario => ({
             nome_completo: usuario.nome_completo,
             registro: usuario.registro,
             cargo: usuario.cargo,
             area: usuario.area,
-            datas: usuario.Listas.map(l => l.data).join(', '),
-            assinaturas: usuario.Listas.map(l => l.ListaPresencaUsuario.status_assinatura).join(', '),
+            // datas: usuario.Listas.map(l => l.data).join(', '),
+            // assinaturas: usuario.Listas.map(l => l.ListaPresencaUsuario.status_assinatura).join(', '),
         }));
     }
 }; 

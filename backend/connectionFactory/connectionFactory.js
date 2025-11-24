@@ -57,8 +57,16 @@ async function conectarAiven() {
     const timestamp = moment().format('YYYY-MM-DD HH:mm:ss');
     console.log('[${timestamp}] Conexão com Aiven realizada com sucesso!');
     logger.info('Conexão com Aiven realizada com sucesso!');
+    
+    Object.keys(sequelizeAiven.models).forEach(modelName => {
+      if(sequelizeAiven.models[modelName].associate) {
+        sequelizeAiven.models[modelName].associate(sequelizeAiven.models);
+      }
+    });
+    
     await sequelizeAiven.sync({alter: true})
     logger.info("Tabelas sincronizadas!")
+
     // caso não conecte - trata o erro e tenta novamente
   } catch (err) {
     const timestamp = moment().format('YYYY-MM-DD HH:mm:ss');
