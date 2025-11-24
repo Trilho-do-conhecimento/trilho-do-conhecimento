@@ -1677,3 +1677,66 @@
 {"email":"admin1@email.com","id_usuario":10,"level":"info","message":"Novo usuário criado com sucesso!","nome_completo":"admin","timestamp":"2025-11-24 11:20:08"}
 {"email":"admin1@email.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-24 11:20:23"}
 {"email":"admin1@email.com","idUsuario":10,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-24 11:20:23"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 16:40:34"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 16:40:37"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 16:40:47"}
+{"email":"domingos.silva@admin.com","idUsuario":2,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-24 16:40:51"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 16:42:59"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 16:43:15"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 16:47:02"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 16:47:04"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 16:47:12"}
+{"email":"domingos.silva@admin.com","idUsuario":2,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-24 16:47:17"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 16:47:41"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 16:47:52"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 16:48:10"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 16:48:19"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 16:51:10"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 16:51:12"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 16:51:17"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 16:51:19"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 16:51:26"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 16:55:20"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 16:55:28"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 16:58:25"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 16:58:27"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 16:58:31"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 16:58:36"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 16:58:37"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 16:58:50"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 16:58:57"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 16:59:13"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 17:03:31"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 17:03:33"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 17:03:41"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:10:26"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 17:13:28"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 17:13:30"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:13:38"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 17:13:38"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:13:55"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:16:08"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:20:19"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:20:25"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:20:32"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:21:36"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:23:12"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:23:17"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 17:23:54"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 17:23:56"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 17:24:04"}
+{"email":"domingos.silva@admin.com","idUsuario":2,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-24 17:24:05"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:24:19"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:24:24"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:24:33"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:26:16"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:26:26"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:31:43"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:32:54"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:35:35"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:35:42"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:38:46"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:39:01"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:41:41"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:46:30"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:46:38"}
