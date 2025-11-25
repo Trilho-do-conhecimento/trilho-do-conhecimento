@@ -42,28 +42,7 @@ body {
 .logo img {
     max-height: 40px;
 }
-.search-bar {
-    display: flex;
-    align-items: center;
-    border: 1px solid var(--white-color);
-    border-radius: 20px;
-    overflow: hidden;
-    background-color: var(--white-color);
-}
-.search-bar input {
-    border: none;
-    padding: 8px 15px;
-    outline: none;
-    font-size: 1rem;
-}
-.search-bar button {
-    background-color: var(--white-color);
-    border: none;
-    padding: 0 15px;
-    cursor: pointer;
-    color: var(--primary-blue);
-    font-size: 1rem;
-}
+
 .main-nav a {
     color: var(--white-color);
     text-decoration: none;

@@ -8,7 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CORRIGIR: caminhos absolutos -->
     <link rel="stylesheet" href="../css/treinamentosAdm_style.css">
+    <link rel="stylesheet" href="../css/search.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 <body>
@@ -16,48 +19,65 @@
     <header class="site-header">
         <div class="header-left">
             <div class="logo">
-                <img src="..\assets\logo metro.png" alt="Logo Metrô">
+                <img src="../assets/logo metro.png" alt="Logo Metrô">
             </div>
             <div class="search-bar">
-                <input type="text" placeholder="Pesquisar">
+                <input type="text" placeholder="Pesquisar" name="curso">
                 <button type="button"><i class="fa fa-search"></i></button>
             </div>
         </div>
         <div class="header-right">
              <nav class="main-nav">
-                <a href="institucional.html">Institucional</a>
-                <a href="ajuda.html">Ajuda</a>
+                <a href="../pages/institucional.html">Institucional</a>
+                <a href="../pages/ajuda.html">Ajuda</a>
             </nav>
         </div>
     </header>
 
     <main>
         <div class="container">
-            <!-- Painel lateral do filtro -->
-        <aside id="painelFiltro" class="painel-filtro">
-            <div class="filtro-header">
-            <h3>Filtros</h3>
-            <span id="fecharFiltro" class="fechar-btn">&times;</span>
-            </div>
-            <form id="formFiltro" class="filtro-conteudo">
-            <label>Cursos</label>
-            <input type="text" name="Cursos" placeholder="Exemplo: desenvolvimento de front-end  ">
-            <label>Data de inicio </label>
-            <input type="date" name="data">
-            <label>Status</label>
-            <input type="text" name="Status" placeholder="Exemplo:concluido">
-            </form>
-        </aside>
-            <a href="menuAdm.html" id="link-voltar" class="back-link" title="Voltar à tela anterior">
+            <aside id="painelFiltro" class="painel-filtro">
+                <div class="filtro-header">
+                    <h3>Filtros</h3>
+                    <span id="fecharFiltro" class="fechar-btn">&times;</span>
+                </div>
+                <form id="formFiltro" class="filtro-conteudo">
+                    <label>Cursos</label>
+                    <input type="text" name="curso" placeholder="Exemplo: desenvolvimento de front-end">
+                    
+                    <label>Data de início</label>
+                    <input type="date" name="data_inicio">
+                    
+                    <label>Status</label>
+                    <select name="status">
+                        <option value="">Todos</option>
+                        <option value="concluido">Concluído</option>
+                        <option value="em andamento">Em andamento</option>
+                        <option value="cancelado">Cancelado</option>
+                    </select>
+                    
+                    <label>Área</label>
+                    <select name="area">
+                        <option value="">Todas</option>
+                        <option value="Segurança">Segurança</option>
+                        <option value="Manutenção">Manutenção</option>
+                        <option value="Operações">Operações</option>
+                    </select>
+                    
+                    <button type="submit" class="btn-aplicar-filtro">Aplicar Filtros</button>
+                </form>
+            </aside>
+
+            <a href="../pages/menuAdm.html" id="link-voltar" class="back-link" title="Voltar à tela anterior">
                 <i class="fas fa-arrow-left"></i>
             </a>
+            
             <h1 class="page-title">Treinamentos</h1>
             <p class="page-subtitle">Aqui o instrutor poderá acessar as listas de presença das turmas e visualizar as informações das mesmas</p>
             
-        <!-- Botão do filtro -->
-        <button id="btnFiltro" class="filtro-btn" type="button">
-            <i class="fa fa-sliders"></i> Filtros
-      </button>
+            <button id="btnFiltro" class="filtro-btn" type="button">
+                <i class="fa fa-sliders"></i> Filtros
+            </button>
 
             <div class="table-container">
                 <table class="trainings-table">
@@ -67,85 +87,12 @@
                             <th>Curso</th>
                             <th>Data de início</th>
                             <th>Status</th>
-                            <th></th> </tr>
+                            <th></th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>EPI - Turma 1</td>
-                            <td>10/08/2025</td>
-                            <td><span class="status-concluido">Concluído</span></td>
-                            <td><a href="#">Lista de presença</a></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Primeiros socorros - Turma 3</td>
-                            <td>09/09/2025</td>
-                            <td><span class="status-andamento">Em andamento</span></td>
-                            <td><a href="#">Lista de presença</a></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                         <tr>
-                            <td>7</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td colspan="5" style="text-align: center;">Carregando...</td>
                         </tr>
                     </tbody>
                 </table>
@@ -159,39 +106,13 @@
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
+    
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-      <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const btnFiltro = document.getElementById('btnFiltro');
-      const painelFiltro = document.getElementById('painelFiltro');
-      const fecharFiltro = document.getElementById('fecharFiltro');
-      const formFiltro = document.getElementById('formFiltro');
     
-      // Abre o painel
-      btnFiltro.addEventListener('click', (e) => {
-        e.preventDefault();
-        painelFiltro.classList.add('ativo');
-      });
+    <script type="module" src="/js/listeners/treinamentosAdmListeners.js"></script>
     
-      // Fecha o painel
-      fecharFiltro.addEventListener('click', () => {
-        painelFiltro.classList.remove('ativo');
-      });
-    
-      // Aplica o filtro
-      formFiltro.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const data = Object.fromEntries(new FormData(formFiltro));
-        console.log('Filtros aplicados:', data);
-    
-        // backend + att lista        
-        painelFiltro.classList.remove('ativo');
-      });
-    });
-    </script>
-        <script src="../js/listeners/search.js"></script>   
 </body>
 </html>

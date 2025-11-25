@@ -73,7 +73,7 @@ async function conectarAiven() {
     console.error('[${timestamp}] Falha ao conectar no Aiven:');
     console.error('Mensagem: ${err.message}');
     console.error('Stack: ${err.stack}');
-    logger.error('Falha ao conectar no Aiven: ${err.message}');
+    logger.error(`Falha ao conectar no Aiven: ${err.message}`);
 
     // tenta reconectar 
     setTimeout(() => {

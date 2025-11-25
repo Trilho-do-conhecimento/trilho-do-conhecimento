@@ -1,4 +1,4 @@
-const sequelize = require('backend/connectionFactory/connectionFactory.js'); // conexão com o bd
+const sequelize = require('../connectionFactory/connectionFactory.js'); // conexão com o bd
 
 // Importação das models
 const Usuario = require('./Usuario');
@@ -6,19 +6,20 @@ const Curso = require('./Curso');
 const Turma = require('./Turma');
 const Certificado = require('./Certificado');
 const Lista_presenca = require('./Lista_presenca');
-const Lista_presenca_usuario = require('./Lista_presenca_usuario');
+const Lista_presenca_usuario = require('./lista_presenca_usuario');
+const AlunoTurma = require('/backend/models/AlunoTurma.js'); // NOVO
 
 // Relacionamento Professor – Turma
 Usuario.hasMany(Turma, { 
     foreignKey: 'id_instrutor',
     as: 'TurmasMinistradas' 
 });
-Turma.belongsTo(Usuario, { //cada turma pertence a um instrutor
+Turma.belongsTo(Usuario, {
     foreignKey: 'id_instrutor',
     as: 'Instrutor'
 });
 
-//Curso – Turma (1:N)
+// Curso – Turma (1:N)
 Curso.hasMany(Turma, {
     foreignKey: 'id_curso',
     as: 'Turmas',
@@ -28,20 +29,42 @@ Curso.hasMany(Turma, {
 
 Turma.belongsTo(Curso, {
     foreignKey: 'id_curso',
-    as: 'Cursos'
+    as: 'Curso'
 });
 
-//Aluno – Certificado 
+// NOVO: Turma – AlunoTurma (1:N)
+Turma.hasMany(AlunoTurma, {
+    foreignKey: 'id_turma',
+    as: 'AlunosTurma'
+});
+
+AlunoTurma.belongsTo(Turma, {
+    foreignKey: 'id_turma',
+    as: 'Turma'
+});
+
+// NOVO: Usuario – AlunoTurma (1:N)
+Usuario.hasMany(AlunoTurma, {
+    foreignKey: 'id_usuario',
+    as: 'MinhasTurmas'
+});
+
+AlunoTurma.belongsTo(Usuario, {
+    foreignKey: 'id_usuario',
+    as: 'Aluno'
+});
+
+// Aluno – Certificado 
 Usuario.hasMany(Certificado, {
     foreignKey: 'id_concluinte',
     as: 'Certificados'
 });
 Certificado.belongsTo(Usuario, {
     foreignKey: 'id_concluinte',
-    as: 'CertificadosEmitidos'
+    as: 'Concluinte'
 });
 
-//Presença - Turma
+// Presença - Turma
 Turma.hasMany(Lista_presenca, {
     foreignKey: 'id_turma',
     as: 'Listas_presencas'
@@ -56,18 +79,18 @@ Usuario.belongsToMany(Lista_presenca, {
     through: Lista_presenca_usuario,
     foreignKey: 'id_usuario',
     otherKey: 'id_lista',
-    as: 'Lista_presenca_usuario'
+    as: 'ListasPresenca'
 });
 
 Lista_presenca.belongsToMany(Usuario, {
     through: Lista_presenca_usuario,
     foreignKey: 'id_lista',
     otherKey: 'id_usuario',
-    as: 'Lista_presenca'
+    as: 'Alunos'
 });
 
-Lista_presenca_usuario.belongsTo(Usuario, { foreignKey: 'id_usuario' }); //lista do usuario pertence ao usuario
-Lista_presenca_usuario.belongsTo(Lista_presenca, { foreignKey: 'id_lista' }); //lista de presença do usuario tambem pertence as listas de presença
+Lista_presenca_usuario.belongsTo(Usuario, { foreignKey: 'id_usuario' });
+Lista_presenca_usuario.belongsTo(Lista_presenca, { foreignKey: 'id_lista' });
 
 // Exportação das model e conexão de arquivos
 module.exports = {
@@ -78,4 +101,5 @@ module.exports = {
     Certificado,
     Lista_presenca,
     Lista_presenca_usuario,
+    AlunoTurma // NOVO
 };

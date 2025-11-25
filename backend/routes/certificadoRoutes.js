@@ -3,6 +3,7 @@ const router = express.Router();
 const CertificadoDAO = require('../DAO/CertificadoDAO.js');
 const logger = require('../logs/logger.js');
 const { gerarCertificadoStream } = require('../../backend/frontend/js/services/certificadoService.js')
+const { enviarParaAssinatura } = require('../externalServices/clickSignService.js')
 
 // Função para validar campos obrigatórios 
 function validarCamposObrigatorios(body) {
@@ -153,5 +154,33 @@ router.delete('/:id', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
+
+// rota da api
+router.post('/enviarAssinatura', async (req, res) => {
+    try {
+        const { fileBase64, filename, signatarios } = req.body;
+
+        console.log('Body recebido:', req.body);
+
+        if (!fileBase64 || !filename) {
+            return res.status(400).json();
+        }
+
+        const resultado = await enviarParaAssinatura(fileBase64, filename, signatarios);
+
+        console.log("Resultado da função:", resultado);
+
+        if (resultado.success) {
+            logger.info('Sucesso! Envelope ID:', resultado.envelopeId);
+            res.json(resultado);
+        } else {
+            res.status(500).json({error: resultado.error});
+        }
+
+    } catch (error) {
+        logger.error('Erro na rota de assinatura:', error);
+        res.status(500).json({error: error.message});
+    }
+}); 
 
 module.exports = router;

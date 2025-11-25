@@ -28,7 +28,7 @@ const authMiddleware = (req, res, next) => {
             console.log("Token decodificado!", decoded);
             
             // Fixa o id do usuário autenticado para as etapas seguintes.
-            req.userId = decoded.id;
+            req.user = decoded;
         
             next(); // Permite seguir para a próxima execução do código. 
 
