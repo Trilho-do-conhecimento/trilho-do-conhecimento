@@ -32,8 +32,7 @@
     <div class="header-right">
       <nav class="main-nav" aria-label="Menu principal">
         <a href="institucional.html">Institucional</a>
-        <a href="#">Ajuda</a>
-        <a href="menuAdm.html">Início</a>
+        <a href="ajuda.html">Ajuda</a>
       </nav>
     </div>
   </header>
@@ -212,15 +211,15 @@
         }
       }
 
-          const linhasExistentes = tbody.querySelectorAll('tr').length;
+      const linhasExistentes = tbody.querySelectorAll('tr').length;
 
-          // Adiciona as novas linhas baseadas nos dados do back
-          participantes.forEach((p, index) => {
-            const row = tbody.insertRow();
-            const rowNumber = linhasExistentes + index + 1;
+      // Adiciona as novas linhas baseadas nos dados do back
+      participantes.forEach((p, index) => {
+        const row = tbody.insertRow();
+        const rowNumber = linhasExistentes + index + 1;
 
-            // preenche a linha com os dados do participante 
-            row.innerHTML = `
+        // preenche a linha com os dados do participante 
+        row.innerHTML = `
           <td class="number-cell">${rowNumber}</td>
           <td><input type="text" name="nome_completo[]" value="${p.nome_completo || ''}" class="auto-row"></td>
           <td><input type="text" name="registro[]" value="${p.registro || ''}" class="auto-row"></td>
@@ -234,114 +233,114 @@
             </select>
           </td>
               `;
-          });
-          // adicionar linha vazia no final para novos registros
-          adicionarLinhaVazia(tbody);
+      });
+      // adicionar linha vazia no final para novos registros
+      adicionarLinhaVazia(tbody);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const btnFiltro = document.getElementById('btnFiltro');
+      const painelFiltro = document.getElementById('painelFiltro');
+      const fecharFiltro = document.getElementById('fecharFiltro');
+      const formFiltro = document.getElementById('formFiltro');
+      const tbody = document.querySelector('.attendance-table tbody');
+
+      adicionarLinhaVazia();
+
+      tbody.addEventListener('input', (e) => {
+        if (e.target.matches('input[type="text"]') || e.target.matches('select')) {
+          const linhaAtual = e.target.closest('tr');
+          const todasLinhas = Array.from(tbody.querySelectorAll('tr'));
+          const ultimaLinha = todasLinhas[todasLinhas.length - 1];
+
+          if (linhaAtual === ultimaLinha && !tbody.dataset.adicionando) {
+            const inputsTexto = Array.from(linhaAtual.querySelectorAll('input[type="text"]'));
+            const temValor = inputsTexto.some(input => input.value.trim() !== '');
+
+            if (temValor) {
+              tbody.dataset.adicionando = 'true';
+              setTimeout(() => {
+                adicionarLinhaVazia(tbody);
+                delete tbody.dataset.adicionando;
+              }, 100);
+            }
+          }
         }
+      });
 
-        document.addEventListener("DOMContentLoaded", () => {
-          const btnFiltro = document.getElementById('btnFiltro');
-          const painelFiltro = document.getElementById('painelFiltro');
-          const fecharFiltro = document.getElementById('fecharFiltro');
-          const formFiltro = document.getElementById('formFiltro');
-          const tbody = document.querySelector('.attendance-table tbody');
+      tbody.addEventListener('change', (e) => {
+        if (e.target.matches('select')) {
+          const linhaAtual = e.target.closest('tr');
+          const todasLinhas = Array.from(tbody.querySelectorAll('tr'));
+          const ultimaLinha = todasLinhas[todasLinhas.length - 1];
 
-          adicionarLinhaVazia();
+          if (linhaAtual === ultimaLinha && !tbody.dataset.adicionando) {
+            tbody.dataset.adicionando = 'true';
+            setTimeout(() => {
+              adicionarLinhaVazia(tbody);
+              delete tbody.dataset.adicionando;
+            }, 100);
+          }
+        }
+      });
 
-          tbody.addEventListener('input', (e) => {
-            if (e.target.matches('input[type="text"]') || e.target.matches('select')) {
-              const linhaAtual = e.target.closest('tr');
-              const todasLinhas = Array.from(tbody.querySelectorAll('tr'));
-              const ultimaLinha = todasLinhas[todasLinhas.length - 1];
+      // Abre o painel
+      btnFiltro.addEventListener('click', (e) => {
+        e.preventDefault();
+        painelFiltro.classList.add('ativo');
+      });
 
-              if (linhaAtual === ultimaLinha && !tbody.dataset.adicionando) {
-                const inputsTexto = Array.from(linhaAtual.querySelectorAll('input[type="text"]'));
-                const temValor = inputsTexto.some(input => input.value.trim() !== '');
+      // Fecha o painel
+      fecharFiltro.addEventListener('click', () => {
+        painelFiltro.classList.remove('ativo');
+      });
 
-                if (temValor) {
-                  tbody.dataset.adicionando = 'true';
-                  setTimeout(() => {
-                    adicionarLinhaVazia(tbody);
-                    delete tbody.dataset.adicionando;
-                  }, 100);
-                }
-              }
-            }
+      // Aplica o filtro
+      formFiltro.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const filtros = Object.fromEntries(new FormData(formFiltro));
+
+        try {
+          const resp = await fetch("/rotas/lista/filtrar", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            credentials: "include",
+            body: JSON.stringify(filtros),
           });
 
-          tbody.addEventListener('change', (e) => {
-            if (e.target.matches('select')) {
-              const linhaAtual = e.target.closest('tr');
-              const todasLinhas = Array.from(tbody.querySelectorAll('tr'));
-              const ultimaLinha = todasLinhas[todasLinhas.length - 1];
+          if (resp.status === 401) {
+            alert('Sessão expirou. Faça login novamente.');
+            window.location.href = '../index.html';
+            return;
+          }
 
-              if (linhaAtual === ultimaLinha && !tbody.dataset.adicionando) {
-                tbody.dataset.adicionando = 'true';
-                setTimeout(() => {
-                  adicionarLinhaVazia(tbody);
-                  delete tbody.dataset.adicionando;
-                }, 100);
-              }
-            }
-          });
+          if (!resp.ok) throw new Error("Falha ao filtrar");
 
-          // Abre o painel
-          btnFiltro.addEventListener('click', (e) => {
-            e.preventDefault();
-            painelFiltro.classList.add('ativo');
-          });
+          const data = await resp.json();
 
-          // Fecha o painel
-          fecharFiltro.addEventListener('click', () => {
+          if (data.sucesso) {
+            atualizarTabela(data.participantes, false);
             painelFiltro.classList.remove('ativo');
-          });
+          } else {
+            alert('Nenhum resultado encontrado');
+          }
+        } catch (err) {
+          alert("Erro ao filtrar: " + err.message);
+        }
+      });
+      document.getElementById('btnCancelar').addEventListener('click', (e) => {
+        e.preventDefault();
 
-          // Aplica o filtro
-          formFiltro.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const filtros = Object.fromEntries(new FormData(formFiltro));
+        document.getElementById('form-lista').reset();
+        document.getElementById('formFiltro').reset();
 
-            try {
-              const resp = await fetch("/rotas/lista/filtrar", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                credentials: "include",
-                body: JSON.stringify(filtros),
-              });
-
-              if (resp.status === 401) {
-                alert('Sessão expirou. Faça login novamente.');
-                window.location.href = '../index.html';
-                return;
-              }
-
-              if (!resp.ok) throw new Error("Falha ao filtrar");
-
-              const data = await resp.json();
-
-              if (data.sucesso) {
-                atualizarTabela(data.participantes, false);
-                painelFiltro.classList.remove('ativo');
-              } else {
-                alert('Nenhum resultado encontrado');
-              }
-            } catch (err) {
-              alert("Erro ao filtrar: " + err.message);
-            }
-          });
-          document.getElementById('btnCancelar').addEventListener('click', (e) => {
-            e.preventDefault();
-
-            document.getElementById('form-lista').reset();
-            document.getElementById('formFiltro').reset();
-
-            const tbody = document.querySelector('.attendance-table tbody');
-            tbody.innerHTML = ``;
-            adicionarLinhaVazia(tbody)
-          })
-        });
-  </script>   
-    <script src="../js/listeners/search.js"></script>
+        const tbody = document.querySelector('.attendance-table tbody');
+        tbody.innerHTML = ``;
+        adicionarLinhaVazia(tbody)
+      })
+    });
+  </script>
+  <script src="../js/listeners/search.js"></script>
 </body>
 
 </html>

@@ -21,3 +21,33 @@ btnTreinamentos.addEventListener("click", handleOpenTreinamentos);
 btnListaPresenca.addEventListener("click", handleOpenListaPresenca);
 btnEuAluno.addEventListener("click", handleOpenMenuAluno);
 btnCadastroUsuario.addEventListener("click", handleOpenCadastroUsuario);
+
+document.addEventListener('DOMContentLoaded', () => {
+  // configura logout
+    const linkSair = document.getElementById('link-sair');
+
+    function logout() {
+
+        // Limpar dados do localStorage
+        localStorage.removeItem('userId');
+        localStorage.removeItem('userType');
+        localStorage.removeItem('userToken');
+        localStorage.removeItem('userName');
+        localStorage.removeItem('ultimaTela');
+
+        // Limpar sessionStorage
+        sessionStorage.clear();
+
+        // Redirecionar para index.html
+        window.location.href = '../index.html';
+    }
+
+    function SairSessao() {
+        linkSair.removeAttribute('href');
+        linkSair.addEventListener('click', (e) => {
+            e.preventDefault();
+            logout();
+        });
+    }
+    SairSessao();
+})

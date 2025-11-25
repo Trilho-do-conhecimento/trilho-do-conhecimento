@@ -1740,3 +1740,228 @@
 {"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:41:41"}
 {"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:46:30"}
 {"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 17:46:38"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 18:05:06"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 18:05:08"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 18:05:16"}
+{"email":"domingos.silva@admin.com","idUsuario":2,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-24 18:05:20"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 18:05:31"}
+{"level":"info","message":"Token recebido do cookie:","timestamp":"2025-11-24 18:05:37"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 18:06:51"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 18:06:53"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 18:07:02"}
+{"level":"warn","message":"Atenção: credenciais de login incorretas!","timestamp":"2025-11-24 18:07:05"}
+{"email":"domingos.silva@admin.com","idUsuario":2,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-24 18:07:11"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 18:41:18"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 18:41:19"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 18:41:22"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 18:41:32"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 18:43:01"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 18:43:03"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 18:43:11"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 18:43:12"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 18:43:14"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 18:43:23"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 18:43:52"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 18:43:54"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 18:44:03"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 18:52:39"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 18:52:42"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 18:52:44"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 18:52:47"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 18:52:58"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 18:53:17"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 18:53:19"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 18:53:28"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:38:26"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:38:29"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:38:32"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:38:35"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:38:38"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 20:38:49"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:40:25"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:40:28"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 20:40:39"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:41:46"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:41:49"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 20:42:00"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:42:07"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:42:10"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:42:13"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:42:15"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:42:17"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:42:25"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:42:28"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:42:32"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:42:34"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:42:37"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:42:38"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:42:41"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:42:46"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:42:48"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:42:52"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:42:54"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:42:56"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:42:59"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:43:03"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:43:06"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:43:08"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:43:11"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 20:43:22"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:43:35"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:43:37"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 20:43:48"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:44:19"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:44:21"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:44:24"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:44:26"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:44:29"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:44:33"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:44:38"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:44:41"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:44:42"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:44:47"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:44:49"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:44:52"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:44:55"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:44:57"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:45:00"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:45:02"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:45:04"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:45:08"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:45:11"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:45:17"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:45:20"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:45:22"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:45:26"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:45:28"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:45:31"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:45:39"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:45:42"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:45:46"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:45:48"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:45:51"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:45:54"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:45:56"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:45:59"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:46:02"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:46:04"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:46:07"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:46:09"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:46:12"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:46:15"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:46:17"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:46:21"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:46:23"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:46:26"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:46:29"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:46:30"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:46:33"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:46:35"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:46:39"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:46:41"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:46:42"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:46:44"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:46:47"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:46:50"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:46:52"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:46:55"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:47:02"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:47:05"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:47:07"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:47:10"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:47:12"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:47:14"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:47:18"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:47:23"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 20:47:34"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:47:53"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:47:56"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:47:59"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:48:01"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:48:04"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:48:06"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 20:48:15"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:48:28"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:48:34"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:48:36"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:48:39"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 20:48:48"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:49:04"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:49:06"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:49:14"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:49:17"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 20:49:25"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:49:36"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:49:39"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 20:49:50"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:50:24"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:50:28"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:50:31"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:50:36"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:50:38"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:50:41"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 20:50:50"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:50:54"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:50:57"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:51:04"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:51:07"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:51:11"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:51:13"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:51:15"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:51:18"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:51:21"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:51:23"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:51:26"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:51:31"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:51:33"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 20:51:45"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:55:25"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:55:27"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:55:32"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:55:38"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:55:40"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:55:42"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:55:44"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:56:01"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:56:09"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:56:11"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:56:14"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:56:21"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:56:36"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:56:40"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:57:06"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:57:16"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:57:17"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:57:26"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:57:29"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 20:57:39"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:57:50"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:57:51"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:57:55"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:58:05"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:58:09"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 20:58:20"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:58:42"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:58:46"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:58:48"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:58:50"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:58:53"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:58:57"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:59:02"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:59:04"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 20:59:09"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 20:59:12"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 20:59:22"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 21:01:10"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 21:01:12"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 21:01:15"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 21:01:17"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 21:01:24"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 21:01:27"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 21:01:38"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 21:02:20"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 21:02:23"}
+{"level":"info","message":"Servidor rodando em http://localhost:3000/","timestamp":"2025-11-24 21:02:25"}
+{"level":"info","message":"Conexão com Aiven realizada com sucesso!","timestamp":"2025-11-24 21:02:28"}
+{"email":"domingos.silva@admin.com","idUsuario":2,"level":"info","message":"Usuário logado com sucesso.","timestamp":"2025-11-24 21:02:35"}
+{"level":"info","message":"Tabelas sincronizadas!","timestamp":"2025-11-24 21:02:38"}
